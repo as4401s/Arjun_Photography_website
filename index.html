@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arjun Photography - Landscape and Travel Portfolio">
+    <title>ARJUN | Visuals</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#050505',
+                        dark: '#0a0a0a',
+                        card: '#121212'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #050505;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 3px;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="text-gray-300 font-sans antialiased selection:bg-white selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" onclick="location.reload()"
+                    class="font-serif text-2xl md:text-3xl tracking-wider text-white hover:text-gray-300 transition-colors">ARJUN'S
+                    PHOTOGRAPHY</a>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home"
+                        class="text-xs uppercase tracking-[0.2em] hover:text-white transition-colors">Home</a>
+                    <a href="#gallery"
+                        class="text-xs uppercase tracking-[0.2em] hover:text-white transition-colors">Work</a>
+                    <a href="#about"
+                        class="text-xs uppercase tracking-[0.2em] hover:text-white transition-colors">About</a>
+                    <div class="flex gap-4 border-l border-white/10 pl-8">
+                        <a href="https://www.instagram.com/ourtravelphotobook/?hl=en" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors"><span
+                                class="sr-only">Instagram</span>IG</a>
+                    </div>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10 absolute w-full">
+            <div class="px-6 py-4 space-y-4 flex flex-col">
+                <a href="#home" class="text-sm uppercase tracking-widest py-2">Home</a>
+                <a href="#gallery" class="text-sm uppercase tracking-widest py-2">Work</a>
+                <a href="#about" class="text-sm uppercase tracking-widest py-2">About</a>
+                <a href="https://www.instagram.com/ourtravelphotobook/?hl=en" target="_blank"
+                    class="text-sm uppercase tracking-widest py-2 text-gray-400">Instagram</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[100svh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images/IMG_2332.webp"
+                onerror="this.src='https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2500&auto=format&fit=crop'"
+                alt="Mountain Landscape" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 animate-fade-in">
+            <p class="text-xs md:text-sm text-gray-400 uppercase tracking-[0.4em] mb-6">Travel & Landscape Photography
+            </p>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-8 tracking-tight">
+                Chasing <span class="italic text-gray-500">Horizons</span>
+            </h1>
+            <a href="#gallery"
+                class="group inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white border-b border-white/30 pb-1 hover:border-white transition-all">
+                View Collections
+                <svg class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery Container -->
+    <section id="gallery" class="py-24 px-4 max-w-[1600px] mx-auto min-h-screen">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 px-2 border-b border-white/10 pb-6">
+            <div>
+                <h2 id="section-title"
+                    class="text-4xl md:text-7xl font-serif text-white mb-4 uppercase tracking-widest drop-shadow-lg">
+                    Pics of the Year</h2>
+                <p id="section-subtitle"
+                    class="text-sm md:text-base text-gray-400 font-light tracking-[0.2em] uppercase">Highlights from my
+                    recent journeys.</p>
+            </div>
+
+            <div class="mt-6 md:mt-0 flex gap-6" id="nav-tabs">
+                <button onclick="window.app.switchView('poy')" id="btn-poy"
+                    class="text-xs uppercase tracking-widest text-white font-bold border-b border-white pb-1 transition-all">Pics
+                    of the Year</button>
+                <button onclick="window.app.switchView('countries')" id="btn-countries"
+                    class="text-xs uppercase tracking-widest text-gray-500 hover:text-white border-b border-transparent hover:border-white/50 pb-1 transition-all">Countries</button>
+            </div>
+        </div>
+
+        <button id="back-btn" onclick="window.app.switchView('countries')"
+            class="hidden mb-8 flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Countries
+        </button>
+
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8" id="gallery-grid"></div>
+        <div class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="countries-grid">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-card py-24 mt-12 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <img src="images/IMG_4279.webp" alt="Arjun" class="w-24 h-24 rounded-full object-cover mx-auto mb-8">
+
+            <h2 class="text-4xl font-serif text-white mb-6">I'm Arjun.</h2>
+            <p class="text-lg text-gray-400 font-light leading-relaxed mb-8 max-w-2xl mx-auto">
+                I don't just take photos; I capture the silence of the mountains and the chaos of the cities.
+                My work focuses exclusively on the raw beauty of nature and the cultural tapestry of travel.
+                Based in Germany, wandering everywhere else.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <a href="https://www.instagram.com/ourtravelphotobook/?hl=en" target="_blank"
+                    class="text-sm text-white border border-white/20 px-8 py-4 hover:bg-white hover:text-black transition-all uppercase tracking-widest rounded-sm">
+                    Follow on Instagram
+                </a>
+                <a href="mailto:arjunayantika@gmail.com"
+                    class="text-sm text-white border border-white/20 px-8 py-4 hover:bg-white hover:text-black transition-all uppercase tracking-widest rounded-sm">
+                    Contact me via mail
+                </a>
+            </div>
+
+            <p class="text-xs text-gray-600 uppercase tracking-widest">&copy; 2024 Arjun Photography. All rights
+                reserved.</p>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox"
+        class="fixed inset-0 z-[60] bg-black/98 hidden flex justify-center items-center opacity-0 transition-opacity duration-300 backdrop-blur-sm">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white p-2 hover:text-gray-300 z-50">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="relative max-w-full max-h-full p-4">
+            <img id="lightbox-img" src="" class="max-h-[85vh] max-w-[95vw] object-contain shadow-2xl rounded-md" alt="">
+            <div class="mt-4 flex justify-between items-center max-w-[95vw] mx-auto">
+                <div>
+                    <h3 id="lightbox-title" class="text-white font-serif text-xl tracking-wide"></h3>
+                    <p id="lightbox-category" class="text-gray-500 text-xs uppercase tracking-widest mt-1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- DATA ---
+        const countriesList = [
+            "Germany", "South Korea", "Switzerland", "Netherlands", "Austria",
+            "Thailand", "Czech Republic", "France", "Singapore", "Turkey",
+            "India", "Belgium", "Poland"
+        ];
+
+        // IMPORTANT: Update these URLs to match your folder structure!
+        const allPhotos = [
+            // PICS OF THE YEAR
+            { id: 1, url: "poy/IMG_0126.webp", title: "", country: "", isPoy: true },
+            { id: 2, url: "poy/IMG_0491.webp", title: "", country: "", isPoy: true },
+            { id: 3, url: "poy/IMG_0673-2.webp", title: "", country: "", isPoy: true },
+            { id: 4, url: "poy/IMG_1068.webp", title: "", country: "", isPoy: true },
+            { id: 5, url: "poy/IMG_1787.webp", title: "", country: "", isPoy: true },
+            { id: 6, url: "poy/IMG_2193-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 7, url: "poy/IMG_2266-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 8, url: "poy/IMG_2332.webp", title: "", country: "", isPoy: true },
+            { id: 9, url: "poy/IMG_3151%20copy.webp", title: "", country: "", isPoy: true },
+            { id: 10, url: "poy/IMG_3428.webp", title: "", country: "", isPoy: true },
+            { id: 11, url: "poy/IMG_4827-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 12, url: "poy/IMG_4924.webp", title: "", country: "", isPoy: true },
+            { id: 13, url: "poy/IMG_4999.webp", title: "", country: "", isPoy: true },
+            { id: 14, url: "poy/IMG_6069.webp", title: "", country: "", isPoy: true },
+            { id: 15, url: "poy/IMG_7514-Enhanced-NR.webp", title: "", country: "", isPoy: true },
+            { id: 16, url: "poy/IMG_7542.webp", title: "", country: "", isPoy: true },
+            { id: 17, url: "poy/IMG_7864.webp", title: "", country: "", isPoy: true },
+            { id: 18, url: "poy/IMG_7908.webp", title: "", country: "", isPoy: true },
+            { id: 19, url: "poy/IMG_8098.webp", title: "", country: "", isPoy: true },
+            { id: 20, url: "poy/IMG_8417-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 21, url: "poy/IMG_9106.webp", title: "", country: "", isPoy: true },
+            { id: 22, url: "poy/IMG_9486-2-Enhanced-NR.webp", title: "", country: "", isPoy: true },
+            { id: 23, url: "poy/IMG_9638.webp", title: "", country: "", isPoy: true },
+            { id: 24, url: "poy/IMG_9980.webp", title: "", country: "", isPoy: true },
+
+            // GERMANY
+            { id: 101, url: "countries/germany/black-forest.jpg", title: "Black Forest", country: "Germany", isPoy: false },
+            { id: 102, url: "countries/germany/berlin.jpg", title: "Berlin Architecture", country: "Germany", isPoy: false },
+
+            // INDIA
+            { id: 401, url: "poy/countries/india/12.webp", title: "", country: "India", isPoy: false },
+            { id: 402, url: "poy/countries/india/18.webp", title: "", country: "India", isPoy: false },
+            { id: 403, url: "poy/countries/india/20170627150215_IMG_3551-2.webp", title: "", country: "India", isPoy: false },
+            { id: 404, url: "poy/countries/india/20170627151801_IMG_3573.webp", title: "", country: "India", isPoy: false },
+            { id: 405, url: "poy/countries/india/20180722151157_IMG_5289.webp", title: "", country: "India", isPoy: false },
+            { id: 406, url: "poy/countries/india/21.webp", title: "", country: "India", isPoy: false },
+            { id: 407, url: "poy/countries/india/22.webp", title: "", country: "India", isPoy: false },
+            { id: 408, url: "poy/countries/india/IMG_0197.webp", title: "", country: "India", isPoy: false },
+            { id: 409, url: "poy/countries/india/IMG_1047.webp", title: "", country: "India", isPoy: false },
+            { id: 410, url: "poy/countries/india/IMG_20170320_163541.webp", title: "", country: "India", isPoy: false },
+            { id: 411, url: "poy/countries/india/IMG_20170627_124047.webp", title: "", country: "India", isPoy: false },
+            { id: 412, url: "poy/countries/india/IMG_20180725_114246-01.webp", title: "", country: "India", isPoy: false },
+            { id: 413, url: "poy/countries/india/IMG_3808.webp", title: "", country: "India", isPoy: false },
+            { id: 414, url: "poy/countries/india/IMG_3827-2.webp", title: "", country: "India", isPoy: false },
+            { id: 415, url: "poy/countries/india/IMG_4085.webp", title: "", country: "India", isPoy: false },
+            { id: 416, url: "poy/countries/india/IMG_5026.webp", title: "", country: "India", isPoy: false },
+            { id: 417, url: "poy/countries/india/IMG_5217.webp", title: "", country: "India", isPoy: false },
+            { id: 418, url: "poy/countries/india/IMG_5335.webp", title: "", country: "India", isPoy: false },
+            { id: 419, url: "poy/countries/india/IMG_5384.webp", title: "", country: "India", isPoy: false },
+            { id: 420, url: "poy/countries/india/IMG_5415.webp", title: "", country: "India", isPoy: false },
+            { id: 421, url: "poy/countries/india/IMG_5418.webp", title: "", country: "India", isPoy: false },
+            { id: 422, url: "poy/countries/india/IMG_5458.webp", title: "", country: "India", isPoy: false },
+            { id: 423, url: "poy/countries/india/IMG_5637-01.webp", title: "", country: "India", isPoy: false },
+            { id: 424, url: "poy/countries/india/IMG_5675.webp", title: "", country: "India", isPoy: false },
+            { id: 425, url: "poy/countries/india/IMG_5713.webp", title: "", country: "India", isPoy: false },
+            { id: 426, url: "poy/countries/india/IMG_5761.webp", title: "", country: "India", isPoy: false },
+            { id: 427, url: "poy/countries/india/IMG_5956.webp", title: "", country: "India", isPoy: false },
+            { id: 428, url: "poy/countries/india/IMG_6905.webp", title: "", country: "India", isPoy: false },
+            { id: 429, url: "poy/countries/india/IMG_7152.webp", title: "", country: "India", isPoy: false },
+            { id: 430, url: "poy/countries/india/P1010026.webp", title: "", country: "India", isPoy: false },
+            { id: 431, url: "poy/countries/india/P1010032.webp", title: "", country: "India", isPoy: false },
+            { id: 432, url: "poy/countries/india/P1020061.webp", title: "", country: "India", isPoy: false },
+            { id: 433, url: "poy/countries/india/P1020274.webp", title: "", country: "India", isPoy: false },
+            { id: 434, url: "poy/countries/india/P1050024.webp", title: "", country: "India", isPoy: false },
+            { id: 435, url: "poy/countries/india/P1050026.webp", title: "", country: "India", isPoy: false },
+            { id: 436, url: "poy/countries/india/P1070029.webp", title: "", country: "India", isPoy: false },
+            { id: 437, url: "poy/countries/india/P1080227.webp", title: "", country: "India", isPoy: false },
+            { id: 438, url: "poy/countries/india/WP_20150726_18_22_55_Rich.webp", title: "", country: "India", isPoy: false },
+
+            // SINGAPORE
+            { id: 501, url: "poy/countries/singapore/IMG_6163.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 502, url: "poy/countries/singapore/IMG_6206.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 503, url: "poy/countries/singapore/IMG_6230.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 504, url: "poy/countries/singapore/IMG_6243.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 505, url: "poy/countries/singapore/IMG_6273.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 506, url: "poy/countries/singapore/IMG_6394-Enhanced-NR.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 507, url: "poy/countries/singapore/IMG_6403-Enhanced-NR.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 508, url: "poy/countries/singapore/IMG_6404-Enhanced-NR.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 509, url: "poy/countries/singapore/IMG_6616.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 510, url: "poy/countries/singapore/IMG_6667.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 511, url: "poy/countries/singapore/IMG_6692.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 512, url: "poy/countries/singapore/IMG_6894.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 513, url: "poy/countries/singapore/IMG_7033.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 514, url: "poy/countries/singapore/IMG_7047.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 515, url: "poy/countries/singapore/IMG_7509-Enhanced-NR.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 516, url: "poy/countries/singapore/IMG_7511-Enhanced-NR.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 517, url: "poy/countries/singapore/IMG_7518.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 518, url: "poy/countries/singapore/IMG_7521.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 519, url: "poy/countries/singapore/IMG_7561.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 520, url: "poy/countries/singapore/IMG_7568.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 521, url: "poy/countries/singapore/IMG_7571.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 522, url: "poy/countries/singapore/IMG_7839.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 523, url: "poy/countries/singapore/IMG_8376.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 524, url: "poy/countries/singapore/IMG_8418.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 525, url: "poy/countries/singapore/IMG_8725.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 526, url: "poy/countries/singapore/IMG_8748.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 527, url: "poy/countries/singapore/IMG_9478-Enhanced-NR.webp", title: "", country: "Singapore", isPoy: false },
+            { id: 528, url: "poy/countries/singapore/IMG_9486-2-Enhanced-NR.webp", title: "", country: "Singapore", isPoy: false },
+
+            // SOUTH KOREA
+            { id: 601, url: "poy/countries/south%20korea/IMG_1429-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 602, url: "poy/countries/south%20korea/IMG_1537-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 603, url: "poy/countries/south%20korea/IMG_1538-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 604, url: "poy/countries/south%20korea/IMG_1545-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 605, url: "poy/countries/south%20korea/IMG_1546-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 606, url: "poy/countries/south%20korea/IMG_1547-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 607, url: "poy/countries/south%20korea/IMG_1550-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 608, url: "poy/countries/south%20korea/IMG_1551-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 609, url: "poy/countries/south%20korea/IMG_1672-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 610, url: "poy/countries/south%20korea/IMG_1784-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 611, url: "poy/countries/south%20korea/IMG_1788-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 612, url: "poy/countries/south%20korea/IMG_1801-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 613, url: "poy/countries/south%20korea/IMG_1802-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 614, url: "poy/countries/south%20korea/IMG_1811-Edit-2%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 615, url: "poy/countries/south%20korea/IMG_1853-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 616, url: "poy/countries/south%20korea/IMG_1877-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 617, url: "poy/countries/south%20korea/IMG_1908-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 618, url: "poy/countries/south%20korea/IMG_1940.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 619, url: "poy/countries/south%20korea/IMG_1948.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 620, url: "poy/countries/south%20korea/IMG_1985.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 621, url: "poy/countries/south%20korea/IMG_1997-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 622, url: "poy/countries/south%20korea/IMG_2004-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 623, url: "poy/countries/south%20korea/IMG_2014-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 624, url: "poy/countries/south%20korea/IMG_2019-Edit-2%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 625, url: "poy/countries/south%20korea/IMG_2020-Edit-2%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 626, url: "poy/countries/south%20korea/IMG_2029-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 627, url: "poy/countries/south%20korea/IMG_2031-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 628, url: "poy/countries/south%20korea/IMG_2059-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 629, url: "poy/countries/south%20korea/IMG_2067-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 630, url: "poy/countries/south%20korea/IMG_2076-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 631, url: "poy/countries/south%20korea/IMG_2079-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 632, url: "poy/countries/south%20korea/IMG_2085-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 633, url: "poy/countries/south%20korea/IMG_2093-Edit-2%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 634, url: "poy/countries/south%20korea/IMG_2139-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 635, url: "poy/countries/south%20korea/IMG_2148-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 636, url: "poy/countries/south%20korea/IMG_2170-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 637, url: "poy/countries/south%20korea/IMG_2173.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 638, url: "poy/countries/south%20korea/IMG_2184-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 639, url: "poy/countries/south%20korea/IMG_2185-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 640, url: "poy/countries/south%20korea/IMG_2193-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 641, url: "poy/countries/south%20korea/IMG_2213-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 642, url: "poy/countries/south%20korea/IMG_2225-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 643, url: "poy/countries/south%20korea/IMG_2227-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 644, url: "poy/countries/south%20korea/IMG_2281-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 645, url: "poy/countries/south%20korea/IMG_2283-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 646, url: "poy/countries/south%20korea/IMG_2300-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 647, url: "poy/countries/south%20korea/IMG_2307-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 648, url: "poy/countries/south%20korea/IMG_2320-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 649, url: "poy/countries/south%20korea/IMG_2323-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 650, url: "poy/countries/south%20korea/IMG_2355-Enhanced-NR-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 651, url: "poy/countries/south%20korea/IMG_2364-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 652, url: "poy/countries/south%20korea/IMG_2389-Edit-2%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 653, url: "poy/countries/south%20korea/IMG_2419-Edit-2%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 654, url: "poy/countries/south%20korea/IMG_2449-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 655, url: "poy/countries/south%20korea/IMG_2461-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 656, url: "poy/countries/south%20korea/IMG_2582-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 657, url: "poy/countries/south%20korea/IMG_2682-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 658, url: "poy/countries/south%20korea/IMG_2728-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 659, url: "poy/countries/south%20korea/IMG_2757-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 660, url: "poy/countries/south%20korea/IMG_2788-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 661, url: "poy/countries/south%20korea/IMG_2871-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 662, url: "poy/countries/south%20korea/IMG_2881.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 663, url: "poy/countries/south%20korea/IMG_2902-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 664, url: "poy/countries/south%20korea/IMG_2906-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 665, url: "poy/countries/south%20korea/IMG_2945-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 666, url: "poy/countries/south%20korea/IMG_2964-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 667, url: "poy/countries/south%20korea/IMG_3027-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 668, url: "poy/countries/south%20korea/IMG_3037-2-Enhanced-NR-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 669, url: "poy/countries/south%20korea/IMG_3183-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 670, url: "poy/countries/south%20korea/IMG_3307-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 671, url: "poy/countries/south%20korea/IMG_3424-Edit.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 672, url: "poy/countries/south%20korea/IMG_3440-Edit-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 673, url: "poy/countries/south%20korea/IMG_3488-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 674, url: "poy/countries/south%20korea/IMG_3508-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 675, url: "poy/countries/south%20korea/IMG_35831-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 676, url: "poy/countries/south%20korea/IMG_3662-Edit%20%281%29.webp", title: "", country: "South Korea", isPoy: false },
+            { id: 677, url: "poy/countries/india/IMG_3866.webp", title: "", country: "India", isPoy: false },
+            { id: 678, url: "poy/countries/india/25%20%281%29.webp", title: "", country: "India", isPoy: false },
+            { id: 679, url: "poy/countries/india/IMG_1070.webp", title: "", country: "India", isPoy: false },
+            { id: 680, url: "poy/countries/india/WP_20150813_16_58_43_Rich%20%281%29.webp", title: "", country: "India", isPoy: false },
+            { id: 681, url: "poy/countries/india/44%20%281%29.webp", title: "", country: "India", isPoy: false },
+            { id: 682, url: "poy/countries/india/IMG_4418.webp", title: "", country: "India", isPoy: false },
+            { id: 683, url: "poy/countries/india/IMG_3888.webp", title: "", country: "India", isPoy: false },
+            { id: 684, url: "poy/countries/india/14.webp", title: "", country: "India", isPoy: false },
+            { id: 685, url: "poy/countries/india/20180722134851_IMG_5226.webp", title: "", country: "India", isPoy: false },
+            { id: 686, url: "poy/countries/india/42%20%281%29.webp", title: "", country: "India", isPoy: false },
+            { id: 687, url: "poy/countries/india/WP_20150813_17_05_13_Rich.webp", title: "", country: "India", isPoy: false },
+            { id: 688, url: "poy/countries/india/IMG_20170319_155315.webp", title: "", country: "India", isPoy: false },
+            { id: 689, url: "poy/countries/india/IMG_5219.webp", title: "", country: "India", isPoy: false },
+            { id: 690, url: "poy/countries/india/IMG_3861.webp", title: "", country: "India", isPoy: false },
+            { id: 691, url: "poy/countries/india/IMG_4131.webp", title: "", country: "India", isPoy: false },
+            { id: 692, url: "poy/countries/india/IMG_20180722_163652__01.webp", title: "", country: "India", isPoy: false },
+            { id: 693, url: "poy/countries/india/IMG_3912.webp", title: "", country: "India", isPoy: false },
+            { id: 694, url: "poy/countries/india/IMG_0410.webp", title: "", country: "India", isPoy: false },
+            { id: 695, url: "poy/countries/india/IMG_4408-01-01.webp", title: "", country: "India", isPoy: false },
+            { id: 696, url: "poy/countries/india/IMG_1057.webp", title: "", country: "India", isPoy: false },
+            { id: 697, url: "poy/countries/india/WP_20150812_08_07_45_Rich%20%281%29.webp", title: "", country: "India", isPoy: false },
+            { id: 698, url: "poy/countries/india/20170627123131_IMG_3477.webp", title: "", country: "India", isPoy: false },
+            { id: 699, url: "poy/countries/india/IMG_3771.webp", title: "", country: "India", isPoy: false },
+            { id: 700, url: "poy/countries/india/IMG_3819.webp", title: "", country: "India", isPoy: false },
+            { id: 701, url: "poy/countries/india/WP_20160121_15_53_28_Rich.webp", title: "", country: "India", isPoy: false },
+            { id: 702, url: "poy/countries/india/51.webp", title: "", country: "India", isPoy: false },
+            { id: 703, url: "poy/countries/india/IMG_1018.webp", title: "", country: "India", isPoy: false },
+            { id: 704, url: "poy/countries/india/IMG_20180201_065905-01.webp", title: "", country: "India", isPoy: false },
+            { id: 705, url: "poy/countries/india/WP_20150815_15_49_48_Rich%20%281%29.webp", title: "", country: "India", isPoy: false },
+            { id: 706, url: "poy/countries/india/IMG_20171019_165610.webp", title: "", country: "India", isPoy: false },
+            { id: 707, url: "poy/countries/india/IMG_5407.webp", title: "", country: "India", isPoy: false },
+            { id: 708, url: "poy/countries/india/WP_20160130_16_04_34_Rich.webp", title: "", country: "India", isPoy: false },
+            { id: 709, url: "poy/countries/india/IMG_3864.webp", title: "", country: "India", isPoy: false },
+            { id: 710, url: "poy/countries/india/40.webp", title: "", country: "India", isPoy: false },
+            { id: 711, url: "poy/countries/india/IMG_5508.webp", title: "", country: "India", isPoy: false },
+            { id: 712, url: "poy/countries/india/IMG_0439.webp", title: "", country: "India", isPoy: false },
+            { id: 713, url: "poy/countries/india/P1020152%20%281%29.webp", title: "", country: "India", isPoy: false },
+            { id: 714, url: "poy/countries/india/IMG_20170627_130137.webp", title: "", country: "India", isPoy: false },
+            { id: 715, url: "poy/countries/india/IMG_5765.webp", title: "", country: "India", isPoy: false },
+            { id: 716, url: "poy/countries/india/IMG_20170316_140801.webp", title: "", country: "India", isPoy: false },
+            { id: 717, url: "poy/countries/india/IMG_20170123_151319.webp", title: "", country: "India", isPoy: false },
+            { id: 718, url: "images/IMG_2332.webp", title: "", country: "", isPoy: false },
+            { id: 719, url: "images/IMG_4279.webp", title: "", country: "", isPoy: false },
+            { id: 723, url: "poy/countries/france/IMG_1621.webp", title: "", country: "France", isPoy: false },
+            { id: 724, url: "poy/countries/france/IMG_6291-Enhanced-NR-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 725, url: "poy/countries/france/IMG_6462-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 726, url: "poy/countries/france/IMG_6166.webp", title: "", country: "France", isPoy: false },
+            { id: 727, url: "poy/countries/france/IMG_6328-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 728, url: "poy/countries/france/IMG_5956-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 729, url: "poy/countries/france/IMG_6164-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 730, url: "poy/countries/france/IMG_6493-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 731, url: "poy/countries/france/IMG_6150.webp", title: "", country: "France", isPoy: false },
+            { id: 732, url: "poy/countries/france/IMG_6193.webp", title: "", country: "France", isPoy: false },
+            { id: 733, url: "poy/countries/france/IMG_6522-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 734, url: "poy/countries/france/IMG_6579-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 735, url: "poy/countries/france/IMG_6667-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 736, url: "poy/countries/france/IMG_5760-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 737, url: "poy/countries/france/IMG_6464.webp", title: "", country: "France", isPoy: false },
+            { id: 738, url: "poy/countries/france/IMG_5987-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 739, url: "poy/countries/france/IMG_5691.webp", title: "", country: "France", isPoy: false },
+            { id: 740, url: "poy/countries/france/IMG_5488-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 741, url: "poy/countries/france/IMG_1631.webp", title: "", country: "France", isPoy: false },
+            { id: 742, url: "poy/countries/france/IMG_5811-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 743, url: "poy/countries/france/IMG_6509-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 744, url: "poy/countries/france/IMG_6165-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 745, url: "poy/countries/france/IMG_6208.webp", title: "", country: "France", isPoy: false },
+            { id: 746, url: "poy/countries/france/IMG_6199-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 747, url: "poy/countries/france/IMG_5716-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 748, url: "poy/countries/france/IMG_5948-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 749, url: "poy/countries/france/IMG_6295-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 750, url: "poy/countries/france/IMG_6494-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 751, url: "poy/countries/france/IMG_5803-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 752, url: "poy/countries/france/IMG_6480-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 753, url: "poy/countries/france/IMG_5789-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 754, url: "poy/countries/france/IMG_6096-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 755, url: "poy/countries/france/IMG_5531-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 756, url: "poy/countries/france/IMG_6210.webp", title: "", country: "France", isPoy: false },
+            { id: 757, url: "poy/countries/france/IMG_5611.webp", title: "", country: "France", isPoy: false },
+            { id: 758, url: "poy/countries/france/IMG_5538.webp", title: "", country: "France", isPoy: false },
+            { id: 759, url: "poy/countries/france/IMG_6261-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 760, url: "poy/countries/france/IMG_6400.webp", title: "", country: "France", isPoy: false },
+            { id: 761, url: "poy/countries/france/IMG_5996-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 762, url: "poy/countries/france/IMG_6447-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 763, url: "poy/countries/france/IMG_6501-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 764, url: "poy/countries/france/IMG_6453-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 765, url: "poy/countries/france/IMG_5856-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 766, url: "poy/countries/france/IMG_6509-Edit%20%281%29.webp", title: "", country: "France", isPoy: false },
+            { id: 767, url: "poy/countries/france/IMG_6534-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 768, url: "poy/countries/france/IMG_6466-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 769, url: "poy/countries/france/IMG_6520-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 770, url: "poy/countries/france/IMG_5842-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 771, url: "poy/countries/france/IMG_6013-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 772, url: "poy/countries/france/IMG_6211.webp", title: "", country: "France", isPoy: false },
+            { id: 773, url: "poy/countries/france/IMG_6138.webp", title: "", country: "France", isPoy: false },
+            { id: 774, url: "poy/countries/france/IMG_5835-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 775, url: "poy/countries/france/IMG_6180.webp", title: "", country: "France", isPoy: false },
+            { id: 776, url: "poy/countries/france/IMG_5845-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 777, url: "poy/countries/france/IMG_1658.webp", title: "", country: "France", isPoy: false },
+            { id: 778, url: "poy/countries/france/IMG_6298.webp", title: "", country: "France", isPoy: false },
+            { id: 779, url: "poy/countries/france/IMG_5780-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 780, url: "poy/countries/france/IMG_5699.webp", title: "", country: "France", isPoy: false },
+            { id: 781, url: "poy/countries/france/IMG_5974-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 782, url: "poy/countries/france/IMG_5832-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 783, url: "poy/countries/france/IMG_9075-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 784, url: "poy/countries/france/IMG_6191.webp", title: "", country: "France", isPoy: false },
+            { id: 785, url: "poy/countries/france/IMG_6144.webp", title: "", country: "France", isPoy: false },
+            { id: 786, url: "poy/countries/france/IMG_6167-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 787, url: "poy/countries/france/IMG_5955-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 788, url: "poy/countries/france/IMG_6050-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 789, url: "poy/countries/france/IMG_5568.webp", title: "", country: "France", isPoy: false },
+            { id: 790, url: "poy/countries/france/IMG_6186.webp", title: "", country: "France", isPoy: false },
+            { id: 791, url: "poy/countries/france/IMG_5541-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 792, url: "poy/countries/france/IMG_6470.webp", title: "", country: "France", isPoy: false },
+            { id: 793, url: "poy/IMG_6326.webp", title: "", country: "", isPoy: true },
+            { id: 794, url: "poy/IMG_9505.webp", title: "", country: "", isPoy: true },
+            { id: 795, url: "poy/IMG_1547-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 796, url: "poy/IMG_4774-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 797, url: "poy/IMG_3145.webp", title: "", country: "", isPoy: true },
+            { id: 798, url: "poy/IMG_7656-Enhanced-NR.webp", title: "", country: "", isPoy: true },
+            { id: 799, url: "poy/IMG_5051-Enhanced-NR-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 800, url: "poy/IMG_8860.webp", title: "", country: "", isPoy: true },
+            { id: 801, url: "poy/IMG_4783-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 802, url: "poy/IMG_9870.webp", title: "", country: "", isPoy: true },
+            { id: 803, url: "poy/IMG_3078%20%281%29.webp", title: "", country: "", isPoy: true },
+            { id: 804, url: "poy/IMG_1390.webp", title: "", country: "", isPoy: true },
+            { id: 805, url: "poy/IMG_3138.webp", title: "", country: "", isPoy: true },
+            { id: 806, url: "poy/IMG_5488-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 807, url: "poy/IMG_4070-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 808, url: "poy/IMG_0942.webp", title: "", country: "", isPoy: true },
+            { id: 809, url: "poy/IMG_9601-Recovered-2.webp", title: "", country: "", isPoy: true },
+            { id: 810, url: "poy/IMG_5326.webp", title: "", country: "", isPoy: true },
+            { id: 811, url: "poy/IMG_9618-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 812, url: "poy/IMG_1833-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 813, url: "poy/IMG_5170.webp", title: "", country: "", isPoy: true },
+            { id: 814, url: "poy/IMG_3440-Edit-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 815, url: "poy/IMG_1889-2.webp", title: "", country: "", isPoy: true },
+            { id: 816, url: "poy/IMG_9695-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 817, url: "poy/IMG_4648.webp", title: "", country: "", isPoy: true },
+            { id: 818, url: "poy/IMG_8057.webp", title: "", country: "", isPoy: true },
+            { id: 819, url: "poy/IMG_5495-Edit-2.webp", title: "", country: "", isPoy: true },
+            { id: 820, url: "poy/IMG_3442.webp", title: "", country: "", isPoy: true },
+            { id: 821, url: "poy/IMG_4057.webp", title: "", country: "", isPoy: true },
+            { id: 822, url: "poy/IMG_0741.webp", title: "", country: "", isPoy: true },
+            { id: 823, url: "poy/118045983_3133121460075196_1937781288304359875_n.webp", title: "", country: "", isPoy: true },
+            { id: 824, url: "poy/IMG_9628.webp", title: "", country: "", isPoy: true },
+            { id: 825, url: "poy/IMG_8053-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 826, url: "poy/118225840_3133121293408546_4676880743329887406_n.webp", title: "", country: "", isPoy: true },
+            { id: 827, url: "poy/IMG_5379-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 828, url: "poy/IMG_3313-2.webp", title: "", country: "", isPoy: true },
+            { id: 829, url: "poy/IMG_1203.webp", title: "", country: "", isPoy: true },
+            { id: 830, url: "poy/IMG_4691-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 831, url: "poy/IMG_6616.webp", title: "", country: "", isPoy: true },
+            { id: 832, url: "poy/IMG_3302-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 833, url: "poy/IMG_8212.webp", title: "", country: "", isPoy: true },
+            { id: 834, url: "poy/IMG_3167.webp", title: "", country: "", isPoy: true },
+            { id: 835, url: "poy/IMG_1274-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 836, url: "poy/IMG_9182.webp", title: "", country: "", isPoy: true },
+            { id: 837, url: "poy/IMG_5726-Enhanced-NR-Edit%20%281%29.webp", title: "", country: "", isPoy: true },
+            { id: 838, url: "poy/IMG_9382-Enhanced-NR.webp", title: "", country: "", isPoy: true },
+            { id: 839, url: "poy/IMG_0382-Edit%20%281%29.webp", title: "", country: "", isPoy: true },
+            { id: 840, url: "poy/IMG_3037-2-Enhanced-NR-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 841, url: "poy/IMG_5569.webp", title: "", country: "", isPoy: true },
+            { id: 842, url: "poy/IMG_1140.webp", title: "", country: "", isPoy: true },
+            { id: 843, url: "poy/IMG_5029-Edit.webp", title: "", country: "", isPoy: true },
+            { id: 844, url: "poy/IMG_8448-Edit-2.webp", title: "", country: "", isPoy: true },
+            { id: 845, url: "poy/IMG_5895.webp", title: "", country: "", isPoy: true },
+            { id: 846, url: "poy/IMG_1634.webp", title: "", country: "", isPoy: true },
+            { id: 847, url: "poy/IMG_3444-Edit-2-2%20%281%29.webp", title: "", country: "", isPoy: true },
+            { id: 848, url: "poy/IMG_1570.webp", title: "", country: "", isPoy: true },
+            { id: 849, url: "poy/IMG_9101.webp", title: "", country: "", isPoy: true },
+            { id: 850, url: "poy/IMG_9785.webp", title: "", country: "", isPoy: true },
+            { id: 851, url: "poy/countries/france/IMG_1660.webp", title: "", country: "France", isPoy: false },
+            { id: 852, url: "poy/countries/france/IMG_5992-Edit.webp", title: "", country: "France", isPoy: false },
+            { id: 853, url: "poy/countries/france/IMG_5986-Edit.webp", title: "", country: "France", isPoy: false }
+        ];
+
+        // --- APP LOGIC ---
+        const galleryGrid = document.getElementById('gallery-grid');
+        const countriesGrid = document.getElementById('countries-grid');
+        const sectionTitle = document.getElementById('section-title');
+        const sectionSubtitle = document.getElementById('section-subtitle');
+        const backBtn = document.getElementById('back-btn');
+        const btnPoy = document.getElementById('btn-poy');
+        const btnCountries = document.getElementById('btn-countries');
+        const lightbox = document.getElementById('lightbox');
+
+        window.app = {
+            switchView: (viewName, countryFilter = null) => {
+                // UI Resets
+                galleryGrid.classList.add('hidden');
+                countriesGrid.classList.add('hidden');
+                backBtn.classList.add('hidden');
+
+                btnPoy.className = "text-xs uppercase tracking-widest text-gray-500 hover:text-white border-b border-transparent hover:border-white/50 pb-1 transition-all cursor-pointer";
+                btnCountries.className = "text-xs uppercase tracking-widest text-gray-500 hover:text-white border-b border-transparent hover:border-white/50 pb-1 transition-all cursor-pointer";
+
+                if (viewName === 'poy') {
+                    galleryGrid.classList.remove('hidden');
+                    btnPoy.className = "text-xs uppercase tracking-widest text-white font-bold border-b border-white pb-1 transition-all cursor-pointer";
+                    sectionTitle.textContent = "Pics of the Year";
+                    sectionSubtitle.textContent = "Highlights from my recent journeys.";
+                    renderPhotos(allPhotos.filter(p => p.isPoy));
+
+                } else if (viewName === 'countries') {
+                    countriesGrid.classList.remove('hidden');
+                    btnCountries.className = "text-xs uppercase tracking-widest text-white font-bold border-b border-white pb-1 transition-all cursor-pointer";
+                    sectionTitle.textContent = "Destinations";
+                    sectionSubtitle.textContent = "Select a country to view collection.";
+                    renderCountryCards();
+
+                } else if (viewName === 'single-country') {
+                    galleryGrid.classList.remove('hidden');
+                    backBtn.classList.remove('hidden');
+                    btnCountries.className = "text-xs uppercase tracking-widest text-white font-bold border-b border-white pb-1 transition-all cursor-pointer";
+                    sectionTitle.textContent = countryFilter;
+                    sectionSubtitle.textContent = `Explorations in ${countryFilter}`;
+
+                    const countryPhotos = allPhotos.filter(p => p.country === countryFilter);
+                    // Shuffle the photos
+                    const shuffledPhotos = shuffleArray([...countryPhotos]);
+                    renderPhotos(shuffledPhotos);
+                }
+            },
+
+            openLightbox: (url, title, cat) => {
+                const img = document.getElementById('lightbox-img');
+                document.getElementById('lightbox-title').textContent = title;
+                document.getElementById('lightbox-category').textContent = cat;
+                img.src = url;
+                img.onerror = function () {
+                    this.src = 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1200';
+                    alert("Image not found: " + url + ". Please check your folder structure.");
+                };
+
+                lightbox.classList.remove('hidden');
+                document.body.classList.add('no-scroll');
+                setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+            }
+        };
+
+        // Fisher-Yates Shuffle
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function renderPhotos(items) {
+            galleryGrid.innerHTML = '';
+            if (items.length === 0) {
+                galleryGrid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500">No photos found in this category yet.</div>`;
+                return;
+            }
+
+            items.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'relative break-inside-avoid mb-8 group';
+
+                const imgHtml = `
+                    <img 
+                        src="${item.url}" 
+                        alt="${item.title}" 
+                        loading="lazy"
+                        class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer rounded-lg"
+                        onclick="window.app.openLightbox('${item.url}', '${item.title}', '${item.country}')"
+                        onerror="this.src='https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=1000&auto=format&fit=crop'"
+                    >`;
+
+                div.innerHTML = `
+                    <div class="relative overflow-hidden bg-gray-900 rounded-lg">
+                        ${imgHtml}
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 pointer-events-none rounded-lg">
+                            <p class="text-white font-serif text-xl transform translate-y-4 group-hover:translate-y-0 transition-transform">${item.title}</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest mt-1 transform translate-y-4 group-hover:translate-y-0 transition-transform delay-75">${item.country}</p>
+                        </div>
+                    </div>
+                `;
+                galleryGrid.appendChild(div);
+            });
+        }
+
+        function renderCountryCards() {
+            countriesGrid.innerHTML = '';
+            countriesList.forEach(country => {
+                const coverPhoto = allPhotos.find(p => p.country === country);
+                const bgUrl = coverPhoto ? coverPhoto.url : 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800';
+
+                const div = document.createElement('div');
+                div.className = 'group relative h-64 cursor-pointer overflow-hidden rounded-lg';
+                div.onclick = () => window.app.switchView('single-country', country);
+                div.innerHTML = `
+                    <img src="${bgUrl}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800'">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-2xl md:text-4xl font-serif text-white uppercase tracking-[0.2em] group-hover:scale-105 transition-transform duration-500 text-center px-4 drop-shadow-2xl">${country}</h3>
+                    </div>
+                `;
+                countriesGrid.appendChild(div);
+            });
+        }
+
+        // Close handlers
+        document.getElementById('lightbox-close').addEventListener('click', () => {
+            lightbox.classList.add('opacity-0');
+            document.body.classList.remove('no-scroll');
+            setTimeout(() => lightbox.classList.add('hidden'), 300);
+        });
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) document.getElementById('lightbox-close').click(); });
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // Init
+        window.app.switchView('poy');
+    </script>
+</body>
+
+</html>
