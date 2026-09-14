@@ -10,6 +10,8 @@
 
 The public catalogue excludes missing photos automatically and contains only current image URLs. `images/` photos are available for the hero/portrait but are not duplicated into the selected-work gallery. Every image directly under `poy/` belongs to selected work; feature ordering is optional.
 
+Country galleries sort by each photo's randomly assigned numeric ID, so the photographs are shuffled rather than following their original camera filenames. The order stays consistent across visits, mobile Load more batches, and the full-screen viewer. New imports receive random IDs and join at random positions. Homepage highlight ordering and destination cover selections remain separately controlled.
+
 ## Hosting
 
 Upload the **contents of `dist/`** to a static host. Do not deploy the repository root, `.photo-originals/`, `output/`, or internal registry. The builder copies only explicitly referenced photographs and a small allowlist of application files. All URLs are relative, so deployment in a subdirectory is supported.

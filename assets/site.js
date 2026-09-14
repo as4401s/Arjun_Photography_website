@@ -83,6 +83,8 @@
     }
 
     visiblePhotos = catalogue.photos.filter((photo) => view === 'country' ? photo.country === country : photo.selected);
+    // IDs are assigned randomly at import, giving each country a stable shuffle.
+    if (view === 'country') visiblePhotos.sort((a, b) => a.id - b.id);
     $('gallery-title').textContent = view === 'country' ? country || 'Destination' : 'Highlights.';
     $('gallery-description').textContent = view === 'country' ? `A collection of moments from ${country || 'the journey'}.` : 'A few moments I keep coming back to.';
     $('collection-count').textContent = `${visiblePhotos.length} photographs`;
