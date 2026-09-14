@@ -40,6 +40,12 @@ After visual changes, check desktop and mobile widths, selected work, destinatio
 - Set absolute Open Graph image/canonical URLs when the final public domain is known.
 - Keep an independent backup of the original photo library.
 
+## Netlify publication
+
+The root `netlify.toml` runs the builder and verifier, then publishes only `dist/`. Netlify installs `requirements.txt` with Python 3.14 before building. A push to the linked production branch publishes the generated pages, logo, responsive images, and browser/Apple icons together. Do not set the publish directory to the repository root: `index.html` is a source template, and `destinations.html` and PNG icons only exist after building.
+
+`SITE_URL` in `netlify.toml` sets canonical and social preview URLs for Netlify. Update it if the public domain changes. Other hosts use the URL in `data/site.json` unless they also set `SITE_URL`. For a manual Netlify upload, build locally and upload `dist/`.
+
 ## GitHub publication
 
 The repository includes `.github/workflows/deploy.yml`. After GitHub Pages is set to **GitHub Actions** in repository Settings → Pages, every push to `main` verifies and publishes the generated `dist/` directory. The workflow uses immutable action revisions and limits publication permissions to the deploy job. Process new images locally and commit the processed files, derivatives, and both generated JSON files before pushing. Original backups are never uploaded.

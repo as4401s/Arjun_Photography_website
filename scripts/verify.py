@@ -23,6 +23,15 @@ def verify():
     assert actual_countries == catalogue['countries'], 'Country folders changed: run scripts/process_images.py'
     count = 0
     public_files = {'index.html', 'destinations.html', 'assets/site.css', 'assets/site.js', 'data/photos.json', '_headers', '.nojekyll'}
+    for page in ('index.html', 'destinations.html'):
+        markup = (ROOT / 'dist' / page).read_text()
+        assert 'data-photo=' not in markup and 'data-icon=' not in markup, f'Unbuilt template: {page}'
+        for size in (32, 180):
+            assert f'href="assets/icons/{size}/{catalogue["favicon"]}.png"' in markup, f'Missing icon link: {page}'
+    homepage = (ROOT / 'dist/index.html').read_text()
+    for role in ('hero', 'portrait', 'logo'):
+        photo = next(p for p in photos if p['id'] == catalogue[role])
+        assert f'src="{photo["src"]}"' in homepage, f'Missing {role} image in homepage'
     for photo in photos:
         assert str(photo['id']) in registry
         for src in [photo['src'], *(v['src'] for v in photo['variants'])]:

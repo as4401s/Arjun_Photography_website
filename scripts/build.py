@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 from pathlib import Path
 import shutil
@@ -45,6 +46,9 @@ def build(root: Path = ROOT) -> Path:
                   f'<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/180/{favicon["id"]}.png">')
     template = template.replace('</head>', icon_links + '\n</head>')
     config = json.loads((root / 'data/site.json').read_text())
+    # Hosting-specific metadata without changing the GitHub Pages configuration.
+    if os.environ.get('SITE_URL'):
+        config['url'] = os.environ['SITE_URL'].rstrip('/') + '/'
     if config.get('url'):
         from urllib.parse import urljoin
         url = config['url']

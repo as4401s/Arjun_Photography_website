@@ -1,0 +1,7 @@
+[build]
+  command = "python3 scripts/build.py && python3 scripts/verify.py"
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.14"
+  SITE_URL = "https://ourtravelphotobook.netlify.app/"
