@@ -1753,6 +1753,951 @@
       "alt": "Austria — photograph by Arjun Sarkar"
     },
     {
+      "id": 226271,
+      "src": "poy/countries/belgium/226271.webp",
+      "width": 1540,
+      "height": 1924,
+      "revision": "44f9594ec0fd",
+      "variants": [
+        {
+          "src": "assets/photos/480/226271.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/226271.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 903960,
+      "src": "poy/countries/belgium/903960.webp",
+      "width": 1924,
+      "height": 1924,
+      "revision": "0542e3a57d0c",
+      "variants": [
+        {
+          "src": "assets/photos/480/903960.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/903960.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 665752,
+      "src": "poy/countries/belgium/665752.webp",
+      "width": 1924,
+      "height": 1924,
+      "revision": "3fdb3dc4f8b0",
+      "variants": [
+        {
+          "src": "assets/photos/480/665752.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/665752.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 194159,
+      "src": "poy/countries/belgium/194159.webp",
+      "width": 1924,
+      "height": 1924,
+      "revision": "dfb1225a5d94",
+      "variants": [
+        {
+          "src": "assets/photos/480/194159.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/194159.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 224679,
+      "src": "poy/countries/belgium/224679.webp",
+      "width": 1540,
+      "height": 1924,
+      "revision": "28eb2453942d",
+      "variants": [
+        {
+          "src": "assets/photos/480/224679.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/224679.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 179490,
+      "src": "poy/countries/belgium/179490.webp",
+      "width": 1540,
+      "height": 1924,
+      "revision": "3e7a55bc5ea6",
+      "variants": [
+        {
+          "src": "assets/photos/480/179490.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/179490.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 571026,
+      "src": "poy/countries/belgium/571026.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "5823f14cbad5",
+      "variants": [
+        {
+          "src": "assets/photos/480/571026.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/571026.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 296954,
+      "src": "poy/countries/belgium/296954.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "d9f82cd6d50e",
+      "variants": [
+        {
+          "src": "assets/photos/480/296954.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/296954.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 259954,
+      "src": "poy/countries/belgium/259954.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "d871eab849e3",
+      "variants": [
+        {
+          "src": "assets/photos/480/259954.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/259954.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 418134,
+      "src": "poy/countries/belgium/418134.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "075a8f7ce8d9",
+      "variants": [
+        {
+          "src": "assets/photos/480/418134.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/418134.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 783416,
+      "src": "poy/countries/belgium/783416.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "b01291b718f8",
+      "variants": [
+        {
+          "src": "assets/photos/480/783416.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/783416.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 135406,
+      "src": "poy/countries/belgium/135406.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "c49aeb1867cc",
+      "variants": [
+        {
+          "src": "assets/photos/480/135406.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/135406.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 806815,
+      "src": "poy/countries/belgium/806815.webp",
+      "width": 2404,
+      "height": 1924,
+      "revision": "509559775ca0",
+      "variants": [
+        {
+          "src": "assets/photos/480/806815.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/806815.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 651887,
+      "src": "poy/countries/belgium/651887.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "9ffd946eba1d",
+      "variants": [
+        {
+          "src": "assets/photos/480/651887.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/651887.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 666208,
+      "src": "poy/countries/belgium/666208.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "604b85c765b2",
+      "variants": [
+        {
+          "src": "assets/photos/480/666208.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/666208.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 710422,
+      "src": "poy/countries/belgium/710422.webp",
+      "width": 2406,
+      "height": 1604,
+      "revision": "02de9f665c0f",
+      "variants": [
+        {
+          "src": "assets/photos/480/710422.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/710422.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 865227,
+      "src": "poy/countries/belgium/865227.webp",
+      "width": 2301,
+      "height": 1841,
+      "revision": "b8bfb5c113b2",
+      "variants": [
+        {
+          "src": "assets/photos/480/865227.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/865227.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 616914,
+      "src": "poy/countries/belgium/616914.webp",
+      "width": 2287,
+      "height": 1829,
+      "revision": "5cd7bb04ebb5",
+      "variants": [
+        {
+          "src": "assets/photos/480/616914.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/616914.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 232747,
+      "src": "poy/countries/belgium/232747.webp",
+      "width": 2290,
+      "height": 1832,
+      "revision": "d6bde8336f16",
+      "variants": [
+        {
+          "src": "assets/photos/480/232747.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/232747.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 303262,
+      "src": "poy/countries/belgium/303262.webp",
+      "width": 2406,
+      "height": 1604,
+      "revision": "c17adcbfca65",
+      "variants": [
+        {
+          "src": "assets/photos/480/303262.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/303262.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 528650,
+      "src": "poy/countries/belgium/528650.webp",
+      "width": 2404,
+      "height": 1924,
+      "revision": "5a26a92e1347",
+      "variants": [
+        {
+          "src": "assets/photos/480/528650.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/528650.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 811813,
+      "src": "poy/countries/belgium/811813.webp",
+      "width": 1924,
+      "height": 1924,
+      "revision": "dc78811c6186",
+      "variants": [
+        {
+          "src": "assets/photos/480/811813.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/811813.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 141633,
+      "src": "poy/countries/belgium/141633.webp",
+      "width": 2164,
+      "height": 1924,
+      "revision": "83087d928fcf",
+      "variants": [
+        {
+          "src": "assets/photos/480/141633.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/141633.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 806993,
+      "src": "poy/countries/belgium/806993.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "95e61c2b9bab",
+      "variants": [
+        {
+          "src": "assets/photos/480/806993.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/806993.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 159672,
+      "src": "poy/countries/belgium/159672.webp",
+      "width": 1924,
+      "height": 1924,
+      "revision": "995be280cce2",
+      "variants": [
+        {
+          "src": "assets/photos/480/159672.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/159672.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 727529,
+      "src": "poy/countries/belgium/727529.webp",
+      "width": 2404,
+      "height": 1924,
+      "revision": "6fd4855a5a21",
+      "variants": [
+        {
+          "src": "assets/photos/480/727529.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/727529.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 336168,
+      "src": "poy/countries/belgium/336168.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "8de08a23ae0f",
+      "variants": [
+        {
+          "src": "assets/photos/480/336168.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/336168.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 15075,
+      "src": "poy/countries/belgium/15075.webp",
+      "width": 1540,
+      "height": 1924,
+      "revision": "02f2de377431",
+      "variants": [
+        {
+          "src": "assets/photos/480/15075.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/15075.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 320560,
+      "src": "poy/countries/belgium/320560.webp",
+      "width": 1924,
+      "height": 1924,
+      "revision": "8ba9e8981e69",
+      "variants": [
+        {
+          "src": "assets/photos/480/320560.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/320560.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 933095,
+      "src": "poy/countries/belgium/933095.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "cea6f0708232",
+      "variants": [
+        {
+          "src": "assets/photos/480/933095.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/933095.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 166504,
+      "src": "poy/countries/belgium/166504.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "af3c4959ed62",
+      "variants": [
+        {
+          "src": "assets/photos/480/166504.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/166504.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 936110,
+      "src": "poy/countries/belgium/936110.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "6f3e0631cce6",
+      "variants": [
+        {
+          "src": "assets/photos/480/936110.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/936110.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 952096,
+      "src": "poy/countries/belgium/952096.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "8ba61e14c26a",
+      "variants": [
+        {
+          "src": "assets/photos/480/952096.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/952096.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 358961,
+      "src": "poy/countries/belgium/358961.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "50c5dd72f126",
+      "variants": [
+        {
+          "src": "assets/photos/480/358961.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/358961.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 66204,
+      "src": "poy/countries/belgium/66204.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "e0b201b9a635",
+      "variants": [
+        {
+          "src": "assets/photos/480/66204.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/66204.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 109651,
+      "src": "poy/countries/belgium/109651.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "9e0f736a2a61",
+      "variants": [
+        {
+          "src": "assets/photos/480/109651.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/109651.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 58614,
+      "src": "poy/countries/belgium/58614.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "e4dd353003fd",
+      "variants": [
+        {
+          "src": "assets/photos/480/58614.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/58614.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 77776,
+      "src": "poy/countries/belgium/77776.webp",
+      "width": 2404,
+      "height": 1924,
+      "revision": "9c11bfc96383",
+      "variants": [
+        {
+          "src": "assets/photos/480/77776.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/77776.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 555467,
+      "src": "poy/countries/belgium/555467.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "e3136fda3e8a",
+      "variants": [
+        {
+          "src": "assets/photos/480/555467.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/555467.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 790177,
+      "src": "poy/countries/belgium/790177.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "8f1125085bb9",
+      "variants": [
+        {
+          "src": "assets/photos/480/790177.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/790177.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 254572,
+      "src": "poy/countries/belgium/254572.webp",
+      "width": 2404,
+      "height": 1924,
+      "revision": "3abefa1b022f",
+      "variants": [
+        {
+          "src": "assets/photos/480/254572.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/254572.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 749121,
+      "src": "poy/countries/belgium/749121.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "a31f9826d7b0",
+      "variants": [
+        {
+          "src": "assets/photos/480/749121.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/749121.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 719777,
+      "src": "poy/countries/belgium/719777.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "a7fcccd8d809",
+      "variants": [
+        {
+          "src": "assets/photos/480/719777.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/719777.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 103009,
+      "src": "poy/countries/belgium/103009.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "774d7aa43288",
+      "variants": [
+        {
+          "src": "assets/photos/480/103009.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/103009.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 671349,
+      "src": "poy/countries/belgium/671349.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "cb29d0c481a3",
+      "variants": [
+        {
+          "src": "assets/photos/480/671349.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/671349.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
       "id": 408341,
       "src": "poy/countries/china/408341.webp",
       "width": 2560,
@@ -3769,6 +4714,27 @@
       "alt": "France — photograph by Arjun Sarkar"
     },
     {
+      "id": 422120,
+      "src": "poy/countries/france/422120.webp",
+      "width": 1646,
+      "height": 1924,
+      "revision": "768c7a331a86",
+      "variants": [
+        {
+          "src": "assets/photos/480/422120.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/422120.webp",
+          "width": 960
+        }
+      ],
+      "country": "France",
+      "selected": false,
+      "title": "",
+      "alt": "France — photograph by Arjun Sarkar"
+    },
+    {
       "id": 430610,
       "src": "poy/countries/france/430610.webp",
       "width": 1332,
@@ -3781,6 +4747,27 @@
         },
         {
           "src": "assets/photos/960/430610.webp",
+          "width": 960
+        }
+      ],
+      "country": "France",
+      "selected": false,
+      "title": "",
+      "alt": "France — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 967135,
+      "src": "poy/countries/france/967135.webp",
+      "width": 2560,
+      "height": 1830,
+      "revision": "12e1dd300bd8",
+      "variants": [
+        {
+          "src": "assets/photos/480/967135.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/967135.webp",
           "width": 960
         }
       ],
@@ -3844,6 +4831,27 @@
         },
         {
           "src": "assets/photos/960/869253.webp",
+          "width": 960
+        }
+      ],
+      "country": "France",
+      "selected": false,
+      "title": "",
+      "alt": "France — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 853129,
+      "src": "poy/countries/france/853129.webp",
+      "width": 2560,
+      "height": 1707,
+      "revision": "1317162114b5",
+      "variants": [
+        {
+          "src": "assets/photos/480/853129.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/853129.webp",
           "width": 960
         }
       ],
@@ -4579,6 +5587,27 @@
         },
         {
           "src": "assets/photos/960/180380.webp",
+          "width": 960
+        }
+      ],
+      "country": "France",
+      "selected": false,
+      "title": "",
+      "alt": "France — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 445746,
+      "src": "poy/countries/france/445746.webp",
+      "width": 1554,
+      "height": 1924,
+      "revision": "53e85b913fd2",
+      "variants": [
+        {
+          "src": "assets/photos/480/445746.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/445746.webp",
           "width": 960
         }
       ],
@@ -6205,6 +7234,27 @@
       "alt": "Germany — photograph by Arjun Sarkar"
     },
     {
+      "id": 205971,
+      "src": "poy/countries/germany/205971.webp",
+      "width": 1540,
+      "height": 1924,
+      "revision": "f94bba4ebb97",
+      "variants": [
+        {
+          "src": "assets/photos/480/205971.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/205971.webp",
+          "width": 960
+        }
+      ],
+      "country": "Germany",
+      "selected": false,
+      "title": "",
+      "alt": "Germany — photograph by Arjun Sarkar"
+    },
+    {
       "id": 927365,
       "src": "poy/countries/germany/927365.webp",
       "width": 1924,
@@ -6259,6 +7309,27 @@
         },
         {
           "src": "assets/photos/960/780544.webp",
+          "width": 960
+        }
+      ],
+      "country": "Germany",
+      "selected": false,
+      "title": "",
+      "alt": "Germany — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 744053,
+      "src": "poy/countries/germany/744053.webp",
+      "width": 2426,
+      "height": 1924,
+      "revision": "ed1578b480da",
+      "variants": [
+        {
+          "src": "assets/photos/480/744053.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/744053.webp",
           "width": 960
         }
       ],
@@ -6721,6 +7792,27 @@
         },
         {
           "src": "assets/photos/960/300444.webp",
+          "width": 960
+        }
+      ],
+      "country": "Germany",
+      "selected": false,
+      "title": "",
+      "alt": "Germany — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 754115,
+      "src": "poy/countries/germany/754115.webp",
+      "width": 2406,
+      "height": 1924,
+      "revision": "25427316ca15",
+      "variants": [
+        {
+          "src": "assets/photos/480/754115.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/754115.webp",
           "width": 960
         }
       ],
@@ -7456,6 +8548,27 @@
         },
         {
           "src": "assets/photos/960/347331.webp",
+          "width": 960
+        }
+      ],
+      "country": "Germany",
+      "selected": false,
+      "title": "",
+      "alt": "Germany — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 903535,
+      "src": "poy/countries/germany/903535.webp",
+      "width": 2280,
+      "height": 1924,
+      "revision": "3ed3b6c07af8",
+      "variants": [
+        {
+          "src": "assets/photos/480/903535.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/903535.webp",
           "width": 960
         }
       ],
@@ -8464,6 +9577,27 @@
         },
         {
           "src": "assets/photos/960/771503.webp",
+          "width": 960
+        }
+      ],
+      "country": "Germany",
+      "selected": false,
+      "title": "",
+      "alt": "Germany — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 202195,
+      "src": "poy/countries/germany/202195.webp",
+      "width": 2048,
+      "height": 1924,
+      "revision": "e1bff3e4b6df",
+      "variants": [
+        {
+          "src": "assets/photos/480/202195.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/202195.webp",
           "width": 960
         }
       ],
@@ -10027,6 +11161,69 @@
       "alt": "India — photograph by Arjun Sarkar"
     },
     {
+      "id": 749352,
+      "src": "poy/countries/india/749352.webp",
+      "width": 2302,
+      "height": 1924,
+      "revision": "ec0929a00a89",
+      "variants": [
+        {
+          "src": "assets/photos/480/749352.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/749352.webp",
+          "width": 960
+        }
+      ],
+      "country": "India",
+      "selected": false,
+      "title": "",
+      "alt": "India — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 707758,
+      "src": "poy/countries/india/707758.webp",
+      "width": 1082,
+      "height": 1924,
+      "revision": "d4c3212c9731",
+      "variants": [
+        {
+          "src": "assets/photos/480/707758.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/707758.webp",
+          "width": 960
+        }
+      ],
+      "country": "India",
+      "selected": false,
+      "title": "",
+      "alt": "India — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 557370,
+      "src": "poy/countries/india/557370.webp",
+      "width": 1082,
+      "height": 1924,
+      "revision": "6e522649d6d0",
+      "variants": [
+        {
+          "src": "assets/photos/480/557370.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/557370.webp",
+          "width": 960
+        }
+      ],
+      "country": "India",
+      "selected": false,
+      "title": "",
+      "alt": "India — photograph by Arjun Sarkar"
+    },
+    {
       "id": 562598,
       "src": "poy/countries/india/562598.webp",
       "width": 1924,
@@ -10081,6 +11278,48 @@
         },
         {
           "src": "assets/photos/960/236860.webp",
+          "width": 960
+        }
+      ],
+      "country": "India",
+      "selected": false,
+      "title": "",
+      "alt": "India — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 162441,
+      "src": "poy/countries/india/162441.webp",
+      "width": 1082,
+      "height": 1924,
+      "revision": "acb31910cf42",
+      "variants": [
+        {
+          "src": "assets/photos/480/162441.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/162441.webp",
+          "width": 960
+        }
+      ],
+      "country": "India",
+      "selected": false,
+      "title": "",
+      "alt": "India — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 492995,
+      "src": "poy/countries/india/492995.webp",
+      "width": 1082,
+      "height": 1924,
+      "revision": "c37e92728446",
+      "variants": [
+        {
+          "src": "assets/photos/480/492995.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/492995.webp",
           "width": 960
         }
       ],
@@ -10921,6 +12160,27 @@
         },
         {
           "src": "assets/photos/960/647556.webp",
+          "width": 960
+        }
+      ],
+      "country": "Netherlands",
+      "selected": false,
+      "title": "",
+      "alt": "Netherlands — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 121586,
+      "src": "poy/countries/netherlands/121586.webp",
+      "width": 1606,
+      "height": 1924,
+      "revision": "3f17bc0aeacc",
+      "variants": [
+        {
+          "src": "assets/photos/480/121586.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/121586.webp",
           "width": 960
         }
       ],
@@ -12988,6 +14248,27 @@
       "alt": "South Korea — photograph by Arjun Sarkar"
     },
     {
+      "id": 614452,
+      "src": "poy/countries/south%20korea/614452.webp",
+      "width": 1540,
+      "height": 1924,
+      "revision": "d6a2f1f4a955",
+      "variants": [
+        {
+          "src": "assets/photos/480/614452.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/614452.webp",
+          "width": 960
+        }
+      ],
+      "country": "South Korea",
+      "selected": false,
+      "title": "",
+      "alt": "South Korea — photograph by Arjun Sarkar"
+    },
+    {
       "id": 889657,
       "src": "poy/countries/south%20korea/889657.webp",
       "width": 2048,
@@ -14407,6 +15688,48 @@
         },
         {
           "src": "assets/photos/960/615547.webp",
+          "width": 960
+        }
+      ],
+      "country": "South Korea",
+      "selected": false,
+      "title": "",
+      "alt": "South Korea — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 661573,
+      "src": "poy/countries/south%20korea/661573.webp",
+      "width": 1540,
+      "height": 1924,
+      "revision": "5fd96747517e",
+      "variants": [
+        {
+          "src": "assets/photos/480/661573.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/661573.webp",
+          "width": 960
+        }
+      ],
+      "country": "South Korea",
+      "selected": false,
+      "title": "",
+      "alt": "South Korea — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 77864,
+      "src": "poy/countries/south%20korea/77864.webp",
+      "width": 1444,
+      "height": 1924,
+      "revision": "a95c1a9d43ff",
+      "variants": [
+        {
+          "src": "assets/photos/480/77864.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/77864.webp",
           "width": 960
         }
       ],

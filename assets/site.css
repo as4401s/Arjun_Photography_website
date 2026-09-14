@@ -91,7 +91,10 @@ h2, .gallery-heading h1 {
 .site-header nav { display: flex; gap: 34px; font-size: 11px; align-items: center; }
 .site-header nav a { padding-block: 12px; }
 .site-header nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
-.site-header nav .social-link { display: none; }
+.site-header nav .social-link { display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border-radius: 12px; }
+.site-header nav .social-link:hover { color: var(--accent); }
+.header-social-icon { display: block; width: 21px; height: 21px; }
+.social-label { display: none; }
 .nav-icon { display: none; }
 
 /* The homepage photograph is the primary visual identity. */
@@ -351,7 +354,7 @@ body[data-page=destinations] .site-header { background: var(--paper); color: var
     position: fixed;
     inset: auto 0 0;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 4px;
     padding: 7px max(12px, env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
     background: #101010f5;
@@ -366,6 +369,7 @@ body[data-page=destinations] .site-header { background: var(--paper); color: var
   .site-header nav a:active { background: #ffffff14; }
   .site-header nav a:focus-visible { outline-offset: -2px; }
   .nav-icon { display: block; width: 21px; height: 21px; }
+  .social-label { display: block; }
   .hero { height: calc(90svh - 72px); min-height: 490px; max-height: 760px; }
   .hero-content { inset: auto 6vw 32px; }
   .hero h1 { font-size: 17vw; margin-bottom: 28px; }
