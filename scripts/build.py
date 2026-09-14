@@ -41,6 +41,9 @@ def build(root: Path = ROOT) -> Path:
     if not favicon:
         raise ValueError('Select an existing favicon in data/site.json.')
     template = template.replace('data-icon="favicon"', f'href="{html.escape(favicon["src"], quote=True)}"')
+    icon_links = (f'<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/32/{favicon["id"]}.png">'
+                  f'<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/180/{favicon["id"]}.png">')
+    template = template.replace('</head>', icon_links + '\n</head>')
     config = json.loads((root / 'data/site.json').read_text())
     if config.get('url'):
         from urllib.parse import urljoin
@@ -59,6 +62,18 @@ def build(root: Path = ROOT) -> Path:
     if stage.exists():
         shutil.rmtree(stage)
     stage.mkdir()
+    # Browser and iOS icon formats are generated from the WebP master at build time.
+    from PIL import Image, PngImagePlugin
+    from process_images import COPYRIGHT, XMP
+    with Image.open(root / unquote(favicon['src'])) as icon:
+        metadata = PngImagePlugin.PngInfo()
+        metadata.add_itxt('Copyright', COPYRIGHT)
+        metadata.add_itxt('Author', 'Arjun Sarkar')
+        metadata.add_itxt('XML:com.adobe.xmp', XMP.decode('utf-8'))
+        for size in (32, 180):
+            target = stage / 'assets/icons' / str(size) / f'{favicon["id"]}.png'
+            target.parent.mkdir(parents=True, exist_ok=True)
+            icon.resize((size, size), Image.Resampling.LANCZOS).save(target, pnginfo=metadata, optimize=True)
     (stage / 'index.html').write_text(template)
     destination_page = template.replace('data-page="home"', 'data-page="destinations"')
     for section in ('home', 'travelbook', 'about'):

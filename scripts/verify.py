@@ -44,6 +44,11 @@ def verify():
             assert (ROOT / 'dist' / relative).is_file(), f'Not published: {src}'
             public_files.add(relative)
             count += 1
+    for size in (32, 180):
+        icon_path = f'assets/icons/{size}/{catalogue["favicon"]}.png'
+        with Image.open(ROOT / 'dist' / icon_path) as icon:
+            assert icon.size == (size, size) and '2026 Arjun Sarkar' in icon.info['Copyright']
+        public_files.add(icon_path)
     actual = {p.relative_to(ROOT / 'dist').as_posix() for p in (ROOT / 'dist').rglob('*') if p.is_file()}
     assert actual == public_files, f'Unexpected or missing public files: {actual ^ public_files}'
     inputs = [p for directory in ('images', 'poy') for p in (ROOT / directory).rglob('*') if p.suffix.lower() in ('.jpg', '.jpeg', '.png', '.tif', '.tiff')]

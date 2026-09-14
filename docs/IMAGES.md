@@ -74,3 +74,5 @@ Use an ID that exists in `data/image-registry.json`, then rerun processing and b
 - Keep `data/image-registry.json` alongside processed photos. Deleting it causes the processor to treat those files as new imports, renaming and re-encoding them.
 - The lock prevents simultaneous imports. If a process is killed forcibly, confirm it is no longer running before removing `.photo-processing.lock` and retrying.
 - A failed import may have completed earlier photos. Their originals remain backed up; a rerun skips completed work. Read the error before retrying. Do not remove backups to resolve errors.
+
+The favicon master is WebP too. The builder also generates small PNG browser and Apple touch icons for device compatibility; these are the only format exceptions in the published site, carry the same attribution, and are not photographs.
