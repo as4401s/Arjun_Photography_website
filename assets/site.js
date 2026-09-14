@@ -98,8 +98,11 @@
     // IDs are assigned randomly at import, giving each country a stable shuffle.
     if (view === 'country') visiblePhotos.sort((a, b) => a.id - b.id);
     $('gallery-title').textContent = view === 'country' ? `${country || 'Destination'} photography.` : 'Highlights.';
+    const summary = catalogue.countrySummaries?.[country];
     const countryDescription = visiblePhotos.length
-      ? `${visiblePhotos.length} travel photographs from ${country} by Arjun Sarkar, shared through Our Travel Photobook.`
+      ? (summary
+        ? `${summary} ${visiblePhotos.length} photographs by Arjun Sarkar for Our Travel Photobook.`
+        : `${visiblePhotos.length} travel photographs from ${country} by Arjun Sarkar, shared through Our Travel Photobook.`)
       : `Photographs from ${country} will be added to Our Travel Photobook as the collection grows.`;
     $('gallery-description').textContent = view === 'country' ? countryDescription : 'A few moments I keep coming back to.';
     $('collection-count').textContent = `${visiblePhotos.length} photographs`;

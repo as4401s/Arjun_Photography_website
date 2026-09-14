@@ -44,6 +44,7 @@ def build(root: Path = ROOT) -> Path:
         raise ValueError('Select an existing favicon in data/site.json.')
     template = template.replace('data-icon="favicon"', f'href="{html.escape(favicon["src"], quote=True)}"')
     icon_links = (f'<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/32/{favicon["id"]}.png">'
+                  f'<link rel="icon" type="image/png" sizes="96x96" href="assets/icons/96/{favicon["id"]}.png">'
                   f'<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/180/{favicon["id"]}.png">')
     template = template.replace('</head>', icon_links + '\n</head>')
     config = json.loads((root / 'data/site.json').read_text())
@@ -76,7 +77,7 @@ def build(root: Path = ROOT) -> Path:
         metadata.add_itxt('Copyright', COPYRIGHT)
         metadata.add_itxt('Author', 'Arjun Sarkar')
         metadata.add_itxt('XML:com.adobe.xmp', XMP.decode('utf-8'))
-        for size in (32, 180):
+        for size in (32, 96, 180):
             target = stage / 'assets/icons' / str(size) / f'{favicon["id"]}.png'
             target.parent.mkdir(parents=True, exist_ok=True)
             icon.resize((size, size), Image.Resampling.LANCZOS).save(target, pnginfo=metadata, optimize=True)

@@ -60,6 +60,8 @@ class SearchPagesTests(unittest.TestCase):
             raw = re.search(r'<script type="application/ld\+json">(.*?)</script>', france).group(1)
             data = json.loads(raw)
             self.assertEqual(data['@graph'][4]['numberOfItems'], 1)
+            website = next(item for item in data['@graph'] if item['@type'] == 'WebSite')
+            self.assertIn('ourtravelphotobook', website['alternateName'])
             token = "'sha256-" + base64.b64encode(hashlib.sha256(raw.encode()).digest()).decode() + "'"
             self.assertIn(token, france)
             self.assertIn(token, (stage / '_headers').read_text())
@@ -71,6 +73,16 @@ class SearchPagesTests(unittest.TestCase):
             self.assertEqual(len(tree.findall('s:url/i:image/i:loc', ns)), 3)
             self.assertIn('noindex, follow', (stage / 'japan-photography.html').read_text())
             self.assertIn('https://example.com/portfolio/sitemap.xml', (stage / 'robots.txt').read_text())
+
+            catalogue['countrySummaries'] = {'France': 'Paris landmarks & quiet streets.'}
+            # Start from the source again, as the builder does on each run.
+            (stage / 'index.html').write_text(template)
+            (stage / 'destinations.html').write_text(destination)
+            (stage / '_headers').write_text((ROOT / '_headers').read_text())
+            enrich_pages(stage, catalogue, 'https://example.com/portfolio/')
+            updated = (stage / 'france-photography.html').read_text()
+            self.assertIn('Paris landmarks &amp; quiet streets.', updated)
+            self.assertIn('<title>Our Travel Photobook | Travel Photography by Arjun Sarkar</title>', (stage / 'index.html').read_text())
 
     def test_invalid_urls_and_duplicate_country_slugs_fail(self):
         for value in ['http://example.com', 'javascript:alert(1)', 'https://a:b@example.com', 'https://example.com/?x=1', 'https://example.com/#about', 'https://example.com/../', '']:

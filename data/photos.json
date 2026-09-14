@@ -19,8 +19,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The castle above the village",
+      "alt": "A pale stone castle standing on a forested hill above a riverside village."
     },
     {
       "id": 817462,
@@ -40,8 +40,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A blue horizon",
+      "alt": "A small sailboat on a turquoise sea beneath a cloud-streaked sky."
     },
     {
       "id": 766329,
@@ -61,8 +61,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "An old house by the river",
+      "alt": "A timber-framed house reflected beside a stone bridge over a river."
     },
     {
       "id": 360014,
@@ -82,8 +82,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "City lights after rain",
+      "alt": "Warm restaurant lights reflected on a rain-soaked city street at night."
     },
     {
       "id": 800886,
@@ -103,8 +103,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A walkway into the mountains",
+      "alt": "A viewing platform and path cut into a snowy mountain slope."
     },
     {
       "id": 259997,
@@ -124,8 +124,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Hamburg's town hall",
+      "alt": "Hamburg's ornate town hall tower seen from the square below."
     },
     {
       "id": 541612,
@@ -237,8 +237,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The last light",
+      "alt": "Two people watching the sun sink towards the sea beneath a pink sky."
     },
     {
       "id": 564210,
@@ -258,8 +258,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The wheel at sunset",
+      "alt": "A Ferris wheel on a pier silhouetted against a colourful evening sky."
     },
     {
       "id": 768129,
@@ -1371,8 +1371,8 @@
       ],
       "country": "Austria",
       "selected": false,
-      "title": "",
-      "alt": "Austria — photograph by Arjun Sarkar"
+      "title": "Austria's ornate library",
+      "alt": "A statue beneath colourful ceiling frescoes and tall wooden bookshelves in an ornate Austrian library."
     },
     {
       "id": 574717,
@@ -1770,8 +1770,8 @@
       ],
       "country": "Belgium",
       "selected": false,
-      "title": "",
-      "alt": "Belgium — photograph by Arjun Sarkar"
+      "title": "Brussels' Atomium",
+      "alt": "The silver spheres of Brussels' Atomium against a blue sky with scattered clouds."
     },
     {
       "id": 226271,
@@ -2841,8 +2841,8 @@
       ],
       "country": "China",
       "selected": false,
-      "title": "",
-      "alt": "China — photograph by Arjun Sarkar"
+      "title": "Shanghai after dark",
+      "alt": "Shanghai's illuminated waterfront skyline reflected across the river at night."
     },
     {
       "id": 930516,
@@ -4164,8 +4164,8 @@
       ],
       "country": "Czech Republic",
       "selected": false,
-      "title": "",
-      "alt": "Czech Republic — photograph by Arjun Sarkar"
+      "title": "Prague's Old Town",
+      "alt": "Prague's Old Town Square with the twin spires of the Church of Our Lady before Týn."
     },
     {
       "id": 370306,
@@ -4395,8 +4395,8 @@
       ],
       "country": "France",
       "selected": false,
-      "title": "",
-      "alt": "France — photograph by Arjun Sarkar"
+      "title": "Eiffel Tower in evening light",
+      "alt": "The Eiffel Tower framed by trees and dramatic evening clouds in Paris."
     },
     {
       "id": 488420,
@@ -7356,8 +7356,8 @@
       ],
       "country": "Germany",
       "selected": false,
-      "title": "",
-      "alt": "Germany — photograph by Arjun Sarkar"
+      "title": "Cologne Cathedral and the Rhine",
+      "alt": "Cologne Cathedral and the steel arches of the Hohenzollern Bridge across the Rhine."
     },
     {
       "id": 448605,
@@ -9876,8 +9876,8 @@
       ],
       "country": "India",
       "selected": false,
-      "title": "",
-      "alt": "India — photograph by Arjun Sarkar"
+      "title": "Festival light in India",
+      "alt": "A person raising a phone in front of a brightly illuminated festival display."
     },
     {
       "id": 257175,
@@ -12039,8 +12039,8 @@
       ],
       "country": "Netherlands",
       "selected": false,
-      "title": "",
-      "alt": "Netherlands — photograph by Arjun Sarkar"
+      "title": "Windmills along the canal",
+      "alt": "Dutch windmills and wooden buildings lining a canal beneath a blue sky."
     },
     {
       "id": 322657,
@@ -12423,9 +12423,9 @@
     {
       "id": 426223,
       "src": "poy/countries/poland/426223.webp",
-      "width": 2406,
-      "height": 1924,
-      "revision": "0212a0ff8336",
+      "width": 2344,
+      "height": 1875,
+      "revision": "83e152610372",
       "variants": [
         {
           "src": "assets/photos/480/426223.webp",
@@ -12438,15 +12438,15 @@
       ],
       "country": "Poland",
       "selected": false,
-      "title": "",
-      "alt": "Poland — photograph by Arjun Sarkar"
+      "title": "Gdańsk by the water",
+      "alt": "Gabled waterfront houses and restaurant terraces beside the water in Gdańsk."
     },
     {
       "id": 55481,
       "src": "poy/countries/poland/55481.webp",
-      "width": 2404,
-      "height": 1924,
-      "revision": "efade2da4b5c",
+      "width": 2342,
+      "height": 1874,
+      "revision": "107ecbb99d02",
       "variants": [
         {
           "src": "assets/photos/480/55481.webp",
@@ -12459,8 +12459,8 @@
       ],
       "country": "Poland",
       "selected": false,
-      "title": "",
-      "alt": "Poland — photograph by Arjun Sarkar"
+      "title": "A row of pastel façades",
+      "alt": "Pastel-coloured gabled houses and café terraces along Gdańsk's waterfront."
     },
     {
       "id": 788031,
@@ -12654,9 +12654,9 @@
     {
       "id": 981223,
       "src": "poy/countries/poland/981223.webp",
-      "width": 2404,
-      "height": 1924,
-      "revision": "e4d4c60ddfdf",
+      "width": 2327,
+      "height": 1863,
+      "revision": "374aa14c9ee0",
       "variants": [
         {
           "src": "assets/photos/480/981223.webp",
@@ -12669,8 +12669,8 @@
       ],
       "country": "Poland",
       "selected": false,
-      "title": "",
-      "alt": "Poland — photograph by Arjun Sarkar"
+      "title": "Rooftops of Gdańsk",
+      "alt": "A view over dense red-tiled roofs and colourful old-town façades in Gdańsk."
     },
     {
       "id": 733260,
@@ -13278,8 +13278,8 @@
       ],
       "country": "Poland",
       "selected": false,
-      "title": "",
-      "alt": "Poland — photograph by Arjun Sarkar"
+      "title": "Palace of Culture and Science",
+      "alt": "Warsaw's Palace of Culture and Science rising above the surrounding city buildings."
     },
     {
       "id": 396858,
@@ -13305,9 +13305,9 @@
     {
       "id": 720308,
       "src": "poy/countries/poland/720308.webp",
-      "width": 2404,
-      "height": 1924,
-      "revision": "7a4be64ea8eb",
+      "width": 2326,
+      "height": 1552,
+      "revision": "9d102ec0caa5",
       "variants": [
         {
           "src": "assets/photos/480/720308.webp",
@@ -13320,8 +13320,8 @@
       ],
       "country": "Poland",
       "selected": false,
-      "title": "",
-      "alt": "Poland — photograph by Arjun Sarkar"
+      "title": "Warsaw's Castle Square",
+      "alt": "Visitors crossing Warsaw's Castle Square between colourful buildings and the royal castle."
     },
     {
       "id": 275874,
@@ -13368,9 +13368,9 @@
     {
       "id": 597835,
       "src": "poy/countries/poland/597835.webp",
-      "width": 2406,
-      "height": 1924,
-      "revision": "5dfcc29f477f",
+      "width": 2320,
+      "height": 1855,
+      "revision": "79d4c3ef3678",
       "variants": [
         {
           "src": "assets/photos/480/597835.webp",
@@ -13383,8 +13383,8 @@
       ],
       "country": "Poland",
       "selected": false,
-      "title": "",
-      "alt": "Poland — photograph by Arjun Sarkar"
+      "title": "Inside an ornate church",
+      "alt": "A chandelier and gilded altar surrounded by richly decorated columns in a Polish church."
     },
     {
       "id": 236558,
@@ -13509,8 +13509,8 @@
       ],
       "country": "Singapore",
       "selected": false,
-      "title": "",
-      "alt": "Singapore — photograph by Arjun Sarkar"
+      "title": "Temple roofs in Singapore",
+      "alt": "A red pagoda-style temple building rising between city streets in Singapore."
     },
     {
       "id": 603512,
@@ -14622,8 +14622,8 @@
       ],
       "country": "South Korea",
       "selected": false,
-      "title": "",
-      "alt": "South Korea — photograph by Arjun Sarkar"
+      "title": "Painted eaves in South Korea",
+      "alt": "Layered traditional palace eaves with intricate green, red and blue painted details."
     },
     {
       "id": 800350,
@@ -15798,8 +15798,8 @@
       ],
       "country": "Switzerland",
       "selected": false,
-      "title": "",
-      "alt": "Switzerland — photograph by Arjun Sarkar"
+      "title": "Lake and Alpine village",
+      "alt": "Wooden village buildings and mountains reflected in the turquoise water of a Swiss lake."
     },
     {
       "id": 236896,
@@ -17349,9 +17349,9 @@
     {
       "id": 826545,
       "src": "poy/countries/taiwan/826545.webp",
-      "width": 2404,
-      "height": 1924,
-      "revision": "e73c0071190d",
+      "width": 2335,
+      "height": 1751,
+      "revision": "84dc78e4ad64",
       "variants": [
         {
           "src": "assets/photos/480/826545.webp",
@@ -17364,8 +17364,8 @@
       ],
       "country": "Taiwan",
       "selected": false,
-      "title": "",
-      "alt": "Taiwan — photograph by Arjun Sarkar"
+      "title": "A path above Taiwan's coast",
+      "alt": "A person on stone steps beside a green coastal hill with blue sea beyond."
     },
     {
       "id": 908503,
@@ -17622,9 +17622,9 @@
     {
       "id": 942604,
       "src": "poy/countries/taiwan/942604.webp",
-      "width": 2404,
-      "height": 1924,
-      "revision": "bbf64fc3b562",
+      "width": 2320,
+      "height": 1857,
+      "revision": "6ab21b273041",
       "variants": [
         {
           "src": "assets/photos/480/942604.webp",
@@ -17637,15 +17637,15 @@
       ],
       "country": "Taiwan",
       "selected": false,
-      "title": "",
-      "alt": "Taiwan — photograph by Arjun Sarkar"
+      "title": "Lantern light in Taiwan",
+      "alt": "People seated outside a small Taiwanese restaurant beneath glowing lanterns at night."
     },
     {
       "id": 69921,
       "src": "poy/countries/taiwan/69921.webp",
-      "width": 2404,
-      "height": 1924,
-      "revision": "90b55bad1b4e",
+      "width": 2328,
+      "height": 1863,
+      "revision": "a7f8c3cd13a3",
       "variants": [
         {
           "src": "assets/photos/480/69921.webp",
@@ -17658,15 +17658,15 @@
       ],
       "country": "Taiwan",
       "selected": false,
-      "title": "",
-      "alt": "Taiwan — photograph by Arjun Sarkar"
+      "title": "Sunlight in the shop",
+      "alt": "Sunlight falling across souvenirs, fabrics and small objects in a Taiwanese shop."
     },
     {
       "id": 106007,
       "src": "poy/countries/taiwan/106007.webp",
-      "width": 2406,
-      "height": 1924,
-      "revision": "a7aeb02ea301",
+      "width": 2316,
+      "height": 1852,
+      "revision": "8450dce84b86",
       "variants": [
         {
           "src": "assets/photos/480/106007.webp",
@@ -17679,8 +17679,8 @@
       ],
       "country": "Taiwan",
       "selected": false,
-      "title": "",
-      "alt": "Taiwan — photograph by Arjun Sarkar"
+      "title": "The cat on the steps",
+      "alt": "A tabby-and-white cat resting its front paws over a stone step in Taiwan."
     },
     {
       "id": 789719,
@@ -17910,8 +17910,8 @@
       ],
       "country": "Taiwan",
       "selected": false,
-      "title": "",
-      "alt": "Taiwan — photograph by Arjun Sarkar"
+      "title": "A temple courtyard in Taiwan",
+      "alt": "Visitors crossing a richly decorated temple courtyard surrounded by city buildings in Taiwan."
     },
     {
       "id": 433385,
@@ -18000,9 +18000,9 @@
     {
       "id": 757902,
       "src": "poy/countries/taiwan/757902.webp",
-      "width": 1540,
-      "height": 1924,
-      "revision": "a1263dc70e0e",
+      "width": 1233,
+      "height": 1849,
+      "revision": "b5dc061f8bf4",
       "variants": [
         {
           "src": "assets/photos/480/757902.webp",
@@ -18015,8 +18015,8 @@
       ],
       "country": "Taiwan",
       "selected": false,
-      "title": "",
-      "alt": "Taiwan — photograph by Arjun Sarkar"
+      "title": "Taipei 101 through the city",
+      "alt": "Taipei 101 rising above trees beside a stone sculpture in warm, hazy light."
     },
     {
       "id": 185952,
@@ -18939,8 +18939,8 @@
       ],
       "country": "Thailand",
       "selected": false,
-      "title": "",
-      "alt": "Thailand — photograph by Arjun Sarkar"
+      "title": "A long-tail boat in turquoise water",
+      "alt": "A colourful Thai long-tail boat floating in clear turquoise water."
     },
     {
       "id": 244359,
@@ -19611,8 +19611,8 @@
       ],
       "country": "Turkey",
       "selected": false,
-      "title": "",
-      "alt": "Turkey — photograph by Arjun Sarkar"
+      "title": "Cappadocia in warm light",
+      "alt": "A couple standing beneath sharply sculpted rock formations in Cappadocia."
     },
     {
       "id": 862367,
@@ -20682,8 +20682,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A moment in Cappadocia",
+      "alt": "A couple posing beneath dramatic rock formations in warm evening light."
     },
     {
       "id": 489306,
@@ -20703,8 +20703,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Resting beneath the trees",
+      "alt": "People relaxing on a wooden lakeside platform beneath sunlit trees."
     },
     {
       "id": 493880,
@@ -20724,8 +20724,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Timber and colour",
+      "alt": "A red timber-framed building among colourful façades in a German old town."
     },
     {
       "id": 257489,
@@ -20745,8 +20745,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Winter above the lake",
+      "alt": "A mountain lake and forest beneath rugged, snow-covered peaks."
     },
     {
       "id": 596626,
@@ -20766,8 +20766,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Lights among the rocks",
+      "alt": "A hillside town glowing at dusk among Cappadocia's rock formations."
     },
     {
       "id": 159913,
@@ -20787,8 +20787,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Boats at sunset",
+      "alt": "Long-tail boats gathered beside a limestone cliff beneath a pink sunset sky."
     },
     {
       "id": 382707,
@@ -20808,8 +20808,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Looking up in the courtyard",
+      "alt": "An ornate stone tower and sculpted façades seen from an enclosed courtyard."
     },
     {
       "id": 292631,
@@ -20829,8 +20829,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "An avenue of autumn",
+      "alt": "People walking and cycling along a tree-lined avenue covered with golden leaves."
     },
     {
       "id": 289251,
@@ -20850,8 +20850,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Boathouses in the green",
+      "alt": "Two small wooden boathouses reflected in a calm lake surrounded by trees."
     },
     {
       "id": 419694,
@@ -20871,8 +20871,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Brussels in gold",
+      "alt": "The richly decorated guildhall façades around Brussels' Grand Place."
     },
     {
       "id": 429618,
@@ -20892,8 +20892,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A playful welcome",
+      "alt": "A cartoon tiger statue welcoming visitors beside traditional Korean buildings."
     },
     {
       "id": 270866,
@@ -20913,8 +20913,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Above the snowline",
+      "alt": "Skiers crossing a wide snowfield beneath a jagged Alpine ridge."
     },
     {
       "id": 233784,
@@ -20934,8 +20934,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Into the gorge",
+      "alt": "A narrow walkway following rushing water through a deep, rocky gorge."
     },
     {
       "id": 695455,
@@ -20955,8 +20955,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The palace gate",
+      "alt": "Visitors passing a large traditional Korean palace gate beneath a tiled roof."
     },
     {
       "id": 883035,
@@ -20976,8 +20976,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Across the green fields",
+      "alt": "A road winding past bright green fields beneath a dramatic sky."
     },
     {
       "id": 611870,
@@ -20997,8 +20997,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Over the open flame",
+      "alt": "A cook grilling skewers over bright orange flames at a food stall."
     },
     {
       "id": 565930,
@@ -21018,8 +21018,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Mountain in the mist",
+      "alt": "A snow-covered mountain peak partly hidden by low clouds."
     },
     {
       "id": 321741,
@@ -21039,8 +21039,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Towers across the water",
+      "alt": "A suspension bridge stretching towards a dense group of waterfront skyscrapers."
     },
     {
       "id": 391427,
@@ -21060,8 +21060,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Dinner through the window",
+      "alt": "Diners silhouetted against the warm interior of a small restaurant."
     },
     {
       "id": 16249,
@@ -21081,8 +21081,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Warmth at the market",
+      "alt": "A market vendor working behind a cloud of steam under warm lights."
     },
     {
       "id": 996018,
@@ -21102,8 +21102,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "An afternoon by the water",
+      "alt": "People sitting along a waterfront with modern buildings across the water."
     },
     {
       "id": 503942,
@@ -21123,8 +21123,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A train through the forest",
+      "alt": "A red steam train sending white smoke through a wooded hillside."
     },
     {
       "id": 616832,
@@ -21144,8 +21144,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Bubbles beneath the cathedral",
+      "alt": "People playing with large soap bubbles beneath Cologne Cathedral's twin spires."
     },
     {
       "id": 455149,
@@ -21165,8 +21165,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Sunlight at Brandenburg Gate",
+      "alt": "Visitors crossing the square in front of Berlin's Brandenburg Gate in bright sunlight."
     },
     {
       "id": 859798,
@@ -21186,8 +21186,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Cologne across the Rhine",
+      "alt": "Cologne Cathedral's twin spires beside the arched railway bridge over the Rhine."
     },
     {
       "id": 212996,
@@ -21207,8 +21207,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The reflected arch",
+      "alt": "A stone arch bridge forming a circle with its reflection among autumn trees."
     },
     {
       "id": 414555,
@@ -21228,8 +21228,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Crossing by the sea",
+      "alt": "A coastal train at a level crossing with cable cars and blue water beyond."
     },
     {
       "id": 532733,
@@ -21249,8 +21249,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The street musician",
+      "alt": "A seated guitarist in a red checked shirt playing in a patch of sunlight."
     },
     {
       "id": 441388,
@@ -21270,8 +21270,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Berlin by the river",
+      "alt": "An ornate bridge sculpture with Berlin Cathedral and the television tower behind it."
     },
     {
       "id": 906767,
@@ -21291,8 +21291,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A patchwork of houses",
+      "alt": "Colourful village houses with red roofs seen from a hillside above."
     },
     {
       "id": 516979,
@@ -21312,8 +21312,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A quiet street corner",
+      "alt": "People walking between pastel buildings along a quiet pedestrian street."
     },
     {
       "id": 495848,
@@ -21333,8 +21333,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Sailing past the chalk cliffs",
+      "alt": "A blue-hulled sailing boat passing white chalk cliffs and green woodland."
     },
     {
       "id": 599974,
@@ -21354,8 +21354,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "An Alpine village below the peaks",
+      "alt": "Wooden village buildings beneath sharply rising mountain peaks."
     },
     {
       "id": 18784,
@@ -21375,8 +21375,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A waterfall in the green",
+      "alt": "A narrow waterfall descending a steep, densely green mountainside."
     },
     {
       "id": 636246,
@@ -21396,8 +21396,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A village in winter",
+      "alt": "Snow-covered houses at the edge of a dense winter forest."
     },
     {
       "id": 398537,
@@ -21417,8 +21417,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A tram in the city",
+      "alt": "An orange tram passing modern city buildings beside parked bicycles."
     },
     {
       "id": 184959,
@@ -21438,8 +21438,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A castle in the clouds",
+      "alt": "Stone towers and fortified walls beneath a soft, overcast sky."
     },
     {
       "id": 194669,
@@ -21459,8 +21459,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Beneath the waterfall",
+      "alt": "A helicopter passing a high waterfall on a dark, sheer mountain face."
     },
     {
       "id": 316884,
@@ -21480,8 +21480,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A train beneath the cliffs",
+      "alt": "A red mountain train crossing a green meadow below a towering rock face."
     },
     {
       "id": 130809,
@@ -21501,8 +21501,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Light over the rooftops",
+      "alt": "Sunbeams breaking over a hillside castle above colourful village rooftops and flowers."
     },
     {
       "id": 662242,
@@ -21522,8 +21522,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A tram through the old town",
+      "alt": "A yellow tram passing a decorated clock tower and colourful old-town façades."
     },
     {
       "id": 309986,
@@ -21543,8 +21543,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A quiet Alpine valley",
+      "alt": "A lone house beneath steep, misty mountains in a green valley."
     },
     {
       "id": 679484,
@@ -21564,8 +21564,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Paris in the evening",
+      "alt": "The illuminated Eiffel Tower rising above trees at dusk."
     },
     {
       "id": 434325,
@@ -21585,8 +21585,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The stall after dark",
+      "alt": "A glowing churros and crêpes sign on a dark evening food stall."
     },
     {
       "id": 786363,
@@ -21606,8 +21606,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "White water and rock",
+      "alt": "Fast-moving water rushing around jagged rocks in a mountain river."
     },
     {
       "id": 884934,
@@ -21627,8 +21627,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The valley and the waterfall",
+      "alt": "Village rooftops beneath a steep Alpine cliff and a high waterfall."
     },
     {
       "id": 895138,
@@ -21648,8 +21648,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Under the Louvre pyramid",
+      "alt": "Visitors beneath the geometric glass structure of the Louvre pyramid."
     },
     {
       "id": 363996,
@@ -21669,8 +21669,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Winter village by the water",
+      "alt": "Colourful houses beside a river and snow-dusted forest at blue hour."
     },
     {
       "id": 83848,
@@ -21690,8 +21690,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Music in the square",
+      "alt": "A pianist playing a black grand piano in front of an ornate concert hall."
     },
     {
       "id": 826356,
@@ -21711,8 +21711,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The hillside house",
+      "alt": "A large house with balconies on a green, wooded hillside."
     },
     {
       "id": 874317,
@@ -21732,8 +21732,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "City colours reflected",
+      "alt": "Illuminated Singapore waterfront towers reflected in dark water at night."
     },
     {
       "id": 25896,
@@ -21753,8 +21753,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Reflections in the old town",
+      "alt": "Historic buildings and a pointed tower reflected in still water."
     },
     {
       "id": 975183,
@@ -21774,8 +21774,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Moon over the tower",
+      "alt": "A full moon aligned behind the silhouette of a tower on a dark hillside."
     },
     {
       "id": 999543,
@@ -21795,8 +21795,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The canal between the warehouses",
+      "alt": "A quiet canal between Hamburg's red-brick warehouse buildings."
     },
     {
       "id": 376746,
@@ -21816,8 +21816,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Brick towers at the end of the street",
+      "alt": "A twin-towered brick church framed by old-town buildings."
     },
     {
       "id": 134029,
@@ -21837,8 +21837,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Domes and minarets",
+      "alt": "The layered domes and slender minarets of a mosque against a blue sky."
     },
     {
       "id": 922436,
@@ -21858,8 +21858,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Istanbul across the water",
+      "alt": "The Galata Tower above a dense hillside of Istanbul buildings seen across the water."
     },
     {
       "id": 928919,
@@ -21879,8 +21879,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Brass in the crowd",
+      "alt": "A musician playing a gleaming brass instrument among a crowd outdoors."
     },
     {
       "id": 42390,
@@ -21900,8 +21900,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A bend in the river",
+      "alt": "A broad river curving around a wooded peninsula beneath a cloudy sky."
     },
     {
       "id": 365196,
@@ -21921,8 +21921,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Amsterdam's canal houses",
+      "alt": "A row of narrow Amsterdam canal houses reflected in the water."
     },
     {
       "id": 664777,
@@ -21942,8 +21942,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Colour beside the canal",
+      "alt": "Brightly coloured gabled buildings along a canal-side walkway."
     },
     {
       "id": 657561,
@@ -21963,8 +21963,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "The swan at the boathouse",
+      "alt": "A white swan beside wooden rowing boats on still, shaded water."
     },
     {
       "id": 159703,
@@ -21984,8 +21984,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Windmills by the water",
+      "alt": "Traditional Dutch windmills and green wooden buildings beside a canal."
     },
     {
       "id": 978074,
@@ -22005,8 +22005,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A moon in the square",
+      "alt": "People silhouetted in front of a glowing moon installation beside a city building."
     },
     {
       "id": 741703,
@@ -22026,8 +22026,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A garden under glass",
+      "alt": "A train passing a waterfall inside a vast glass-roofed indoor garden."
     },
     {
       "id": 909328,
@@ -22047,8 +22047,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Lines of the modern city",
+      "alt": "A white cable-stayed bridge leading towards modern high-rise buildings."
     },
     {
       "id": 217712,
@@ -22068,8 +22068,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Waiting by the harbour",
+      "alt": "A bicycle beside the towering bow of a ship at the waterfront."
     },
     {
       "id": 486540,
@@ -22089,8 +22089,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Keeping the rhythm",
+      "alt": "A street drummer in a dark shirt playing a compact drum kit."
     },
     {
       "id": 201464,
@@ -22110,8 +22110,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Warsaw looking up",
+      "alt": "Warsaw's Palace of Culture and Science rising above a broad city square."
     },
     {
       "id": 701028,
@@ -22131,8 +22131,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Pastel colours at the palace",
+      "alt": "A pink-and-yellow palace façade framed by a formal garden and blue sky."
     },
     {
       "id": 456452,
@@ -22152,8 +22152,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "A square full of colour",
+      "alt": "People crossing Warsaw's Castle Square beneath its column and colourful façades."
     },
     {
       "id": 41415,
@@ -22173,8 +22173,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Cappadocia after dark",
+      "alt": "Illuminated buildings nestled among Cappadocia's distinctive rock formations at night."
     },
     {
       "id": 206818,
@@ -22194,8 +22194,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Gold and painted roofs",
+      "alt": "Gilded columns and ornate temple roofs beneath a bright blue sky."
     },
     {
       "id": 583676,
@@ -22215,8 +22215,8 @@
       ],
       "country": "",
       "selected": true,
-      "title": "",
-      "alt": "Travel photograph by Arjun Sarkar"
+      "title": "Layers of a temple roof",
+      "alt": "Ornate temple roofs and gilded details rising above a garden."
     }
   ],
   "countries": [
@@ -22236,6 +22236,23 @@
     "Thailand",
     "Turkey"
   ],
+  "countrySummaries": {
+    "Austria": "Austria in photographs: ornate libraries, palace interiors, city streets and Alpine scenery.",
+    "Belgium": "Belgium in photographs: canal reflections, historic squares, street scenes and the Atomium.",
+    "China": "China in photographs: illuminated skylines, misty mountains, riverside towns and everyday city life.",
+    "Czech Republic": "Czech Republic photography: Prague's streets, bridges, trams and richly decorated interiors.",
+    "France": "France in photographs: Paris landmarks, museum interiors, palace gardens and colourful old-town streets.",
+    "Germany": "Germany in photographs: Alpine lakes, forest walks, river towns and city streets through the seasons.",
+    "India": "India in photographs: street markets, festival scenes, palace architecture, coastlines and mountain landscapes.",
+    "Netherlands": "Netherlands photography: canals, windmills, modern architecture and everyday life beside the water.",
+    "Poland": "Poland in photographs: Gdańsk's waterfront, Warsaw's architecture, seaside piers and quiet park moments.",
+    "Singapore": "Singapore in photographs: waterfront skylines, temple details, colourful streets and indoor gardens.",
+    "South Korea": "South Korea photography: palace courtyards, busy food markets, coastal trains and city views.",
+    "Switzerland": "Switzerland in photographs: mountain railways, turquoise lakes, waterfalls and villages beneath Alpine peaks.",
+    "Taiwan": "Taiwan in photographs: temples, night markets, Taipei's skyline and green hills above the coast.",
+    "Thailand": "Thailand in photographs: ornate temples, night markets, long-tail boats and limestone islands.",
+    "Turkey": "Turkey in photographs: Istanbul's streets and architecture, colourful bazaars and Cappadocia's rock formations."
+  },
   "hero": 541612,
   "portrait": 265521,
   "logo": 298472,

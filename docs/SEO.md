@@ -14,11 +14,25 @@
 
 ## What improves the content next
 
-Many photographs still have generic alt text. Add accurate landmarks, city names, and meaningful visual descriptions through `data/photo-details.json`, keyed by the existing numeric photo ID, then rerun processing and building. Describe what is actually in the photograph; do not repeat keyword lists or infer places that have not been identified.
+All 82 homepage highlights, all 15 destination covers and the 10 corrected Poland/Taiwan photos have visually reviewed titles and descriptive alt text (107 photos in total). These descriptions appear in image alternatives, the accessible viewer, social previews and image structured data. Many other country photographs still have generic alt text. Add accurate landmarks, city names, and meaningful visual descriptions through `data/photo-details.json`, keyed by the existing numeric photo ID, then rerun processing and building. Describe what is actually in the photograph; do not repeat keyword lists or infer places that have not been identified.
+
+`data/country-summaries.json` supplies distinct, visible summaries of the subjects represented in each collection. The catalogue passes the same text to static pages and the JavaScript gallery so metadata and visible content stay consistent. Keep summaries accurate when the library changes.
+
+The homepage title starts with Our Travel Photobook. The existing WebSite and Organization structured data also identify the established `ourtravelphotobook` handle as an alternate name. A 96px PNG favicon complements the browser and Apple icons for search display.
 
 Short first-person accounts of real trips, dates, locations, and photography choices would give readers and search engines more useful context. Add these only when Arjun supplies or confirms the facts. Keep the photographer's name, brand, and social profile links consistent.
 
-After publication, submit the sitemap in Google Search Console and Bing Webmaster Tools. Check indexing, image search impressions, search terms, mobile page experience, and broken links over time. A property verification token must come from the relevant account; it is not invented or included here.
+The Google Search Console Domain property is verified and the canonical sitemap has been submitted. Bing Webmaster Tools setup remains separate. Check indexing, image search impressions, search terms, mobile page experience, and broken links over time. Preserve the domain verification TXT record in Cloudflare; it is not part of the public site build.
+
+## New-domain indexing
+
+The custom domain first went live on 14 September 2026. Availability at the URL does not mean Google has already discovered, crawled and indexed it. The established Instagram account may appear first while the new website is still being discovered. A public search alone cannot conclusively establish index status; use Search Console URL Inspection.
+
+Search Console inspection on 14 September 2026 reported the homepage as **URL is unknown to Google**, with no recorded crawl. The sitemap was submitted to the verified Domain property. Its first report said **Couldn't fetch**, but Google's subsequent live test fetched that exact sitemap successfully with crawling allowed. The XML is valid and publicly returns HTTP 200; initial report data is still processing. Google reported no manual actions or security issues. If the sitemap error persists, inspect the exact sitemap URL again with a live test and review the report's detailed error before changing DNS or resubmitting.
+
+Request homepage indexing once after the release, and use the sitemap for the remaining galleries. Repeated requests do not accelerate crawling. Update the Instagram and YouTube profile website fields to the canonical domain when signed into those accounts; this code release does not edit social profiles.
+
+Google says crawling can take days to weeks, and indexing or ranking is not guaranteed. No code change can force an immediate first-place brand result. Keep redirects stable, add accurate photographic context, and check Search Console for actual crawl or canonical errors.
 
 ## GEO scope
 
@@ -30,4 +44,6 @@ Here, GEO means discoverability in generative/AI search. The improvements make s
 - [Google: crawlable URLs and fragments](https://developers.google.com/search/docs/crawling-indexing/url-structure)
 - [Google: AI features and your website](https://developers.google.com/search/docs/appearance/ai-features)
 - [Google: image credit metadata](https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata)
+- [Google: request crawling and submit a sitemap](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)
+- [Google: site names and alternate names](https://developers.google.com/search/docs/appearance/site-names)
 - [Netlify: file-based Pretty URL configuration](https://docs.netlify.com/build/configure-builds/file-based-configuration/)

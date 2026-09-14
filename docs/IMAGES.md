@@ -20,7 +20,7 @@ Supported input: `.jpg`, `.jpeg`, `.png`, `.webp`, `.tif`, and `.tiff`, case-ins
 1. Compare each photograph against the registry's SHA-256 fingerprint. Skip unchanged files whose derivatives exist.
 2. Copy the original to `.photo-originals/<sha256>/<original filename>` and verify the backup byte-for-byte.
 3. Correct EXIF orientation and inspect the image at its original resolution.
-4. Detect connected white or near-white rectangular edge strips. Allow small compression artifacts and gray shading in an already detected frame. Require multiple matching sides; do not automatically trim isolated bright skies or snow. Stop at the photo content. Never crop more than 20% from one edge.
+4. Detect connected white or near-white rectangular edge strips. An adaptive perimeter-colour check also recognizes cream, pink and blue-grey frames, including light shading. Require multiple matching sides (at least three bounded sides for tinted frames); do not automatically trim isolated bright skies or snow. Stop at the photo content. Never crop more than 20% from one edge.
 5. Crop only a detected frame. Preserve the remaining aspect ratio; resize only when the longest edge exceeds 2560 pixels.
 6. Assign a globally collision-checked random integer ID between 1000 and 1000000, inclusive. Ordinary photographs use this number as their filename. A country photo named `cover` keeps its name, becoming `cover.webp`. Existing processed filenames remain stable.
 7. Save WebP at quality 90 with responsive 480px and 960px width variants when the source is large enough. Responsive files use the photo's numeric ID so covers from different countries cannot collide; sizes are separate directories.
@@ -48,6 +48,10 @@ python3 scripts/crop_report.py
 Open `output/crop-review.html` locally to compare original and processed images. The report is not published. Crop coordinates, original dimensions, and backup locations are recorded in `data/image-registry.json`.
 
 Automatic detection cannot distinguish every white scene from an added frame. Inspect unusual borders or white backgrounds in the report. One-sided, patterned, signed, and very large borders are intentionally conservative cases. Never repeatedly crop a processed file to “try harder.” Restore the original for manual correction instead.
+
+For a full-library check after imports, run `.venv/bin/python scripts/audit_borders.py --check`. This reads every current master, leaves images unchanged, writes a private `output/border-audit/report.json`, and exits nonzero if a possible frame needs review. Suggested coordinates are in the current master; do not pass them to `crop_photo.py` without mapping them to the original. Review the preserved original and apply the confirmed crop there. Transparent artwork is excluded from frame detection.
+
+On 14 September 2026, all 1,059 catalogue images were scanned and reviewed in contact sheets. Ten missed cream/grey frames were corrected from their preserved originals: Poland `55481`, `426223`, `597835`, `720308`, `981223`; Taiwan `69921`, `106007`, `757902`, `826545`, `942604`. IDs and filenames were preserved; masters, responsive variants, catalogue dimensions, copyright metadata and cache revisions were refreshed.
 
 ## Captions, covers, and composition
 

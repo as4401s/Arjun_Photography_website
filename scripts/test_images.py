@@ -52,6 +52,28 @@ class ImageWorkflowTests(unittest.TestCase):
         self.assertEqual(border_box(sky), (0, 0, 240, 180))
         self.assertEqual(border_box(Image.new('RGB', (240, 180), 'white')), (0, 0, 240, 180))
 
+    def test_tinted_and_shaded_frames_are_removed(self):
+        for colour in ((246, 241, 220), (250, 232, 225), (220, 232, 240), (205, 205, 205)):
+            with self.subTest(colour=colour):
+                framed = ImageOps.expand(self.photo, border=(13, 7, 18, 22), fill=colour)
+                self.assertEqual(border_box(framed), (13, 7, 253, 187))
+        framed = np.asarray(ImageOps.expand(self.photo, border=12, fill=(239, 235, 232))).copy()
+        # A graded frame like the Taiwan photograph: darker along the bottom.
+        shade = np.linspace(0, 22, framed.shape[0]).astype(np.uint8)[:, None, None]
+        framed = Image.fromarray(np.maximum(framed.astype(np.int16) - shade, 0).astype(np.uint8))
+        stream = io.BytesIO()
+        framed.save(stream, format='JPEG', quality=90)
+        stream.seek(0)
+        crop = border_box(Image.open(stream))
+        self.assertTrue(all(abs(a-b) <= 1 for a, b in zip(crop, (12, 12, 252, 192))), crop)
+
+    def test_tinted_sky_and_blank_artwork_keep_composition(self):
+        for colour in ((246, 241, 220), (215, 225, 240)):
+            sky = self.photo.copy()
+            sky.paste(colour, (0, 0, 240, 25))
+            self.assertEqual(border_box(sky), (0, 0, 240, 180))
+            self.assertEqual(border_box(Image.new('RGB', (240, 180), colour)), (0, 0, 240, 180))
+
     def test_import_metadata_backup_empty_country_and_idempotence(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

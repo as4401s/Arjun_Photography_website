@@ -45,12 +45,13 @@ def atomic_json(path: Path, value: object) -> None:
 
 
 def border_box(image: Image.Image) -> tuple[int, int, int, int]:
-    """Find connected, flat white edge strips, without trimming bright subjects.
+    """Find connected white or lightly tinted frames, preserving bright subjects.
 
     Work at native resolution. Require neutral near-white lines spanning >=98%
     of an edge and at least two agreeing sides.
     Stop on the first content line; never seek white pixels within the image.
     Compression tolerance is 20 levels; the strip itself must average >=245.
+    A conservative three-sided fallback recognizes pale tinted or shaded frames.
     """
     rgb = np.asarray(image.convert('RGB'))
     h, w = rgb.shape[:2]
@@ -98,7 +99,27 @@ def border_box(image: Image.Image) -> tuple[int, int, int, int]:
     if sum(d > 0 for d in depths) >= 2 or all(d > 0 for d in refined):
         left, top, right, bottom = refined
         return (left, top, w - right, h - bottom)
-    # One-sided white edges can be real sky/snow: leave them for review.
+    # Edited frames can be cream, pink, blue-grey, or shaded instead of white.
+    # Learn their colour from the perimeter and require three bounded sides.
+    # This fallback never searches inside a photograph for a matching colour.
+    perimeter = np.concatenate((rgb[0], rgb[-1], rgb[:, 0], rgb[:, -1]))
+    colour = np.median(perimeter, axis=0)
+    if colour.min() >= 180 and np.ptp(colour) <= 70:
+        matching = np.max(np.abs(rgb.astype(np.int16) - colour), axis=2) <= 32
+
+        def frame_depth(values: np.ndarray) -> int:
+            limit = max(1, int(len(values) * .20))
+            content = np.flatnonzero(values[:limit] < .98)
+            return int(content[0]) if content.size else 0
+
+        rows, cols = matching.mean(axis=1), matching.mean(axis=0)
+        left, top, right, bottom = (
+            frame_depth(cols), frame_depth(rows),
+            frame_depth(cols[::-1]), frame_depth(rows[::-1]),
+        )
+        if sum(d >= 2 for d in (left, top, right, bottom)) >= 3:
+            return (left, top, w - right, h - bottom)
+    # One-sided bright edges can be real sky/snow: leave them for review.
     return (0, 0, w, h)
 
 
@@ -230,7 +251,12 @@ def catalogue(root: Path, registry: dict) -> dict:
     photos.sort(key=lambda p: ranks.get(p['id'], len(ranks)))
     covers = {country: resolve(value) for country, value in config.get('covers', {}).items()}
     covers.update({Path(e['src']).parts[2].title(): e['id'] for e in entries if is_country_cover(Path(e['src']))})
+    summaries_path = root / 'data/country-summaries.json'
+    summaries = json.loads(summaries_path.read_text()) if summaries_path.exists() else {}
+    if not isinstance(summaries, dict) or any(not isinstance(v, str) for v in summaries.values()):
+        raise ValueError('Country summaries must map country names to plain text.')
     return {'copyright': COPYRIGHT, 'photos': photos, 'countries': countries,
+            'countrySummaries': {c: summaries[c] for c in countries if summaries.get(c)},
             'hero': resolve(config.get('hero')), 'portrait': resolve(config.get('portrait')), 'logo': resolve(config.get('logo')), 'favicon': resolve(config.get('favicon')),
             'covers': covers}
 

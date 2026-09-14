@@ -6,6 +6,7 @@
 - **Country cover:** name one image `cover` in that country's folder. The importer preserves `cover.webp` and selects it automatically; ordinary images still get random numeric names. See `docs/IMAGES.md` for replacement and rename instructions.
 - **Ordering and site photos:** edit `data/site.json`. Existing original paths remain resolvable after random renaming. Prefer numeric IDs for new configuration.
 - **Captions:** edit `data/photo-details.json`, then process and build.
+- **Country introductions:** edit `data/country-summaries.json`, then process and build. Describe subjects actually present in the collection.
 - **Text or layout:** edit `index.html` or `assets/site.css`, then build.
 - **Behaviour:** edit `assets/site.js`, check its syntax and browser interactions, then build.
 
@@ -34,9 +35,10 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 node --check assets/site.js
 python3 scripts/build.py
 python3 scripts/verify.py
+python3 scripts/audit_borders.py --check
 ```
 
-The image regression checks cover unbordered photos, asymmetric white frames, JPEG compression, bright skies, attribution metadata, backups, empty collections, and repeat imports. The verifier checks the actual catalogue, filenames, dimensions, file formats, metadata on every full-size image and thumbnail, and private-file exclusion from `dist/`.
+The image regression checks cover unbordered photos, asymmetric white frames, cream and shaded tinted frames, JPEG compression, bright skies, attribution metadata, backups, empty collections, and repeat imports. The verifier checks the actual catalogue, filenames, dimensions, file formats, metadata on every full-size image and thumbnail, and private-file exclusion from `dist/`. The border audit is read-only: review any flagged photographs before applying crops, as bright compositions can resemble frames.
 
 After visual changes, check desktop and mobile widths, selected work, destinations, an empty country, viewer arrows/Escape, focus restoration, and browser back/forward navigation. Check the browser console and network panel for broken requests. Serve `dist/` through HTTP rather than opening the template as a `file://` URL; catalogue fetching requires a server.
 

@@ -13939,10 +13939,10 @@
     "id": 426223,
     "original": "poy/countries/poland/IMG_3998.jpg",
     "src": "poy/countries/poland/426223.webp",
-    "sha256": "0212a0ff83362497564eedc2e6afcd4a0d24150c79bbea773580f9638188c854",
+    "sha256": "83e1526103723982dff5b1c206b601e59a2e1b7155bdeffd62d9ee162aec68d2",
     "version": 1,
-    "width": 2406,
-    "height": 1924,
+    "width": 2344,
+    "height": 1875,
     "variants": [
       {
         "src": "assets/photos/480/426223.webp",
@@ -13958,14 +13958,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2406,
-      1924
+      31,
+      25,
+      2375,
+      1900
     ],
     "croppedSize": [
-      2406,
-      1924
+      2344,
+      1875
     ],
     "backup": ".photo-originals/72fbe9a9d587f270b98367b881b545555d0322c32f30c0d068b495ea73bc834f/IMG_3998.jpg"
   },
@@ -13973,10 +13973,10 @@
     "id": 55481,
     "original": "poy/countries/poland/IMG_4001.jpg",
     "src": "poy/countries/poland/55481.webp",
-    "sha256": "efade2da4b5c26588b79801a2a7f0302080bff7c6e9b4f4689795b7c5b94317b",
+    "sha256": "107ecbb99d02b0e6a8fd60553772b43e414924bf0972209b778f7c017081d5e7",
     "version": 1,
-    "width": 2404,
-    "height": 1924,
+    "width": 2342,
+    "height": 1874,
     "variants": [
       {
         "src": "assets/photos/480/55481.webp",
@@ -13992,14 +13992,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2404,
-      1924
+      33,
+      26,
+      2375,
+      1900
     ],
     "croppedSize": [
-      2404,
-      1924
+      2342,
+      1874
     ],
     "backup": ".photo-originals/31700c2d6ef1b3142a8dd8cab1334cea9ee7b4e3913dba852e35c37d3faeb6db/IMG_4001.jpg"
   },
@@ -14313,10 +14313,10 @@
     "id": 981223,
     "original": "poy/countries/poland/IMG_4303.jpg",
     "src": "poy/countries/poland/981223.webp",
-    "sha256": "e4d4c60ddfdfdbe70be4e897a5cef13f553fb0c8eb9aaedec84af226f71d8f09",
+    "sha256": "374aa14c9ee09f256c5c46296a7c01585f2320f972dbbb3f1cef419bb846849b",
     "version": 1,
-    "width": 2404,
-    "height": 1924,
+    "width": 2327,
+    "height": 1863,
     "variants": [
       {
         "src": "assets/photos/480/981223.webp",
@@ -14332,14 +14332,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2404,
-      1924
+      39,
+      31,
+      2366,
+      1894
     ],
     "croppedSize": [
-      2404,
-      1924
+      2327,
+      1863
     ],
     "backup": ".photo-originals/cca20de8375dd57726ac859f07da95b008a81e1ca37507d01c02892db2398a44/IMG_4303.jpg"
   },
@@ -15197,10 +15197,10 @@
     "id": 720308,
     "original": "poy/countries/poland/IMG_9695-Edit.jpg",
     "src": "poy/countries/poland/720308.webp",
-    "sha256": "7a4be64ea8ebb66ea2ebc7f113941e5932f31ef1632f7163a9bb1fe1924897aa",
+    "sha256": "9d102ec0caa586eacfa21cfc22c90b4856ef8041585ca4e732ca994d9d01626e",
     "version": 1,
-    "width": 2404,
-    "height": 1924,
+    "width": 2326,
+    "height": 1552,
     "variants": [
       {
         "src": "assets/photos/480/720308.webp",
@@ -15216,14 +15216,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2404,
-      1924
+      37,
+      184,
+      2363,
+      1736
     ],
     "croppedSize": [
-      2404,
-      1924
+      2326,
+      1552
     ],
     "backup": ".photo-originals/952f6cd5110226f4456e1a2212b87679e48b82f5eae83b7544e299a660b49ea3/IMG_9695-Edit.jpg"
   },
@@ -15299,10 +15299,10 @@
     "id": 597835,
     "original": "poy/countries/poland/IMG_9701-Edit.jpg",
     "src": "poy/countries/poland/597835.webp",
-    "sha256": "5dfcc29f477ff6b5f254dcd78813cf03989dbc12ca3acce2587f67b58c201733",
+    "sha256": "79d4c3ef3678277abf4aec751cf63b29ecf151a25f62106974b39675b41e7e21",
     "version": 1,
-    "width": 2406,
-    "height": 1924,
+    "width": 2320,
+    "height": 1855,
     "variants": [
       {
         "src": "assets/photos/480/597835.webp",
@@ -15318,14 +15318,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2406,
-      1924
+      45,
+      36,
+      2365,
+      1891
     ],
     "croppedSize": [
-      2406,
-      1924
+      2320,
+      1855
     ],
     "backup": ".photo-originals/51d363bdfd17a876036c1eaf496b546f94edbc133af2b24d2e231777ed370c3d/IMG_9701-Edit.jpg"
   },
@@ -21410,10 +21410,10 @@
     "id": 826545,
     "original": "poy/countries/taiwan/IMG_9264.jpg",
     "src": "poy/countries/taiwan/826545.webp",
-    "sha256": "e73c0071190d4977ed4b8fd70b3597efe67fd6d5168adcc8178cc2989a372c3d",
+    "sha256": "84dc78e4ad644062d9b6718da97107a584a67de3435dedc23d65dae921a860a5",
     "version": 1,
-    "width": 2404,
-    "height": 1924,
+    "width": 2335,
+    "height": 1751,
     "variants": [
       {
         "src": "assets/photos/480/826545.webp",
@@ -21429,14 +21429,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2404,
-      1924
+      33,
+      86,
+      2368,
+      1837
     ],
     "croppedSize": [
-      2404,
-      1924
+      2335,
+      1751
     ],
     "backup": ".photo-originals/306e11f11828361a751c22c9f090766d9d347a6a50b9b2d32246dba7f2ce1bf5/IMG_9264.jpg"
   },
@@ -21852,10 +21852,10 @@
     "id": 942604,
     "original": "poy/countries/taiwan/IMG_9429.jpg",
     "src": "poy/countries/taiwan/942604.webp",
-    "sha256": "bbf64fc3b5624fe3ac5119ed644e1d9df6e84cbfb0a46c5f0cee8bebd2db00a6",
+    "sha256": "6ab21b27304119d005cc9f6b01fa409611a682c09eb4433bb125fa22a8e9b542",
     "version": 1,
-    "width": 2404,
-    "height": 1924,
+    "width": 2320,
+    "height": 1857,
     "variants": [
       {
         "src": "assets/photos/480/942604.webp",
@@ -21871,14 +21871,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2404,
-      1924
+      40,
+      32,
+      2360,
+      1889
     ],
     "croppedSize": [
-      2404,
-      1924
+      2320,
+      1857
     ],
     "backup": ".photo-originals/48db856d399ad07e9c35d04e7d65240621d6e1f2ec01ebe1b9ca8e2b0b05d2f0/IMG_9429.jpg"
   },
@@ -21886,10 +21886,10 @@
     "id": 69921,
     "original": "poy/countries/taiwan/IMG_9432.jpg",
     "src": "poy/countries/taiwan/69921.webp",
-    "sha256": "90b55bad1b4e14407ae6363ecb7fb75a497e3ad151cb86e4db1d7cf3a9e3f6d5",
+    "sha256": "a7f8c3cd13a3613d272a89c6defddc7d1518ab610e1c66a36d4f220eb678dfc2",
     "version": 1,
-    "width": 2404,
-    "height": 1924,
+    "width": 2328,
+    "height": 1863,
     "variants": [
       {
         "src": "assets/photos/480/69921.webp",
@@ -21905,14 +21905,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2404,
-      1924
+      40,
+      32,
+      2368,
+      1895
     ],
     "croppedSize": [
-      2404,
-      1924
+      2328,
+      1863
     ],
     "backup": ".photo-originals/c10ba4afb7a8c7a6b6f0e6301b1369c29d41c1e13d42c4a2af1f992bcf6083a4/IMG_9432.jpg"
   },
@@ -21920,10 +21920,10 @@
     "id": 106007,
     "original": "poy/countries/taiwan/IMG_9437.jpg",
     "src": "poy/countries/taiwan/106007.webp",
-    "sha256": "a7aeb02ea301dace902b56dd3f319b49011b01fc9a36c8dbbae72eb4c44538d4",
+    "sha256": "8450dce84b868ca2fdc8700127733b3b9ac46c76d0e68fcf0718e3a2ff129ab6",
     "version": 1,
-    "width": 2406,
-    "height": 1924,
+    "width": 2316,
+    "height": 1852,
     "variants": [
       {
         "src": "assets/photos/480/106007.webp",
@@ -21939,14 +21939,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      2406,
-      1924
+      49,
+      39,
+      2365,
+      1891
     ],
     "croppedSize": [
-      2406,
-      1924
+      2316,
+      1852
     ],
     "backup": ".photo-originals/96696691c39d7bf4ede10b3cf0642c04fc3146d2e35c856835a0c7100a9f6fa0/IMG_9437.jpg"
   },
@@ -22464,10 +22464,10 @@
     "id": 757902,
     "original": "poy/countries/taiwan/IMG_9612.jpg",
     "src": "poy/countries/taiwan/757902.webp",
-    "sha256": "a1263dc70e0e815b981880f12d70c12355145066c338dea3fd8e80a870256d7f",
+    "sha256": "b5dc061f8bf45c91deebd946b9e4f1b2c0fabd14a34a13f96b8b10d2b70697fd",
     "version": 1,
-    "width": 1540,
-    "height": 1924,
+    "width": 1233,
+    "height": 1849,
     "variants": [
       {
         "src": "assets/photos/480/757902.webp",
@@ -22483,14 +22483,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      1540,
-      1924
+      154,
+      38,
+      1387,
+      1887
     ],
     "croppedSize": [
-      1540,
-      1924
+      1233,
+      1849
     ],
     "backup": ".photo-originals/72df8f57a526856d59d8fcdd5ee62853bb0aa5eeb1fe8cf7868033f9c77669b7/IMG_9612.jpg"
   },

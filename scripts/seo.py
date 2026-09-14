@@ -40,7 +40,9 @@ def page_names(catalogue: dict) -> set[str]:
     return {'index.html', 'destinations.html', '404.html', *pages}
 
 
-def country_description(country: str, count: int) -> str:
+def country_description(country: str, count: int, summary: str = '') -> str:
+    if count and summary:
+        return f'{summary} {count} photographs by {AUTHOR} for {BRAND}.'
     return (f'{count} travel photographs from {country} by {AUTHOR}, shared through {BRAND}.'
             if count else f'Photographs from {country} will be added to {BRAND} as the collection grows.')
 
@@ -91,9 +93,11 @@ def structured_data(base: str, path: str, title: str, description: str, photos: 
     graph = [
         {'@type': 'Person', '@id': base + '#photographer', 'name': AUTHOR,
          'url': base + '#about', 'description': 'Travel and landscape photographer based in Germany.'},
-        {'@type': 'Organization', '@id': base + '#publisher', 'name': BRAND, 'url': base,
+        {'@type': 'Organization', '@id': base + '#publisher', 'name': BRAND,
+         'alternateName': 'ourtravelphotobook', 'url': base,
          'founder': {'@id': base + '#photographer'}, 'sameAs': SOCIAL},
         {'@type': 'WebSite', '@id': base + '#website', 'url': base, 'name': BRAND,
+         'alternateName': ['ourtravelphotobook', 'OurTravelPhotobook'],
          'publisher': {'@id': base + '#publisher'}, 'inLanguage': 'en'},
         {'@type': 'CollectionPage', '@id': url + '#page', 'url': url, 'name': title,
          'description': description, 'isPartOf': {'@id': base + '#website'},
@@ -161,12 +165,12 @@ def enrich_pages(stage: Path, catalogue: dict, base: str) -> None:
     index = destination.replace('<div class="photo-grid" id="photo-grid"></div>', '<div class="photo-grid" id="photo-grid" hidden></div>')
     index = index.replace('<div class="destinations-grid" id="destinations-grid" hidden></div>', f'<div class="destinations-grid" id="destinations-grid">{destination_markup(catalogue)}</div>')
     covers = [cover_for(catalogue, c, [p for p in catalogue['photos'] if p['country'] == c]) for c in catalogue['countries']]
-    pages = [('', 'index.html', home, f'Travel Photography by {AUTHOR} | {BRAND}',
-              f'Travel and landscape photography by {AUTHOR}, based in Germany. Explore photographs from Europe and Asia with {BRAND}.', selected, hero),
+    pages = [('', 'index.html', home, f'{BRAND} | Travel Photography by {AUTHOR}',
+              f'{BRAND} is the travel photography portfolio of {AUTHOR}. Explore landscapes, city life and travel stories from Europe and Asia.', selected, hero),
              ('', 'destinations.html', index, f'Travel Photography Destinations | {BRAND}', description, [p for p in covers if p], hero)]
     for country in catalogue['countries']:
         photos = sorted([p for p in catalogue['photos'] if p['country'] == country], key=lambda p: p['id'])
-        text = country_description(country, len(photos))
+        text = country_description(country, len(photos), catalogue.get('countrySummaries', {}).get(country, ''))
         markup = destination.replace('data-page="destinations"', f'data-page="destinations" data-country="{html.escape(country)}"')
         markup = markup.replace('<h1 id="gallery-title">The destinations.</h1>', f'<h1 id="gallery-title">{html.escape(country)} photography.</h1>')
         markup = markup.replace(html.escape(description), html.escape(text))

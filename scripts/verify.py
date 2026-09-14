@@ -38,7 +38,7 @@ def verify():
         token = "'sha256-" + base64.b64encode(hashlib.sha256(structured[1].encode()).digest()).decode() + "'"
         assert token in markup and token in (ROOT / 'dist/_headers').read_text(), f'Structured data blocked by CSP: {page}'
         assert 'class="photo-item"' in markup or 'class="destination"' in markup or 'id="empty-state"' in markup, f'No crawlable content: {page}'
-        for size in (32, 180):
+        for size in (32, 96, 180):
             assert f'href="assets/icons/{size}/{catalogue["favicon"]}.png"' in markup, f'Missing icon link: {page}'
     homepage = (ROOT / 'dist/index.html').read_text()
     for role in ('hero', 'portrait', 'logo'):
@@ -69,7 +69,7 @@ def verify():
             assert (ROOT / 'dist' / relative).is_file(), f'Not published: {src}'
             public_files.add(relative)
             count += 1
-    for size in (32, 180):
+    for size in (32, 96, 180):
         icon_path = f'assets/icons/{size}/{catalogue["favicon"]}.png'
         with Image.open(ROOT / 'dist' / icon_path) as icon:
             assert icon.size == (size, size) and '2026 Arjun Sarkar' in icon.info['Copyright']
