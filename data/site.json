@@ -1,0 +1,20 @@
+{
+  "hero": "images/IMG_2332.webp",
+  "portrait": "images/IMG_4279.webp",
+  "featured": [
+    "poy/IMG_0673-2.webp",
+    "poy/IMG_2332.webp",
+    "poy/IMG_8417-Edit.webp",
+    "poy/IMG_1787.webp",
+    "poy/IMG_4774-Edit.webp",
+    "poy/IMG_7864.webp"
+  ],
+  "covers": {
+    "Switzerland": "poy/countries/switzerland/IMG_4395-Edit.jpg",
+    "Taiwan": "poy/countries/taiwan/IMG_0042.jpg",
+    "China": "poy/countries/china/IMG_4892.jpg"
+  },
+  "logo": "images/OurTravelPhotbook.png",
+  "favicon": "images/travel-emblem.webp",
+  "url": "https://as4401s.github.io/Arjun_Photography_website/"
+}

@@ -1,1 +1,9 @@
 .DS_Store
+.venv/
+__pycache__/
+.photo-originals/
+.photo-processing.lock
+output/
+dist/
+.playwright-cli/
+dist.next/
