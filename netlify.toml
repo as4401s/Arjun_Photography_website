@@ -4,4 +4,15 @@
 
 [build.environment]
   PYTHON_VERSION = "3.14"
-  SITE_URL = "https://ourtravelphotobook.netlify.app/"
+  SITE_URL = "https://www.ourtravelphotobook.com/"
+
+# Keep generated links consistent with their canonical .html URLs on both hosts.
+[build.processing.html]
+  pretty_urls = false
+
+# Keep existing Netlify links working while consolidating the public address.
+[[redirects]]
+  from = "https://ourtravelphotobook.netlify.app/*"
+  to = "https://www.ourtravelphotobook.com/:splat"
+  status = 301
+  force = true

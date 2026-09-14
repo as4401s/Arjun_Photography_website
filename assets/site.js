@@ -18,6 +18,7 @@
   const mobileLayout = window.matchMedia('(max-width: 600px)');
   const mobileBatchSize = 40;
   let renderedCount = 0;
+  let routeRendered = false;
 
   function imageUrl(photo, src = photo.src) {
     return photo.revision ? `${src}?v=${photo.revision}` : src;
@@ -43,7 +44,17 @@
     status.hidden = !message;
   }
 
+  function countryPage(country) {
+    const slug = country.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return `${slug}-photography.html`;
+  }
+
   function routeTo(hash) {
+    if (document.body.dataset.country && hash === '#destinations') {
+      location.assign('destinations.html');
+      return;
+    }
     if (location.hash === hash) renderRoute();
     else location.hash = hash;
     $('gallery').scrollIntoView({ behavior: 'instant' });
@@ -54,12 +65,13 @@
     let hash;
     try { hash = decodeURIComponent(location.hash.slice(1)); }
     catch { hash = ''; }
-    const isCountry = hash.startsWith('country=');
-    const country = isCountry ? hash.slice(8) : '';
+    const isCountry = hash.startsWith('country=') || Boolean(document.body.dataset.country);
+    const country = hash.startsWith('country=') ? hash.slice(8) : document.body.dataset.country || '';
     const destinationPage = document.body.dataset.page === 'destinations';
     const view = destinationPage ? (isCountry ? 'country' : 'destinations') : 'selected';
     // Section anchor navigation should not replace the collection being browsed.
-    if (['home', 'about', 'gallery', 'travelbook'].includes(hash) && grid.childElementCount + destinations.childElementCount > 0) return;
+    if (routeRendered && ['home', 'about', 'gallery', 'travelbook'].includes(hash)) return;
+    routeRendered = true;
     grid.replaceChildren();
     renderedCount = 0;
     $('load-more').hidden = true;
@@ -76,7 +88,7 @@
 
     if (view === 'destinations') {
       $('gallery-title').textContent = 'The destinations.';
-      $('gallery-description').textContent = 'Different places. A thousand ways of seeing.';
+      $('gallery-description').textContent = `Explore travel photography from ${catalogue.countries.length} countries by Arjun Sarkar, the Germany-based photographer behind Our Travel Photobook.`;
       renderDestinations();
       showStatus(`${catalogue.countries.length} destinations to explore.`);
       return;
@@ -85,8 +97,11 @@
     visiblePhotos = catalogue.photos.filter((photo) => view === 'country' ? photo.country === country : photo.selected);
     // IDs are assigned randomly at import, giving each country a stable shuffle.
     if (view === 'country') visiblePhotos.sort((a, b) => a.id - b.id);
-    $('gallery-title').textContent = view === 'country' ? country || 'Destination' : 'Highlights.';
-    $('gallery-description').textContent = view === 'country' ? `A collection of moments from ${country || 'the journey'}.` : 'A few moments I keep coming back to.';
+    $('gallery-title').textContent = view === 'country' ? `${country || 'Destination'} photography.` : 'Highlights.';
+    const countryDescription = visiblePhotos.length
+      ? `${visiblePhotos.length} travel photographs from ${country} by Arjun Sarkar, shared through Our Travel Photobook.`
+      : `Photographs from ${country} will be added to Our Travel Photobook as the collection grows.`;
+    $('gallery-description').textContent = view === 'country' ? countryDescription : 'A few moments I keep coming back to.';
     $('collection-count').textContent = `${visiblePhotos.length} photographs`;
     if (view === 'country' && !catalogue.countries.includes(country)) {
       showStatus('This destination is not in the collection. Explore all destinations using the link above.');
@@ -146,8 +161,8 @@
       const photos = catalogue.photos.filter((photo) => photo.country === country);
       const cover = photos.find((photo) => /\/cover\.webp$/i.test(photo.src))
         || photos.find((photo) => photo.id === catalogue.covers?.[country]) || photos[0];
-      const button = document.createElement('button');
-      button.type = 'button';
+      const button = document.createElement('a');
+      button.href = countryPage(country);
       button.className = 'destination';
       button.setAttribute('aria-label', `${country}, ${photos.length ? `${photos.length} photographs` : 'photographs coming soon'}`);
       const frame = document.createElement('div');
@@ -176,7 +191,6 @@
       count.textContent = photos.length ? `${photos.length} photographs` : 'A story still to come';
       meta.append(title, count);
       button.append(frame, meta);
-      button.addEventListener('click', () => routeTo(`#country=${encodeURIComponent(country)}`));
       fragment.append(button);
     }
     destinations.append(fragment);
@@ -308,6 +322,15 @@
       const data = await response.json();
       if (!Array.isArray(data.photos) || !Array.isArray(data.countries)) throw new Error('Invalid photo catalogue');
       catalogue = data;
+      // Preserve old shared hash URLs while moving collections to crawlable pages.
+      if (document.body.dataset.page === 'destinations' && location.hash.startsWith('#country=')) {
+        let legacyCountry;
+        try { legacyCountry = decodeURIComponent(location.hash.slice(9)); } catch { legacyCountry = ''; }
+        if (catalogue.countries.includes(legacyCountry)) {
+          location.replace(countryPage(legacyCountry));
+          return;
+        }
+      }
       for (const role of ['hero', 'portrait']) {
         const photo = catalogue.photos.find((item) => item.id === catalogue[role]);
         const image = $(`${role}-image`);

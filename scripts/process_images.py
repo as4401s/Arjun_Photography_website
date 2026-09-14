@@ -140,7 +140,8 @@ def process(job: tuple[Path, int, dict | None], root: Path) -> dict:
     stage = root / '.photo-originals' / '.staging' / str(number)
     staged_main = stage / 'main.webp'
     staged_files = []
-    with Image.open(source) as opened:
+    # Limit decoding to the formats accepted by the photo importer.
+    with Image.open(source, formats=['JPEG', 'PNG', 'TIFF', 'WEBP']) as opened:
         if getattr(opened, 'n_frames', 1) > 1:
             raise ValueError(f'Animated image is unsupported: {relative}')
         icc = opened.info.get('icc_profile')
@@ -305,7 +306,7 @@ def run(root: Path, workers: int, dry_run: bool) -> None:
     print(f'{len(files)} photos: {len(jobs)} to process; {unchanged} unchanged.', flush=True)
     if dry_run:
         for path, _, _ in jobs:
-            with Image.open(path) as im:
+            with Image.open(path, formats=['JPEG', 'PNG', 'TIFF', 'WEBP']) as im:
                 im = ImageOps.exif_transpose(im)
                 box = border_box(im)
                 print(json.dumps({'file': str(path.relative_to(root)), 'size': im.size, 'crop': box}))

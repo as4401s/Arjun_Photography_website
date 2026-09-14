@@ -8,7 +8,7 @@
   <meta name="copyright" content="Copyright 2026 Arjun Sarkar. All rights reserved.">
   <meta name="theme-color" content="#0c100f">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; font-src 'self'; object-src 'none'; frame-src 'none'; worker-src 'none'; script-src-attr 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
   <meta property="og:title" content="Our Travel Photobook — Photography by Arjun Sarkar">
   <meta property="og:description" content="A growing collection of places, people, and quiet moments.">
   <meta property="og:type" content="website">
@@ -49,13 +49,13 @@
       <button class="load-more" id="load-more" type="button" aria-controls="photo-grid" hidden><span>Load more photographs</span><span id="load-more-count"></span><span aria-hidden="true">↓</span></button>
       <p class="sr-only" id="photo-progress" role="status"></p>
       <div class="destinations-grid" id="destinations-grid" hidden></div>
-      <div class="empty-state" id="empty-state" hidden><p class="eyebrow">A story still to come</p><h3>The journey continues.</h3><p>Photographs from this destination will be added soon.</p><button class="text-button" type="button" id="empty-back">Explore other destinations ↗</button></div>
+      <div class="empty-state" id="empty-state" hidden><p class="eyebrow">A story still to come</p><h3>The journey continues.</h3><p>Photographs from this destination will be added soon.</p><a class="text-button" href="destinations.html" id="empty-back">Explore other destinations ↗</a></div>
       <noscript><p>Enable JavaScript to browse the photo collections. You can still get in touch using the links below.</p></noscript>
     </section>
 
     <section class="about section-shell" id="about" aria-labelledby="about-title">
       <div class="about-photo"><img id="portrait-image" data-photo="portrait" alt="Arjun Sarkar" loading="lazy" decoding="async"><span class="eyebrow">Behind the camera</span></div>
-      <div class="about-copy"><p class="eyebrow">A little about me</p><h2 id="about-title">Hello, I'm Arjun.</h2><p class="about-lead">Drawn to quiet landscapes.<br>And cities that never sit still.</p><p>I’m Arjun, the photographer behind Our Travel Photobook. Photography is how I remember a place — its light, its people, and the feeling of being there.</p><p>I share my photographs and travel stories through Our Travel Photobook, on this website, Instagram, and YouTube. Based in Germany, always looking around.</p><a class="contact-link" href="mailto:arjunayantika@gmail.com">Let’s get in touch <span aria-hidden="true">↗</span></a></div>
+      <div class="about-copy"><p class="eyebrow">A little about me</p><h2 id="about-title">Hello, I'm Arjun.</h2><p class="about-lead">Drawn to quiet landscapes.<br>And cities that never sit still.</p><p>I’m Arjun Sarkar, the photographer behind Our Travel Photobook. Photography is how I remember a place — its light, its people, and the feeling of being there.</p><p>I share my photographs and travel stories through Our Travel Photobook, on this website, Instagram, and YouTube. Based in Germany, always looking around.</p><a class="contact-link" href="mailto:arjunayantika@gmail.com">Let’s get in touch <span aria-hidden="true">↗</span></a></div>
     </section>
 
     <section class="travelbook section-shell" id="travelbook" aria-labelledby="travelbook-title">

@@ -2,6 +2,7 @@
 """Build a deployable allowlisted static site; never publish the working directory."""
 from __future__ import annotations
 import argparse
+from seo import enrich_pages, validate_site_url
 import hashlib
 import html
 import json
@@ -49,6 +50,7 @@ def build(root: Path = ROOT) -> Path:
     # Hosting-specific metadata without changing the GitHub Pages configuration.
     if os.environ.get('SITE_URL'):
         config['url'] = os.environ['SITE_URL'].rstrip('/') + '/'
+    config['url'] = validate_site_url(config.get('url', ''))
     if config.get('url'):
         from urllib.parse import urljoin
         url = config['url']
@@ -93,7 +95,11 @@ def build(root: Path = ROOT) -> Path:
     for path in sorted(allowed | {Path('assets/site.css'), Path('assets/site.js'), Path('data/photos.json'), Path('_headers')}):
         destination = stage / path
         destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(root / path, destination)
+        source = root / path
+        if not source.resolve().is_relative_to(root.resolve()):
+            raise ValueError(f'External public asset: {path}')
+        shutil.copy2(source, destination)
+    enrich_pages(stage, catalogue, config['url'])
     (stage / '.nojekyll').touch()
     dist = root / 'dist'
     if dist.exists():

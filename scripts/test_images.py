@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 
 import numpy as np
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, UnidentifiedImageError
 
 from process_images import EXIF_COPYRIGHT, border_box, run
 from crop_photo import crop_photo
@@ -18,6 +18,18 @@ class ImageWorkflowTests(unittest.TestCase):
     def setUp(self):
         rng = np.random.default_rng(42)
         self.photo = Image.fromarray(rng.integers(15, 225, (180, 240, 3), dtype=np.uint8))
+
+    def test_disguised_unsupported_format_is_rejected_without_removing_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'images').mkdir()
+            source = root / 'images/disguised.jpg'
+            self.photo.save(source, format='BMP')
+            before = source.read_bytes()
+            with contextlib.redirect_stdout(io.StringIO()), self.assertRaises(UnidentifiedImageError):
+                run(root, 1, False)
+            self.assertEqual(source.read_bytes(), before)
+            self.assertFalse((root / 'data/photos.json').exists())
 
     def test_no_border_keeps_composition(self):
         self.assertEqual(border_box(self.photo), (0, 0, 240, 180))

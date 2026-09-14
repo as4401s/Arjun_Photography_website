@@ -33,6 +33,9 @@ To choose a country cover, name its photo `cover` inside that country's folder. 
 - [Image workflow, crop review, metadata, and recovery](docs/IMAGES.md)
 - [Site configuration and maintenance](docs/MAINTENANCE.md)
 - [Design and engineering decisions](docs/DESIGN.md)
+- [Search visibility and AI discoverability](docs/SEO.md)
+- [Buy and connect a Cloudflare domain](docs/DOMAIN.md)
+- [Security review](docs/SECURITY.md)
 
 ## Checks
 
@@ -48,7 +51,8 @@ Node is optional for development; the website has no JavaScript package dependen
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | HTML template; the builder inserts hero and portrait URLs |
+| `index.html` | HTML template; the builder inserts imagery and crawlable galleries |
+| `scripts/seo.py` | Country pages, metadata, structured data, sitemap, and robots.txt |
 | `assets/site.css`, `assets/site.js` | Styles and gallery interactions |
 | `data/site.json` | Hero, portrait, featured order, and destination covers |
 | `data/photo-details.json` | Optional captions and descriptive alt text by photo ID |
