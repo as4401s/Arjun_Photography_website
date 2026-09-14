@@ -60,6 +60,9 @@ class SearchPagesTests(unittest.TestCase):
             raw = re.search(r'<script type="application/ld\+json">(.*?)</script>', france).group(1)
             data = json.loads(raw)
             self.assertEqual(data['@graph'][4]['numberOfItems'], 1)
+            image = data['@graph'][4]['itemListElement'][0]['item']
+            self.assertEqual(image['license'], 'https://example.com/portfolio/image-rights.html')
+            self.assertEqual(image['acquireLicensePage'], 'https://example.com/portfolio/image-rights.html#request-permission')
             website = next(item for item in data['@graph'] if item['@type'] == 'WebSite')
             self.assertIn('ourtravelphotobook', website['alternateName'])
             token = "'sha256-" + base64.b64encode(hashlib.sha256(raw.encode()).digest()).decode() + "'"
@@ -69,10 +72,20 @@ class SearchPagesTests(unittest.TestCase):
             tree = ET.parse(stage / 'sitemap.xml')
             ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9', 'i': 'http://www.google.com/schemas/sitemap-image/1.1'}
             urls = [e.text for e in tree.findall('s:url/s:loc', ns)]
-            self.assertEqual(urls, ['https://example.com/portfolio/', 'https://example.com/portfolio/destinations.html', 'https://example.com/portfolio/france-photography.html'])
+            self.assertEqual(urls, ['https://example.com/portfolio/', 'https://example.com/portfolio/destinations.html', 'https://example.com/portfolio/image-rights.html', 'https://example.com/portfolio/france-photography.html'])
             self.assertEqual(len(tree.findall('s:url/i:image/i:loc', ns)), 3)
             self.assertIn('noindex, follow', (stage / 'japan-photography.html').read_text())
             self.assertIn('https://example.com/portfolio/sitemap.xml', (stage / 'robots.txt').read_text())
+            rights = (stage / 'image-rights.html').read_text()
+            self.assertIn('id="request-permission"', rights)
+            self.assertIn('mailto:arjunayantika@gmail.com?subject=', rights)
+            self.assertIn('All rights reserved.', rights)
+            self.assertNotIn('<script src=', rights)
+            self.assertNotIn('<dialog', rights)
+            self.assertNotIn('href="#home"', rights)
+            rights_data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', rights)[1])
+            self.assertEqual(rights_data['@graph'][3]['@type'], 'WebPage')
+            self.assertEqual(rights_data['@graph'][-1]['itemListElement'][-1]['name'], 'Image rights')
 
             catalogue['countrySummaries'] = {'France': 'Paris landmarks & quiet streets.'}
             # Start from the source again, as the builder does on each run.

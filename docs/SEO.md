@@ -5,12 +5,14 @@
 - The homepage highlights, destination cards, and each country gallery are rendered into HTML at build time. Visitors and crawlers can follow real links and see photographs without JavaScript. JavaScript adds the viewer and existing mobile batches of 40.
 - Each country has a stable page such as `france-photography.html` with a unique heading, title, description, canonical URL, and cover-based social preview. Existing `destinations.html#country=France` links move to the new page in the browser. Fragments are not sent to servers, so this compatibility transition is client-side.
 - `sitemap.xml` lists the homepage, destination index, and populated country pages, with public image URLs. `robots.txt` permits crawling and points to that sitemap. Neither includes private originals or registry paths. Empty future countries remain available to visitors with `noindex, follow` until populated.
-- JSON-LD identifies Arjun Sarkar, Our Travel Photobook, the website, country collections, breadcrumbs, and image authorship. Structured data reflects the visible collection; it does not invent ratings, awards, opening hours, or licensing offers.
+- JSON-LD identifies Arjun Sarkar, Our Travel Photobook, the website, country collections, breadcrumbs, and image authorship. Every ImageObject includes `license` and `acquireLicensePage`, linked to the public `image-rights.html` page and its permission-request section. These describe the existing all-rights-reserved policy and a real contact route; they do not grant a free license or promise approval. New photographs inherit the fields during each build.
 - Inline structured data is safely serialized and authorized with exact CSP hashes. The page and HTTP security policies retain their restrictions on executable scripts.
 - Both hosted copies identify the configured primary site as canonical. The primary is `https://www.ourtravelphotobook.com/`. If it changes, update both `data/site.json` and `netlify.toml` as described in `DOMAIN.md`.
 - Netlify's automatic Pretty URL rewriting is disabled in configuration so generated links and canonical `.html` URLs stay consistent. Existing extensionless aliases can still be served by Netlify; the canonical tag identifies the preferred URL.
 
 `build.py` calls `seo.py`; adding or removing photos and running the normal import/build commands refreshes page counts, galleries, metadata, and the sitemap together. Country slug collisions fail the build instead of overwriting a page. Do not manually edit `dist/`.
+
+Edit `templates/image-rights.html` to maintain the visible rights and contact information. It shares the website's navigation, footer, styles, canonical metadata, and icons, and is included in the sitemap. The verifier checks both licensing fields on every generated image entry. JSON-LD supplies these optional Google fields without recompressing photos or changing embedded copyright attribution. Search Console's saved inspection reports reflect the version Google tested; run a fresh live test after publication to validate updated fields.
 
 ## What improves the content next
 

@@ -13,6 +13,7 @@ from xml.etree import ElementTree as ET
 
 BRAND = 'Our Travel Photobook'
 AUTHOR = 'Arjun Sarkar'
+RIGHTS_PAGE = 'image-rights.html'
 SOCIAL = ['https://www.instagram.com/ourtravelphotobook/', 'https://www.youtube.com/@ourtravelphotobook']
 
 
@@ -37,7 +38,7 @@ def page_names(catalogue: dict) -> set[str]:
     pages = [country_page(c) for c in catalogue['countries']]
     if len(pages) != len(set(pages)):
         raise ValueError('Country names produce duplicate page URLs.')
-    return {'index.html', 'destinations.html', '404.html', *pages}
+    return {'index.html', 'destinations.html', '404.html', RIGHTS_PAGE, *pages}
 
 
 def country_description(country: str, count: int, summary: str = '') -> str:
@@ -109,13 +110,19 @@ def structured_data(base: str, path: str, title: str, description: str, photos: 
              'name': p.get('title') or p['alt'], 'caption': p['alt'],
              'width': p['width'], 'height': p['height'],
              'creator': {'@id': base + '#photographer'}, 'creditText': AUTHOR,
+             'license': urljoin(base, RIGHTS_PAGE),
+             'acquireLicensePage': urljoin(base, RIGHTS_PAGE + '#request-permission'),
              'copyrightNotice': f'© 2026 {AUTHOR}. All rights reserved.'}}
              for i, p in enumerate(photos, 1)]},
     ]
     if country:
         graph[3]['about'] = {'@type': 'Country', 'name': country}
+    if path == RIGHTS_PAGE:
+        graph[3]['@type'] = 'WebPage'
+        del graph[3]['mainEntity']
+        graph.pop(4)
     if path != 'index.html':
-        crumbs = [('', 'Home'), ('destinations.html', 'Destinations')]
+        crumbs = [('', 'Home'), (RIGHTS_PAGE, 'Image rights') if path == RIGHTS_PAGE else ('destinations.html', 'Destinations')]
         if country:
             crumbs.append((path, country))
         graph.append({'@type': 'BreadcrumbList', 'itemListElement': [
@@ -153,6 +160,14 @@ def enrich_pages(stage: Path, catalogue: dict, base: str) -> None:
     page_names(catalogue)  # Reject colliding slugs before writing any output.
     home = (stage / 'index.html').read_text()
     destination = (stage / 'destinations.html').read_text()
+    rights_content = (Path(__file__).resolve().parents[1] / 'templates/image-rights.html').read_text()
+    rights = re.sub(r'<main>.*?</main>', lambda _: rights_content, home, flags=re.S)
+    rights = re.sub(r'<dialog\b.*?</dialog>', '', rights, flags=re.S)
+    rights = re.sub(r'<script src="assets/site.js[^\"]*" defer></script>', '', rights)
+    rights = rights.replace('data-page="home"', 'data-page="rights"')
+    rights = rights.replace('href="#home"', 'href="./#home"')
+    rights = rights.replace('href="#gallery">Skip to photographs', 'href="#image-rights">Skip to image rights')
+    rights = rights.replace('href="./#home" aria-label="Back to top">Back to top ↑', 'href="#image-rights" aria-label="Back to top">Back to top ↑')
     selected = [p for p in catalogue['photos'] if p['selected']]
     hero = next(p for p in catalogue['photos'] if p['id'] == catalogue['hero'])
     home = home.replace('<div class="photo-grid" id="photo-grid"></div>', f'<div class="photo-grid" id="photo-grid">{photo_markup(selected)}</div>')
@@ -168,6 +183,8 @@ def enrich_pages(stage: Path, catalogue: dict, base: str) -> None:
     pages = [('', 'index.html', home, f'{BRAND} | Travel Photography by {AUTHOR}',
               f'{BRAND} is the travel photography portfolio of {AUTHOR}. Explore landscapes, city life and travel stories from Europe and Asia.', selected, hero),
              ('', 'destinations.html', index, f'Travel Photography Destinations | {BRAND}', description, [p for p in covers if p], hero)]
+    pages.append(('', RIGHTS_PAGE, rights, f'Image Rights & Permissions | {BRAND}',
+                  f'Copyright and image-use information for photographs by {AUTHOR}. Contact {BRAND} to request written permission or discuss licensing.', [], hero))
     for country in catalogue['countries']:
         photos = sorted([p for p in catalogue['photos'] if p['country'] == country], key=lambda p: p['id'])
         text = country_description(country, len(photos), catalogue.get('countrySummaries', {}).get(country, ''))

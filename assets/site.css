@@ -298,6 +298,14 @@ body[data-page=destinations] .site-header { background: var(--paper); color: var
 .footer-name { font-family: var(--serif); font-size: 25px; letter-spacing: -.04em; }
 .site-footer p { margin: 6px 0; font-size: 10px; color: var(--muted); }
 .site-footer > a:not(.footer-name) { font-size: 11px; }
+.rights-link { display: inline-block; padding-block: 10px; text-decoration: underline; text-underline-offset: 4px; }
+.rights-page { max-width: 960px; margin-inline: auto; padding-block: 170px 64px; }
+.rights-page h1 { font: 400 clamp(38px, 6vw, 64px)/1.1 var(--serif); letter-spacing: -.04em; }
+.rights-page .rights-lead { font: 24px/1.5 var(--serif); color: var(--ink); }
+.rights-page section { margin-block: 40px; }
+.rights-page h2 { font-size: 30px; }
+.rights-page p { max-width: 68ch; color: var(--muted); line-height: 1.8; }
+.rights-page .contact-link { font-size: 18px; }
 
 /* Native dialog supplies modality, focus containment, and Escape semantics. */
 .lightbox { inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 24px 3vw; border: 0; background: #080808; color: #f5f3ed; overflow: auto; }

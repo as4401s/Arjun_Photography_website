@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 from urllib.parse import unquote
 
-from seo import page_names
+from seo import page_names, RIGHTS_PAGE
 from PIL import Image
 from process_images import ROOT, EXIF_COPYRIGHT, is_country_cover
 
@@ -34,10 +34,22 @@ def verify():
         assert len(re.findall(r'<link rel="canonical"', markup)) == 1, f'Canonical URL missing or duplicated: {page}'
         structured = re.search(r'<script type="application/ld\+json">(.*?)</script>', markup)
         assert structured, f'Missing structured data: {page}'
-        json.loads(structured[1])
+        data = json.loads(structured[1])
+        canonical = re.search(r'<link rel="canonical" href="([^"]+)"', markup)[1]
+        base = canonical.rsplit('/', 1)[0] + '/'
+        for group in data['@graph']:
+            if group['@type'] == 'ItemList':
+                for entry in group['itemListElement']:
+                    image = entry['item']
+                    assert image['license'] == base + RIGHTS_PAGE, f'Missing image rights: {page}'
+                    assert image['acquireLicensePage'] == base + RIGHTS_PAGE + '#request-permission', f'Missing permission link: {page}'
         token = "'sha256-" + base64.b64encode(hashlib.sha256(structured[1].encode()).digest()).decode() + "'"
         assert token in markup and token in (ROOT / 'dist/_headers').read_text(), f'Structured data blocked by CSP: {page}'
-        assert 'class="photo-item"' in markup or 'class="destination"' in markup or 'id="empty-state"' in markup, f'No crawlable content: {page}'
+        if page == RIGHTS_PAGE:
+            assert 'id="request-permission"' in markup and 'mailto:arjunayantika@gmail.com' in markup, 'Missing permission contact'
+        else:
+            assert 'class="photo-item"' in markup or 'class="destination"' in markup or 'id="empty-state"' in markup, f'No crawlable content: {page}'
+        assert 'href="image-rights.html"' in markup, f'Missing visible rights link: {page}'
         for size in (32, 96, 180):
             assert f'href="assets/icons/{size}/{catalogue["favicon"]}.png"' in markup, f'Missing icon link: {page}'
     homepage = (ROOT / 'dist/index.html').read_text()
@@ -78,7 +90,7 @@ def verify():
     namespace = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
     sitemap_urls = [entry.text for entry in sitemap.findall('s:url/s:loc', namespace)]
     populated = {p['country'] for p in photos if p['country']}
-    assert len(sitemap_urls) == len(populated) + 2 and len(sitemap_urls) == len(set(sitemap_urls)), 'Missing or duplicate sitemap pages'
+    assert len(sitemap_urls) == len(populated) + 3 and len(sitemap_urls) == len(set(sitemap_urls)), 'Missing or duplicate sitemap pages'
     actual = {p.relative_to(ROOT / 'dist').as_posix() for p in (ROOT / 'dist').rglob('*') if p.is_file()}
     assert actual == public_files, f'Unexpected or missing public files: {actual ^ public_files}'
     inputs = [p for directory in ('images', 'poy') for p in (ROOT / directory).rglob('*') if p.suffix.lower() in ('.jpg', '.jpeg', '.png', '.tif', '.tiff')]
