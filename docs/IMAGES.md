@@ -76,3 +76,7 @@ Use an ID that exists in `data/image-registry.json`, then rerun processing and b
 - A failed import may have completed earlier photos. Their originals remain backed up; a rerun skips completed work. Read the error before retrying. Do not remove backups to resolve errors.
 
 The favicon master is WebP too. The builder also generates small PNG browser and Apple touch icons for device compatibility; these are the only format exceptions in the published site, carry the same attribution, and are not photographs.
+
+Transparent PNG and WebP artwork keeps its alpha channel in the processed master and every responsive variant. Border cropping is skipped for these assets so intentional transparent padding remains intact. Use a genuinely transparent export for logos: changing a file extension to SVG or matching a background color cannot remove a baked-in glow.
+
+For a frame that needs visual review, `python3 scripts/crop_photo.py PHOTO_ID LEFT TOP RIGHT BOTTOM` crops directly from the preserved original, keeps its numeric ID, refreshes responsive variants and metadata, and records the crop in the registry. Coordinates are in original-image pixels, with the right and bottom edges excluded. The Germany image `525804` was reviewed and cropped to `(26, 26, 1900, 1900)` to remove its light grey frame. Rebuild after a reviewed crop.

@@ -137,9 +137,11 @@ def process(job: tuple[Path, int, dict | None], root: Path) -> dict:
         if getattr(opened, 'n_frames', 1) > 1:
             raise ValueError(f'Animated image is unsupported: {relative}')
         icc = opened.info.get('icc_profile')
-        photo = ImageOps.exif_transpose(opened).convert('RGB')
+        has_alpha = 'A' in opened.getbands() or 'transparency' in opened.info
+        photo = ImageOps.exif_transpose(opened).convert('RGBA' if has_alpha else 'RGB')
         original_size = photo.size
-        box = border_box(photo)
+        # Transparent artwork has intentional padding, not a photographic frame.
+        box = (0, 0, *photo.size) if has_alpha else border_box(photo)
         photo = photo.crop(box)
         cropped_size = photo.size
         photo.thumbnail((2560, 2560), Image.Resampling.LANCZOS)
@@ -205,6 +207,7 @@ def catalogue(root: Path, registry: dict) -> dict:
         detail = overrides.get(str(entry['id']), {})
         photos.append({
             'id': entry['id'], 'src': quote(entry['src']), 'width': entry['width'], 'height': entry['height'],
+            'revision': entry['sha256'][:12],
             'variants': [{**v, 'src': quote(v['src'])} for v in entry['variants']],
             'country': country, 'selected': parts[0] == 'poy' and not country,
             'title': detail.get('title', ''),

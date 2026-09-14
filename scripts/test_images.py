@@ -5,11 +5,13 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 from PIL import Image, ImageOps
 
 from process_images import EXIF_COPYRIGHT, border_box, run
+from crop_photo import crop_photo
 
 
 class ImageWorkflowTests(unittest.TestCase):
@@ -69,6 +71,43 @@ class ImageWorkflowTests(unittest.TestCase):
             catalogue = json.loads((root / 'data/photos.json').read_text())
             self.assertEqual(catalogue['countries'], ['Empty'])
             self.assertEqual(catalogue['photos'], [])
+
+    def test_transparency_survives_master_and_responsive_images(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'images').mkdir()
+            artwork = Image.new('RGBA', (1200, 800), (255, 255, 255, 0))
+            artwork.paste((220, 175, 80, 255), (200, 200, 1000, 600))
+            artwork.save(root / 'images/logo.png')
+            with contextlib.redirect_stdout(io.StringIO()):
+                run(root, 1, False)
+            entry = next(iter(json.loads((root / 'data/image-registry.json').read_text()).values()))
+            self.assertEqual(entry['crop'], [0, 0, 1200, 800])
+            for src in [entry['src'], *(v['src'] for v in entry['variants'])]:
+                with Image.open(root / src) as image:
+                    self.assertEqual(image.mode, 'RGBA')
+                    self.assertEqual(image.getpixel((0, 0))[3], 0)
+                    self.assertEqual(image.getpixel((image.width // 2, image.height // 2))[3], 255)
+
+    def test_reviewed_crop_uses_original_and_retains_identity(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'images').mkdir()
+            self.photo.save(root / 'images/source.png')
+            with contextlib.redirect_stdout(io.StringIO()), patch('crop_photo.ROOT', root):
+                run(root, 1, False)
+                registry_path = root / 'data/image-registry.json'
+                number, original = next(iter(json.loads(registry_path.read_text()).items()))
+                backup = (root / original['backup']).read_bytes()
+                crop_photo(int(number), [20, 20, 200, 160])
+                crop_photo(int(number), [0, 0, 230, 170])
+                updated = json.loads(registry_path.read_text())[number]
+                self.assertEqual(updated['src'], original['src'])
+                self.assertEqual(updated['originalSize'], [240, 180])
+                self.assertEqual((updated['width'], updated['height']), (230, 170))
+                self.assertEqual((root / updated['backup']).read_bytes(), backup)
+                with self.assertRaises(ValueError):
+                    crop_photo(int(number), [0, 0, 999, 999])
 
 
 if __name__ == '__main__':

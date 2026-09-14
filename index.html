@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Travel and landscape photographs by Arjun Sarkar. Explore quiet landscapes, city life, and journeys across Europe and Asia.">
   <meta name="author" content="Arjun Sarkar">
   <meta name="copyright" content="Copyright 2026 Arjun Sarkar. All rights reserved.">
@@ -22,9 +22,9 @@
   <header class="site-header" id="site-header">
     <a class="wordmark" href="#home" aria-label="Arjun Photography, home">Arjun<span>Photography</span></a>
     <nav aria-label="Main navigation">
-      <a href="./#gallery">Highlights</a>
-      <a href="destinations.html">Destinations</a>
-      <a href="./#about">About</a>
+      <a href="./#gallery" data-nav="highlights"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m3 16 5-5 4 4 4-6 5 7"/><circle cx="8" cy="7" r="1"/></svg><span>Highlights</span></a>
+      <a href="destinations.html" data-nav="destinations"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Destinations</span></a>
+      <a href="./#about" data-nav="about"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span>About</span></a>
       <a class="social-link" href="https://www.instagram.com/ourtravelphotobook/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, opens in a new tab">Instagram <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -41,11 +41,13 @@
     </section>
 
     <section class="work section-shell" id="gallery" aria-labelledby="gallery-title">
-      <div class="section-intro"><p class="eyebrow">01 / The photographs</p><p>Far from the everyday.<br>Close to what matters.</p></div>
+      <div class="section-intro"><p class="eyebrow">The photographs</p><p>Far from the everyday.<br>Close to what matters.</p></div>
       <div class="gallery-heading"><div><h2 id="gallery-title">Highlights<span class="accent">.</span></h2><p id="gallery-description">A few moments I keep coming back to.</p></div><nav class="view-switch" aria-label="Browse photographs"><a id="selected-button" href="./#gallery" aria-current="page">Highlights</a><a id="countries-button" href="destinations.html">Destinations <span aria-hidden="true">↗</span></a></nav></div>
       <div class="collection-toolbar" id="collection-toolbar" hidden><button class="text-button" id="back-button" type="button">← All destinations</button><span id="collection-count"></span></div>
       <p class="status" id="gallery-status" role="status">Loading the photographs…</p>
       <div class="photo-grid" id="photo-grid"></div>
+      <button class="load-more" id="load-more" type="button" aria-controls="photo-grid" hidden><span>Load more photographs</span><span id="load-more-count"></span><span aria-hidden="true">↓</span></button>
+      <p class="sr-only" id="photo-progress" role="status"></p>
       <div class="destinations-grid" id="destinations-grid" hidden></div>
       <div class="empty-state" id="empty-state" hidden><p class="eyebrow">A story still to come</p><h3>The journey continues.</h3><p>Photographs from this destination will be added soon.</p><button class="text-button" type="button" id="empty-back">Explore other destinations ↗</button></div>
       <noscript><p>Enable JavaScript to browse the photo collections. You can still get in touch using the links below.</p></noscript>
@@ -53,19 +55,19 @@
 
     <section class="about section-shell" id="about" aria-labelledby="about-title">
       <div class="about-photo"><img id="portrait-image" data-photo="portrait" alt="Arjun Sarkar" loading="lazy" decoding="async"><span class="eyebrow">Behind the camera</span></div>
-      <div class="about-copy"><p class="eyebrow">02 / A little about me</p><h2 id="about-title">Hello, I'm Arjun.</h2><p class="about-lead">Drawn to quiet landscapes.<br>And cities that never sit still.</p><p>I’m Arjun, the photographer behind Our Travel Photobook. Photography is how I remember a place — its light, its people, and the feeling of being there.</p><p>I share my photographs and travel stories through Our Travel Photobook, on this website, Instagram, and YouTube. Based in Germany, always looking around.</p><a class="contact-link" href="mailto:arjunayantika@gmail.com">Let’s get in touch <span aria-hidden="true">↗</span></a></div>
+      <div class="about-copy"><p class="eyebrow">A little about me</p><h2 id="about-title">Hello, I'm Arjun.</h2><p class="about-lead">Drawn to quiet landscapes.<br>And cities that never sit still.</p><p>I’m Arjun, the photographer behind Our Travel Photobook. Photography is how I remember a place — its light, its people, and the feeling of being there.</p><p>I share my photographs and travel stories through Our Travel Photobook, on this website, Instagram, and YouTube. Based in Germany, always looking around.</p><a class="contact-link" href="mailto:arjunayantika@gmail.com">Let’s get in touch <span aria-hidden="true">↗</span></a></div>
     </section>
 
     <section class="travelbook section-shell" id="travelbook" aria-labelledby="travelbook-title">
       <a class="travelbook-logo" href="https://www.youtube.com/@ourtravelphotobook" target="_blank" rel="noopener noreferrer" aria-label="Our Travel Photobook on YouTube, opens in a new tab"><img data-photo="logo" alt="Our Travel Photobook — mountains, the Eiffel Tower, and the Taj Mahal" loading="lazy" decoding="async"></a>
-      <div class="travelbook-copy"><p class="eyebrow">Beyond the still frame</p><h2 id="travelbook-title">Our Travel<br><em>Photobook.</em></h2><p>The places in between the photographs.<br>Come along for the journey.</p><div class="channel-links"><a href="https://www.youtube.com/@ourtravelphotobook" target="_blank" rel="noopener noreferrer"><span class="play-icon" aria-hidden="true">▶</span> Watch on YouTube <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/ourtravelphotobook/" target="_blank" rel="noopener noreferrer"><svg class="instagram-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Follow on Instagram <span aria-hidden="true">↗</span></a></div></div>
+      <div class="travelbook-copy"><p class="eyebrow">Beyond the still frame</p><h2 id="travelbook-title">Our Travel<br><em>Photobook.</em></h2><p>The places in between the photographs.<br>Come along for the journey.</p><div class="channel-links"><a href="https://www.youtube.com/@ourtravelphotobook" target="_blank" rel="noopener noreferrer"><svg class="social-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"></path></svg> Watch on YouTube <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/ourtravelphotobook/" target="_blank" rel="noopener noreferrer"><svg class="social-icon instagram-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Follow on Instagram <span aria-hidden="true">↗</span></a></div></div>
     </section>
   </main>
   <footer class="site-footer section-shell"><a class="footer-name" href="#home">Our Travel Photobook</a><div><p>© <span id="copyright-year">2026</span> Arjun Sarkar. All rights reserved.</p><p>All photographs by Arjun Sarkar.</p></div><a href="https://www.instagram.com/ourtravelphotobook/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#home" aria-label="Back to top">Back to top ↑</a></footer>
 
   <dialog class="lightbox" id="lightbox" aria-label="Photograph viewer" aria-describedby="viewer-help">
     <div class="viewer-top"><span class="eyebrow">Our Travel Photobook / Arjun Sarkar</span><button class="viewer-close" id="viewer-close" type="button" autofocus aria-label="Close photograph viewer">Close <span aria-hidden="true">×</span></button></div>
-    <div class="viewer-stage"><button class="viewer-arrow previous" id="viewer-previous" type="button" aria-label="Previous photograph">←</button><img id="viewer-image" alt=""><button class="viewer-arrow next" id="viewer-next" type="button" aria-label="Next photograph">→</button></div>
+    <div class="viewer-stage"><button class="viewer-arrow previous" id="viewer-previous" type="button" aria-label="Previous photograph">←</button><img id="viewer-outgoing" alt="" aria-hidden="true"><img id="viewer-image" alt=""><button class="viewer-arrow next" id="viewer-next" type="button" aria-label="Next photograph">→</button></div>
     <div class="viewer-bottom"><div><p id="viewer-caption"></p><p class="viewer-rights">© 2026 Arjun Sarkar. All rights reserved.</p></div><p id="viewer-counter" aria-live="polite"></p></div><p id="viewer-help" class="sr-only">Use the left and right arrow keys to browse. Press Escape to close.</p><p id="viewer-error" role="status" hidden>This photograph couldn’t load. Try the next one.</p>
   </dialog>
 </body>

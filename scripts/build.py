@@ -85,7 +85,7 @@ def build(root: Path = ROOT) -> Path:
     destination_page = destination_page.replace('<title>Our Travel Photobook — Photography by Arjun Sarkar</title>', '<title>Destinations — Our Travel Photobook</title>')
     destination_page = destination_page.replace('href="#home"', 'href="./"')
     destination_page = destination_page.replace('<h2 id="gallery-title">Highlights<span class="accent">.</span></h2>', '<h1 id="gallery-title">The destinations.</h1>')
-    destination_page = destination_page.replace('01 / The photographs', 'Explore / The destinations')
+    destination_page = destination_page.replace('The photographs', 'Explore / The destinations')
     if config.get('url'):
         destination_page = destination_page.replace(f'href="{html.escape(config["url"], quote=True)}"', f'href="{html.escape(config["url"], quote=True)}destinations.html"')
         destination_page = destination_page.replace(f'property="og:url" content="{html.escape(config["url"], quote=True)}"', f'property="og:url" content="{html.escape(config["url"], quote=True)}destinations.html"')

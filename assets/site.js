@@ -7,11 +7,21 @@
   const status = $('gallery-status');
   const dialog = $('lightbox');
   const viewerImage = $('viewer-image');
+  const outgoingImage = $('viewer-outgoing');
+  let viewerRequest = 0;
+  let adjacentImages = [];
   let catalogue;
   let visiblePhotos = [];
   let currentPhoto = 0;
   let openingButton;
   let touchStart = null;
+  const mobileLayout = window.matchMedia('(max-width: 600px)');
+  const mobileBatchSize = 40;
+  let renderedCount = 0;
+
+  function imageUrl(photo, src = photo.src) {
+    return photo.revision ? `${src}?v=${photo.revision}` : src;
+  }
 
   function photoImage(photo, sizes, lazy = true) {
     const image = document.createElement('img');
@@ -22,8 +32,8 @@
     image.decoding = 'async';
     image.sizes = sizes;
     image.srcset = [...photo.variants, { src: photo.src, width: photo.width }]
-      .map((variant) => `${variant.src} ${variant.width}w`).join(', ');
-    image.src = photo.variants[0]?.src || photo.src;
+      .map((variant) => `${imageUrl(photo, variant.src)} ${variant.width}w`).join(', ');
+    image.src = imageUrl(photo, photo.variants[0]?.src || photo.src);
     return image;
   }
 
@@ -49,8 +59,11 @@
     const destinationPage = document.body.dataset.page === 'destinations';
     const view = destinationPage ? (isCountry ? 'country' : 'destinations') : 'selected';
     // Section anchor navigation should not replace the collection being browsed.
-    if (['home', 'about', 'gallery'].includes(hash) && grid.childElementCount + destinations.childElementCount > 0) return;
+    if (['home', 'about', 'gallery', 'travelbook'].includes(hash) && grid.childElementCount + destinations.childElementCount > 0) return;
     grid.replaceChildren();
+    renderedCount = 0;
+    $('load-more').hidden = true;
+    $('photo-progress').textContent = '';
     destinations.replaceChildren();
     grid.hidden = view === 'destinations';
     destinations.hidden = view !== 'destinations';
@@ -86,8 +99,9 @@
   }
 
   function renderPhotos() {
+    const limit = mobileLayout.matches ? Math.min(renderedCount + mobileBatchSize, visiblePhotos.length) : visiblePhotos.length;
     const fragment = document.createDocumentFragment();
-    for (let index = 0; index < visiblePhotos.length; index += 1) {
+    for (let index = renderedCount; index < limit; index += 1) {
       const photo = visiblePhotos[index];
       const button = document.createElement('button');
       button.type = 'button';
@@ -107,8 +121,22 @@
       fragment.append(button);
     }
     grid.append(fragment);
-
+    renderedCount = limit;
+    const remaining = visiblePhotos.length - renderedCount;
+    $('load-more').hidden = !mobileLayout.matches || !remaining;
+    $('load-more-count').textContent = `${remaining} remaining`;
   }
+
+  $('load-more').addEventListener('click', () => {
+    const firstNewIndex = renderedCount;
+    renderPhotos();
+    $('photo-progress').textContent = `${renderedCount} of ${visiblePhotos.length} photographs shown.`;
+    grid.children[firstNewIndex]?.focus({ preventScroll: true });
+  });
+  mobileLayout.addEventListener('change', () => {
+    // Expanding to desktop reveals the rest; shrinking keeps photos already shown.
+    if (!mobileLayout.matches && !grid.hidden && renderedCount) renderPhotos();
+  });
 
   function renderDestinations() {
     const fragment = document.createDocumentFragment();
@@ -145,17 +173,43 @@
     destinations.append(fragment);
   }
 
-  function updateViewer() {
+  async function updateViewer() {
     const photo = visiblePhotos[currentPhoto];
     if (!photo) return;
+    const request = ++viewerRequest;
     $('viewer-error').hidden = true;
-    viewerImage.classList.add('loading');
-    viewerImage.alt = photo.alt;
-    viewerImage.src = photo.src;
-    $('viewer-caption').textContent = photo.title || photo.country || 'Highlights';
-    $('viewer-counter').textContent = `${String(currentPhoto + 1).padStart(2, '0')} / ${visiblePhotos.length}`;
+    dialog.setAttribute('aria-busy', 'true');
     $('viewer-previous').hidden = visiblePhotos.length < 2;
     $('viewer-next').hidden = visiblePhotos.length < 2;
+    const incoming = new Image();
+    incoming.decoding = 'async';
+    incoming.src = imageUrl(photo);
+    try {
+      await incoming.decode();
+      if (request !== viewerRequest) return;
+      if (viewerImage.getAttribute('src')) {
+        outgoingImage.src = viewerImage.src;
+        outgoingImage.classList.add('is-visible');
+      }
+      viewerImage.alt = photo.alt;
+      viewerImage.src = imageUrl(photo);
+      $('viewer-caption').textContent = photo.title || photo.country || 'Highlights';
+      $('viewer-counter').textContent = `${String(currentPhoto + 1).padStart(2, '0')} / ${visiblePhotos.length}`;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (request === viewerRequest) outgoingImage.classList.remove('is-visible');
+      }));
+      // Warm only neighboring photographs, keeping the rest of the archive lazy.
+      adjacentImages = visiblePhotos.length > 1 ? [-1, 1].map((offset) => {
+        const image = new Image();
+        image.decoding = 'async';
+        image.src = imageUrl(visiblePhotos[(currentPhoto + offset + visiblePhotos.length) % visiblePhotos.length]);
+        return image;
+      }) : [];
+    } catch {
+      if (request === viewerRequest) $('viewer-error').hidden = false;
+    } finally {
+      if (request === viewerRequest) dialog.removeAttribute('aria-busy');
+    }
   }
 
   function openViewer(index, button) {
@@ -171,17 +225,20 @@
     updateViewer();
   }
 
-  viewerImage.addEventListener('load', () => viewerImage.classList.remove('loading'));
   viewerImage.addEventListener('error', () => {
-    viewerImage.classList.remove('loading');
     $('viewer-error').hidden = false;
   });
   $('viewer-close').addEventListener('click', () => dialog.close());
   $('viewer-previous').addEventListener('click', () => stepViewer(-1));
   $('viewer-next').addEventListener('click', () => stepViewer(1));
   dialog.addEventListener('close', () => {
-    document.body.classList.remove('viewer-open');
+    viewerRequest += 1;
+    adjacentImages = [];
+    dialog.removeAttribute('aria-busy');
+    outgoingImage.classList.remove('is-visible');
+    outgoingImage.removeAttribute('src');
     viewerImage.removeAttribute('src');
+    document.body.classList.remove('viewer-open');
     openingButton?.focus({ preventScroll: true });
   });
   dialog.addEventListener('click', (event) => {
@@ -215,6 +272,23 @@
   }, { rootMargin: '-85px 0px 0px 0px' });
   if ($('home')) observer.observe($('home'));
   else $('site-header').classList.add('scrolled');
+  const navigationLinks = document.querySelectorAll('[data-nav]');
+  let navigationFrame = 0;
+  function updateNavigation() {
+    navigationFrame = 0;
+    const destinationPage = document.body.dataset.page === 'destinations';
+    const aboutVisible = $('about') && $('about').getBoundingClientRect().top <= window.innerHeight * .45;
+    const active = destinationPage ? 'destinations' : aboutVisible ? 'about' : 'highlights';
+    for (const link of navigationLinks) {
+      if (link.dataset.nav === active) link.setAttribute('aria-current', destinationPage ? 'page' : 'location');
+      else link.removeAttribute('aria-current');
+    }
+  }
+  window.addEventListener('scroll', () => {
+    if (!navigationFrame) navigationFrame = requestAnimationFrame(updateNavigation);
+  }, { passive: true });
+  window.addEventListener('resize', updateNavigation);
+  updateNavigation();
   $('copyright-year').textContent = new Date().getFullYear();
 
   async function loadCatalogue() {
@@ -235,6 +309,7 @@
         }
       }
       renderRoute();
+      updateNavigation();
       if (location.hash === '#destinations' || location.hash.startsWith('#country=') || location.hash === '#selected') $('gallery').scrollIntoView({ behavior: 'instant' });
       else if (['#about', '#gallery', '#travelbook'].includes(location.hash)) document.querySelector(location.hash)?.scrollIntoView({ behavior: 'instant' });
     } catch (error) {

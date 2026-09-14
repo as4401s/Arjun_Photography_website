@@ -10267,10 +10267,10 @@
     "id": 525804,
     "original": "poy/countries/germany/IMG_0441.jpg",
     "src": "poy/countries/germany/525804.webp",
-    "sha256": "745087bf703dc3a1d2bf7b6e57b2e567c5f442828fa032dcb134b2ae0b73bc43",
+    "sha256": "e4294de9770bc39875871df5b22e00b1c6e7be13eb0f326d45f1ccc58dac0950",
     "version": 1,
-    "width": 1924,
-    "height": 1924,
+    "width": 1874,
+    "height": 1874,
     "variants": [
       {
         "src": "assets/photos/480/525804.webp",
@@ -10286,14 +10286,14 @@
       1924
     ],
     "crop": [
-      0,
-      0,
-      1924,
-      1924
+      26,
+      26,
+      1900,
+      1900
     ],
     "croppedSize": [
-      1924,
-      1924
+      1874,
+      1874
     ],
     "backup": ".photo-originals/8c854d6193311f5ae6f030873fb7f4feaf0b2673f573711572c0f08890ae45b1/IMG_0441.jpg"
   },
@@ -22892,5 +22892,379 @@
       192
     ],
     "backup": ".photo-originals/be599f437ce3118061377bf759c8012ea8627c345269f44c08224795fa96470d/travel-emblem.webp"
+  },
+  "298472": {
+    "id": 298472,
+    "original": "images/travel-photobook-transparent.png",
+    "src": "images/298472.webp",
+    "sha256": "da1b7d6e10cdde19a5fb50746aaa1bed3bc8bf5ba592b5a5e3d19e4575baf32a",
+    "version": 1,
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "assets/photos/480/298472.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/298472.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      1536,
+      1024
+    ],
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "croppedSize": [
+      1536,
+      1024
+    ],
+    "backup": ".photo-originals/f601cf93ffab96176fe1229044618daf640edbc6846ad97ba852ac75b610aac8/travel-photobook-transparent.png"
+  },
+  "581243": {
+    "id": 581243,
+    "original": "poy/countries/poland/IMG_4551.jpg",
+    "src": "poy/countries/poland/581243.webp",
+    "sha256": "73a26fb4c25b24b87412ee744d822690f7a2a3abbc85e3068a58ea4627b311c6",
+    "version": 1,
+    "width": 2322,
+    "height": 1549,
+    "variants": [
+      {
+        "src": "assets/photos/480/581243.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/581243.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2404,
+      1924
+    ],
+    "crop": [
+      44,
+      190,
+      2366,
+      1739
+    ],
+    "croppedSize": [
+      2322,
+      1549
+    ],
+    "backup": ".photo-originals/c986e884a1dc40c4f477b1f99ac0adbc66028f8fdc2a0371f2d166c8d2def41b/IMG_4551.jpg"
+  },
+  "978135": {
+    "id": 978135,
+    "original": "poy/countries/germany/IMG_4740.jpg",
+    "src": "poy/countries/germany/978135.webp",
+    "sha256": "b74a8c34c1b1bedc468961f5be6f83cbda2f5fefeddaca03949c9d029970834a",
+    "version": 1,
+    "width": 2338,
+    "height": 1754,
+    "variants": [
+      {
+        "src": "assets/photos/480/978135.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/978135.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2404,
+      1924
+    ],
+    "crop": [
+      31,
+      84,
+      2369,
+      1838
+    ],
+    "croppedSize": [
+      2338,
+      1754
+    ],
+    "backup": ".photo-originals/ac5b540b6eef77c059bd6b37d05a641a278ee825ee4426df289e4a85837998a7/IMG_4740.jpg"
+  },
+  "920545": {
+    "id": 920545,
+    "original": "poy/countries/poland/IMG_4516.jpg",
+    "src": "poy/countries/poland/920545.webp",
+    "sha256": "202f9c1620f17ebf47d386fa9e3f4c00c8e2f34df6059b23496b506649b1c8f1",
+    "version": 1,
+    "width": 2299,
+    "height": 1533,
+    "variants": [
+      {
+        "src": "assets/photos/480/920545.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/920545.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2404,
+      1924
+    ],
+    "crop": [
+      47,
+      191,
+      2346,
+      1724
+    ],
+    "croppedSize": [
+      2299,
+      1533
+    ],
+    "backup": ".photo-originals/86bbc482d47768aa7cebb54766f4f6ef743280a10c5f44c0a6066464e26d0a13/IMG_4516.jpg"
+  },
+  "757297": {
+    "id": 757297,
+    "original": "poy/countries/poland/IMG_4525.jpg",
+    "src": "poy/countries/poland/757297.webp",
+    "sha256": "cc2df570b6416d74cfb3b9a7b2c51a36ed96d7d4eb50b2a8122266570cc6d557",
+    "version": 1,
+    "width": 2295,
+    "height": 1531,
+    "variants": [
+      {
+        "src": "assets/photos/480/757297.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/757297.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2406,
+      1924
+    ],
+    "crop": [
+      54,
+      196,
+      2349,
+      1727
+    ],
+    "croppedSize": [
+      2295,
+      1531
+    ],
+    "backup": ".photo-originals/61a97e25964b560f786321eabff9464607c6e4c4fae6fad5f8794e75d01b0d1d/IMG_4525.jpg"
+  },
+  "89520": {
+    "id": 89520,
+    "original": "poy/countries/poland/IMG_4532.jpg",
+    "src": "poy/countries/poland/89520.webp",
+    "sha256": "70d641e2d9a9ec7f629cbcd47ddd0b05a392e8d758d15f0fd7248468e0a8af60",
+    "version": 1,
+    "width": 2309,
+    "height": 1540,
+    "variants": [
+      {
+        "src": "assets/photos/480/89520.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/89520.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2404,
+      1924
+    ],
+    "crop": [
+      47,
+      192,
+      2356,
+      1732
+    ],
+    "croppedSize": [
+      2309,
+      1540
+    ],
+    "backup": ".photo-originals/27c8d05023576a957c24afa2deb7074d2600d2c4cfcc7fcaa936b08822474e7f/IMG_4532.jpg"
+  },
+  "749188": {
+    "id": 749188,
+    "original": "poy/countries/poland/IMG_4539.jpg",
+    "src": "poy/countries/poland/749188.webp",
+    "sha256": "69208a58b5016694fa9398bbd9a1cd764fa47c0bf8b4376662f37a1101aa5c68",
+    "version": 1,
+    "width": 2308,
+    "height": 1537,
+    "variants": [
+      {
+        "src": "assets/photos/480/749188.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/749188.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2406,
+      1924
+    ],
+    "crop": [
+      49,
+      194,
+      2357,
+      1731
+    ],
+    "croppedSize": [
+      2308,
+      1537
+    ],
+    "backup": ".photo-originals/b35e5879298778f399612677b9cb6e7918fa516078414af04f0e806862a942fd/IMG_4539.jpg"
+  },
+  "378240": {
+    "id": 378240,
+    "original": "poy/countries/germany/IMG_4651.jpg",
+    "src": "poy/countries/germany/378240.webp",
+    "sha256": "6f781f8ce60aae2fc8c203a062d2891ef16c45983d533eb52773a45085faab6e",
+    "version": 1,
+    "width": 2406,
+    "height": 1924,
+    "variants": [
+      {
+        "src": "assets/photos/480/378240.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/378240.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2406,
+      1924
+    ],
+    "crop": [
+      0,
+      0,
+      2406,
+      1924
+    ],
+    "croppedSize": [
+      2406,
+      1924
+    ],
+    "backup": ".photo-originals/6ebaa45daf2439f9113f7d57e8e105d3b1a3ab01952ac215598c6b637ff00394/IMG_4651.jpg"
+  },
+  "499644": {
+    "id": 499644,
+    "original": "poy/countries/germany/IMG_4743.jpg",
+    "src": "poy/countries/germany/499644.webp",
+    "sha256": "5e3b68dae8843d5f61bfa06789876feab711ed82aecf67e1550d1bc985ae336c",
+    "version": 1,
+    "width": 2329,
+    "height": 1747,
+    "variants": [
+      {
+        "src": "assets/photos/480/499644.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/499644.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2406,
+      1924
+    ],
+    "crop": [
+      37,
+      87,
+      2366,
+      1834
+    ],
+    "croppedSize": [
+      2329,
+      1747
+    ],
+    "backup": ".photo-originals/7bd2c032d18177ca9c8bd770da13ee8ab22b497ddd1b0b0816e09d7ec5b0b0a3/IMG_4743.jpg"
+  },
+  "925963": {
+    "id": 925963,
+    "original": "poy/countries/germany/IMG_4748.jpg",
+    "src": "poy/countries/germany/925963.webp",
+    "sha256": "8f4d2ca20204da7dc533d78541afa348a131ca0877bb38f8c7c57ffd47aac9e9",
+    "version": 1,
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      {
+        "src": "assets/photos/480/925963.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/925963.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2566,
+      1924
+    ],
+    "crop": [
+      0,
+      0,
+      2566,
+      1924
+    ],
+    "croppedSize": [
+      2566,
+      1924
+    ],
+    "backup": ".photo-originals/49accfe3c7ff0dbc3f4a974e261f8cda6148cbc84ff2b40ee6da17542c9635b8/IMG_4748.jpg"
+  },
+  "882038": {
+    "id": 882038,
+    "original": "poy/countries/germany/IMG_4847.jpg",
+    "src": "poy/countries/germany/882038.webp",
+    "sha256": "2c3d98e82d95507b1f255975bd84606adcc347e4f8ede761f9d4ac4bc6bf3d05",
+    "version": 1,
+    "width": 2406,
+    "height": 1924,
+    "variants": [
+      {
+        "src": "assets/photos/480/882038.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/882038.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      2406,
+      1924
+    ],
+    "crop": [
+      0,
+      0,
+      2406,
+      1924
+    ],
+    "croppedSize": [
+      2406,
+      1924
+    ],
+    "backup": ".photo-originals/d34e671d844038308c9cf486294b5c80eb4b27c117fabd94bf59623c8c2f5c2c/IMG_4847.jpg"
   }
 }

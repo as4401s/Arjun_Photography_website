@@ -20,6 +20,8 @@ The site has no forms, credentials, analytics, external fonts, third-party scrip
 
 HTML and the catalogue should revalidate on each request. Image caching is bounded to one day, allowing corrected photos at stable filenames to update. CSS and JavaScript URLs include content hashes as query parameters. Serve over HTTPS in production.
 
+Gallery image requests include a revision from the processed master checksum. Reviewed crops therefore refresh in returning visitors' browsers immediately, while keeping the numeric photo ID. Mobile collections initially show 40 photos; the Load more button adds up to 40 at a time. Desktop shows the full collection. All thumbnails remain lazy-loaded.
+
 ## Verification
 
 ```sh
