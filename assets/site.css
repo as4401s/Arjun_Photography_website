@@ -179,9 +179,9 @@ h2, .gallery-heading h1 {
 .view-switch a[aria-current=page]::after { content: ''; height: 2px; background: var(--ink); position: absolute; bottom: 0; left: 0; right: 0; }
 .view-switch a:hover { color: #fff; }
 .view-switch span { margin-left: 10px; }
-.photo-grid { columns: 3; column-gap: 22px; }
+.photo-grid { columns: 3; column-gap: 16px; }
 .photo-item {
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   break-inside: avoid;
   position: relative;
   display: block;
@@ -325,8 +325,8 @@ body[data-page=destinations] .site-header { background: var(--paper); color: var
 @media (max-width: 900px) {
   .hero { min-height: 600px; }
   .site-header nav { gap: 22px; }
-  .photo-grid { columns: 2; column-gap: 16px; }
-  .photo-item { margin-bottom: 16px; }
+  .photo-grid { columns: 2; column-gap: 12px; }
+  .photo-item { margin-bottom: 12px; }
   .destinations-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery-heading { align-items: flex-start; flex-direction: column; gap: 20px; }
   .view-switch { width: 100%; }
@@ -383,7 +383,7 @@ body[data-page=destinations] .site-header { background: var(--paper); color: var
   .gallery-heading h2, .gallery-heading h1 { font-size: 46px; }
   .view-switch { display: none; }
   .photo-grid { columns: 1; }
-  .photo-item { margin-bottom: 18px; }
+  .photo-item { margin-bottom: 12px; }
   .load-more { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 16px 18px; margin-top: 26px; border: 1px solid #393731; border-radius: 12px; background: #050505; font-size: 12px; text-align: left; }
   .load-more:hover, .load-more:active { background: #181713; border-color: var(--accent); }
   #load-more-count { margin-left: auto; color: var(--muted); font-size: 10px; white-space: nowrap; }
