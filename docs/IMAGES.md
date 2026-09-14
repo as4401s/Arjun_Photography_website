@@ -13,7 +13,7 @@ python3 scripts/build.py
 
 No HTML editing is needed when adding photographs. The old `python3 diff_images.py` command now invokes the same processor instead of printing snippets to paste into HTML.
 
-Supported input: `.jpg`, `.jpeg`, `.png`, `.webp`, `.tif`, and `.tiff`, case-insensitively. Export HEIC/RAW files as JPEG or TIFF first. Animated images are rejected. The workflow is for photographs; transparent graphics should live outside the scanned photo directories.
+Supported input: `.jpg`, `.jpeg`, `.png`, `.webp`, `.tif`, and `.tiff`, case-insensitively. Export HEIC/RAW files as JPEG or TIFF first. Animated images are rejected. Put transparent site graphics in `images/`; their transparency is preserved and automatic border cropping is skipped.
 
 ## What happens, in order
 

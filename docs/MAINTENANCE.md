@@ -14,6 +14,8 @@ Country galleries sort by each photo's randomly assigned numeric ID, so the phot
 
 ## Hosting
 
+**Publish only when Arjun explicitly requests it.** Keep routine edits and image imports local. Do not push or deploy automatically: pushes trigger Netlify and GitHub Pages builds and consume hosting limits.
+
 Upload the **contents of `dist/`** to a static host. Do not deploy the repository root, `.photo-originals/`, `output/`, or internal registry. The builder copies only explicitly referenced photographs and a small allowlist of application files. All URLs are relative, so deployment in a subdirectory is supported.
 
 The `_headers` file configures CSP, anti-framing, MIME sniffing protection, privacy permissions, and cache policy on hosts that support this format. On other hosts, configure equivalent HTTP response headers in the hosting settings. GitHub Pages does not apply `_headers`; the HTML CSP still applies, but HTTP-only protections such as `frame-ancestors` require host support.
