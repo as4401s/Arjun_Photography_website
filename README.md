@@ -26,6 +26,8 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 
 Open [the local preview](http://localhost:8000). The processor finds new JPEG, PNG, TIFF, and WebP files; removes detected white frames; assigns collision-checked random numeric names from `1000.webp` to `1000000.webp`; produces responsive WebP versions; embeds Arjun Sarkar's copyright; and regenerates the catalogue. Re-running it skips unchanged images.
 
+To choose a country cover, name its photo `cover` inside that country's folder. It keeps the master filename `cover.webp` and becomes the destination cover automatically. Other photos still receive random numeric filenames. See the image workflow for replacing a cover or selecting an existing photo without recompression.
+
 **Publish only `dist/`.** It contains the site and processed photographs. Originals and internal files are deliberately excluded. The working directory is not a deployable folder.
 
 - [Image workflow, crop review, metadata, and recovery](docs/IMAGES.md)

@@ -3,6 +3,7 @@
 ## Day-to-day changes
 
 - **New country:** create `poy/countries/<country>/`, add images, process, build. An empty directory with `.gitkeep` appears as coming soon.
+- **Country cover:** name one image `cover` in that country's folder. The importer preserves `cover.webp` and selects it automatically; ordinary images still get random numeric names. See `docs/IMAGES.md` for replacement and rename instructions.
 - **Ordering and site photos:** edit `data/site.json`. Existing original paths remain resolvable after random renaming. Prefer numeric IDs for new configuration.
 - **Captions:** edit `data/photo-details.json`, then process and build.
 - **Text or layout:** edit `index.html` or `assets/site.css`, then build.

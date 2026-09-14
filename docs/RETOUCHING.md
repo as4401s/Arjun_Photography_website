@@ -27,3 +27,11 @@ Each received a separate built-in imagegen edit using this prompt:
 > Use case: precise-object-edit. Edit this 512 by 384 pixel crop from the user's own travel photograph. Remove ONLY the black Arjun signature, its copyright symbol, winged camera emblem, and camera outline in the sky. Inpaint their pixels with the immediately surrounding sky/cloud texture. Keep the exact same 4:3 composition, colors, grain, clouds, trees, building edges, and all other image details. No crop, no zoom, no added detail, no color grading. Return one clean photographic patch in the same framing and aspect ratio; no text or watermark. Preserve the existing sky gradient and cloud boundaries so this patch fits seamlessly back into the original photograph.
 
 Only a feathered area around each signature was composited from the generated patch. The rest of the photograph used the existing master. WebP encoding was then applied with the usual metadata and responsive-image settings.
+
+## Named Belgium cover
+
+The subsequent cover update added photo `70558` at `poy/countries/belgium/cover.webp`. Its top-left Arjun mark was also removed with a separate built-in imagegen sky patch. Harmonic boundary color matching blended this patch into the original blue sky without a visible rectangular edge. The reserved cover filename and internal ID were preserved, and the same original/patch/edited-master backups were recorded in the registry.
+
+Prompt:
+
+> Use case: precise-object-edit. This is a 512 by 384 pixel sky crop from the user's own travel photo. Remove only the black Arjun signature, copyright symbol, winged camera emblem and outlined camera. Inpaint those pixels with the surrounding blue sky gradient and subtle photographic texture. Preserve all surrounding clouds, original sky colors, exposure, grain, and exact 4:3 framing. No crop, zoom, text, watermark, color grading, or extra objects. The patch must fit seamlessly back into the existing photograph.

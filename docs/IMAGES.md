@@ -22,8 +22,8 @@ Supported input: `.jpg`, `.jpeg`, `.png`, `.webp`, `.tif`, and `.tiff`, case-ins
 3. Correct EXIF orientation and inspect the image at its original resolution.
 4. Detect connected white or near-white rectangular edge strips. Allow small compression artifacts and gray shading in an already detected frame. Require multiple matching sides; do not automatically trim isolated bright skies or snow. Stop at the photo content. Never crop more than 20% from one edge.
 5. Crop only a detected frame. Preserve the remaining aspect ratio; resize only when the longest edge exceeds 2560 pixels.
-6. Assign a globally collision-checked random integer filename between 1000 and 1000000, inclusive. Existing processed filenames remain stable.
-7. Save WebP at quality 90 with responsive 480px and 960px width variants when the source is large enough. All image files use numeric names; sizes are separate directories.
+6. Assign a globally collision-checked random integer ID between 1000 and 1000000, inclusive. Ordinary photographs use this number as their filename. A country photo named `cover` keeps its name, becoming `cover.webp`. Existing processed filenames remain stable.
+7. Save WebP at quality 90 with responsive 480px and 960px width variants when the source is large enough. Responsive files use the photo's numeric ID so covers from different countries cannot collide; sizes are separate directories.
 8. Write EXIF Artist and Copyright, plus XMP creator, rights, and `Marked=true`, to every generated WebP, including thumbnails. Retain embedded ICC color profiles. Do not copy source GPS, serial numbers, or other camera EXIF.
 9. Verify the output, update the registry, remove the input from the public photo folder, and regenerate the catalogue from files that actually exist.
 
@@ -50,6 +50,12 @@ Open `output/crop-review.html` locally to compare original and processed images.
 Automatic detection cannot distinguish every white scene from an added frame. Inspect unusual borders or white backgrounds in the report. One-sided, patterned, signed, and very large borders are intentionally conservative cases. Never repeatedly crop a processed file to “try harder.” Restore the original for manual correction instead.
 
 ## Captions, covers, and composition
+
+Name one photo `cover.jpg`, `cover.png`, or `cover.webp` inside a country folder to select it as that country's cover. Other supported input formats work too. After processing, its master keeps the name `cover.webp` and automatically takes priority over any cover configured in `data/site.json`. It remains part of the country gallery.
+
+To select a photo already in the gallery, **rename** its numeric WebP file to `cover.webp` in the same country folder. When its bytes match the previous registry entry, the importer preserves its ID, original backup, retouch records, and existing responsive images without recompressing it. Keep the registry alongside the photos.
+
+To replace an existing cover, put a new `cover.jpg` or `cover.png` next to the registered `cover.webp`, then process and build. The importer backs up the new original and updates the existing cover ID. Do not change both files at once or supply multiple new cover files; the importer rejects ambiguous choices before processing. If you want the old cover to stay in the gallery, rename it back to its recorded numeric ID before importing the replacement.
 
 The viewer and main gallery show the complete processed image. The full-screen hero and destination previews use `object-fit: cover` for their layouts; the underlying photograph remains unchanged.
 

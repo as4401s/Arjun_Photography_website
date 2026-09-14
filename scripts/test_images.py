@@ -109,6 +109,72 @@ class ImageWorkflowTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     crop_photo(int(number), [0, 0, 999, 999])
 
+    def test_named_cover_import_and_replacement(self):
+        with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()):
+            root = Path(directory)
+            country = root / 'poy/countries/belgium'
+            country.mkdir(parents=True)
+            self.photo.save(country / 'cover.jpg')
+            self.photo.save(country / 'ordinary.jpg')
+            run(root, 1, False)
+            registry_path = root / 'data/image-registry.json'
+            registry = json.loads(registry_path.read_text())
+            cover = next(e for e in registry.values() if Path(e['src']).stem == 'cover')
+            ordinary = next(e for e in registry.values() if e['id'] != cover['id'])
+            self.assertTrue(Path(ordinary['src']).stem.isdigit())
+            self.assertFalse((country / 'cover.jpg').exists())
+            self.assertEqual(json.loads((root / 'data/photos.json').read_text())['covers']['Belgium'], cover['id'])
+            first_backup = (root / cover['backup']).read_bytes()
+            first_state = registry_path.read_bytes()
+            run(root, 1, False)
+            self.assertEqual(registry_path.read_bytes(), first_state)
+            Image.new('RGB', (300, 200), '#3270ab').save(country / 'cover.jpg')
+            run(root, 1, False)
+            updated = json.loads(registry_path.read_text())[str(cover['id'])]
+            self.assertEqual(updated['src'], cover['src'])
+            self.assertNotEqual(updated['sha256'], cover['sha256'])
+            self.assertEqual((root / cover['backup']).read_bytes(), first_backup)
+            self.assertEqual(len(json.loads((root / 'data/photos.json').read_text())['photos']), 2)
+
+    def test_renamed_cover_preserves_pixels_identity_and_retouch_records(self):
+        with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()):
+            root = Path(directory)
+            country = root / 'poy/countries/france'
+            country.mkdir(parents=True)
+            self.photo.save(country / 'original.jpg')
+            run(root, 1, False)
+            registry_path = root / 'data/image-registry.json'
+            registry = json.loads(registry_path.read_text())
+            key, original = next(iter(registry.items()))
+            original['retouches'] = [{'kind': 'reviewed signature removal'}]
+            registry_path.write_text(json.dumps(registry))
+            (root / 'data/site.json').write_text(json.dumps({'covers': {'France': 'missing.jpg'}}))
+            renamed = country / 'cover.webp'
+            (root / original['src']).rename(renamed)
+            pixels = renamed.read_bytes()
+            run(root, 1, True)
+            self.assertEqual(json.loads(registry_path.read_text())[key]['src'], original['src'])
+            run(root, 1, False)
+            updated = json.loads(registry_path.read_text())[key]
+            self.assertEqual(renamed.read_bytes(), pixels)
+            self.assertEqual(updated['id'], original['id'])
+            self.assertEqual(updated['backup'], original['backup'])
+            self.assertEqual(updated['retouches'], original['retouches'])
+            self.assertEqual(json.loads((root / 'data/photos.json').read_text())['covers']['France'], original['id'])
+
+    def test_competing_cover_inputs_are_rejected_without_modification(self):
+        with tempfile.TemporaryDirectory() as directory, contextlib.redirect_stdout(io.StringIO()):
+            root = Path(directory)
+            country = root / 'poy/countries/france'
+            country.mkdir(parents=True)
+            self.photo.save(country / 'cover.jpg')
+            self.photo.save(country / 'cover.png')
+            before = {p.name: p.read_bytes() for p in country.iterdir()}
+            with self.assertRaisesRegex(ValueError, 'one cover image'):
+                run(root, 2, False)
+            self.assertEqual({p.name: p.read_bytes() for p in country.iterdir()}, before)
+            self.assertFalse((root / 'data/image-registry.json').exists())
+
 
 if __name__ == '__main__':
     unittest.main()

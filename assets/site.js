@@ -144,7 +144,8 @@
     const fragment = document.createDocumentFragment();
     for (const country of catalogue.countries) {
       const photos = catalogue.photos.filter((photo) => photo.country === country);
-      const cover = photos.find((photo) => photo.id === catalogue.covers[country]) || photos[0];
+      const cover = photos.find((photo) => /\/cover\.webp$/i.test(photo.src))
+        || photos.find((photo) => photo.id === catalogue.covers?.[country]) || photos[0];
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'destination';
@@ -152,10 +153,16 @@
       const frame = document.createElement('div');
       frame.className = cover ? 'destination-image' : 'destination-empty';
       if (cover) {
-        const image = photoImage(cover, '(max-width: 900px) 44vw, 29vw');
+        const image = photoImage(cover, '(max-width: 600px) 92vw, (max-width: 900px) 44vw, 29vw');
+        image.src = imageUrl(cover);
         image.alt = '';
         image.addEventListener('error', () => { image.hidden = true; }, { once: true });
         frame.append(image);
+        const arrow = document.createElement('span');
+        arrow.className = 'destination-arrow';
+        arrow.setAttribute('aria-hidden', 'true');
+        arrow.textContent = '↗';
+        frame.append(arrow);
       } else {
         const note = document.createElement('span');
         note.textContent = 'Coming soon';
@@ -166,7 +173,7 @@
       const title = document.createElement('h3');
       title.textContent = country;
       const count = document.createElement('span');
-      count.textContent = photos.length ? `${photos.length} photographs ↗` : 'A story still to come';
+      count.textContent = photos.length ? `${photos.length} photographs` : 'A story still to come';
       meta.append(title, count);
       button.append(frame, meta);
       button.addEventListener('click', () => routeTo(`#country=${encodeURIComponent(country)}`));
@@ -296,7 +303,7 @@
   async function loadCatalogue() {
     showStatus('Loading the photographs…');
     try {
-      const response = await fetch('data/photos.json');
+      const response = await fetch('data/photos.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error(`Catalogue request failed: ${response.status}`);
       const data = await response.json();
       if (!Array.isArray(data.photos) || !Array.isArray(data.countries)) throw new Error('Invalid photo catalogue');

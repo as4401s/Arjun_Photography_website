@@ -119,6 +119,11 @@ def save_webp(image: Image.Image, path: Path, icc: bytes | None) -> None:
     temporary.replace(path)
 
 
+def is_country_cover(path: Path) -> bool:
+    """The reserved cover filename applies only inside a country collection."""
+    return len(path.parts) == 4 and path.parts[:2] == ('poy', 'countries') and path.stem.casefold() == 'cover'
+
+
 def process(job: tuple[Path, int, dict | None], root: Path) -> dict:
     source, number, previous = job
     relative = source.relative_to(root).as_posix()
@@ -129,7 +134,9 @@ def process(job: tuple[Path, int, dict | None], root: Path) -> dict:
         shutil.copy2(source, backup)
     if digest(backup) != source_hash:
         raise RuntimeError(f'Original backup verification failed: {relative}')
-    destination = source.with_name(f'{number}.webp')
+    destination = source.with_suffix('.webp') if is_country_cover(Path(relative)) else source.with_name(f'{number}.webp')
+    if previous and is_country_cover(Path(previous['src'])):
+        destination = root / previous['src']
     stage = root / '.photo-originals' / '.staging' / str(number)
     staged_main = stage / 'main.webp'
     staged_files = []
@@ -220,9 +227,11 @@ def catalogue(root: Path, registry: dict) -> dict:
     featured = [resolve(value) for value in config.get('featured', [])]
     ranks = {number: rank for rank, number in enumerate(featured) if number is not None}
     photos.sort(key=lambda p: ranks.get(p['id'], len(ranks)))
+    covers = {country: resolve(value) for country, value in config.get('covers', {}).items()}
+    covers.update({Path(e['src']).parts[2].title(): e['id'] for e in entries if is_country_cover(Path(e['src']))})
     return {'copyright': COPYRIGHT, 'photos': photos, 'countries': countries,
             'hero': resolve(config.get('hero')), 'portrait': resolve(config.get('portrait')), 'logo': resolve(config.get('logo')), 'favicon': resolve(config.get('favicon')),
-            'covers': {country: resolve(value) for country, value in config.get('covers', {}).items()}}
+            'covers': covers}
 
 
 @contextmanager
@@ -249,13 +258,43 @@ def run(root: Path, workers: int, dry_run: bool) -> None:
                    if p.is_file() and not p.is_symlink() and p.suffix.lower() in EXTENSIONS
                    and (not dry_run or p.relative_to(root).as_posix() not in pending_sources))
     by_path = {e['src']: e for e in registry.values()}
+    # A new cover.jpg may replace a registered cover.webp. Reject competing
+    # unprocessed cover files before starting any jobs or overwriting a photo.
+    cover_groups = {}
+    for path in files:
+        if is_country_cover(path.relative_to(root)):
+            cover_groups.setdefault(path.parent, []).append(path)
+    replaced_covers = {}
+    excluded = set()
+    for paths in cover_groups.values():
+        if len(paths) <= 1:
+            continue
+        registered = [p for p in paths if p.relative_to(root).as_posix() in by_path]
+        incoming = [p for p in paths if p not in registered]
+        if len(registered) != 1 or len(incoming) != 1:
+            raise ValueError(f'Keep one cover image per country before importing: {paths}')
+        existing = by_path[registered[0].relative_to(root).as_posix()]
+        if digest(registered[0]) != existing['sha256']:
+            raise ValueError(f'Two cover images have changed; choose one before importing: {paths}')
+        replaced_covers[incoming[0]] = existing
+        excluded.add(registered[0])
+    files = [p for p in files if p not in excluded]
     used = {int(key) for key in registry}
     used.update(int(p.stem) for p in files if p.stem.isdigit())
     jobs = []
     unchanged = 0
     for path in files:
-        previous = by_path.get(path.relative_to(root).as_posix())
-        if previous and previous['version'] == VERSION and digest(path) == previous['sha256'] and all((root / v['src']).exists() for v in previous['variants']):
+        relative = path.relative_to(root)
+        previous = by_path.get(relative.as_posix()) or replaced_covers.get(path)
+        source_hash = digest(path)
+        if not previous and is_country_cover(relative) and path.suffix.lower() == '.webp':
+            renamed = [e for e in registry.values() if Path(e['src']).parent == relative.parent
+                       and not (root / e['src']).exists() and e['sha256'] == source_hash]
+            if len(renamed) == 1:
+                previous = renamed[0]
+        if previous and path not in replaced_covers and previous['version'] == VERSION and source_hash == previous['sha256'] and all((root / v['src']).exists() for v in previous['variants']):
+            if not dry_run and is_country_cover(relative):
+                previous['src'] = relative.as_posix()
             unchanged += 1
             continue
         number = previous['id'] if previous else secrets.randbelow(999001) + 1000

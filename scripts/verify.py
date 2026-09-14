@@ -6,7 +6,7 @@ import re
 from urllib.parse import unquote
 
 from PIL import Image
-from process_images import ROOT, EXIF_COPYRIGHT
+from process_images import ROOT, EXIF_COPYRIGHT, is_country_cover
 
 
 def verify():
@@ -34,10 +34,14 @@ def verify():
         assert f'src="{photo["src"]}"' in homepage, f'Missing {role} image in homepage'
     for photo in photos:
         assert str(photo['id']) in registry
+        assert 1000 <= photo['id'] <= 1000000, photo['id']
         for src in [photo['src'], *(v['src'] for v in photo['variants'])]:
             relative = unquote(src)
             path = ROOT / relative
-            assert re.fullmatch(r'\d+\.webp', path.name) and 1000 <= int(path.stem) <= 1000000, src
+            named_cover = src == photo['src'] and is_country_cover(Path(relative)) and path.suffix == '.webp'
+            assert named_cover or (re.fullmatch(r'\d+\.webp', path.name) and int(path.stem) == photo['id']), src
+            if named_cover:
+                assert catalogue['covers'].get(photo['country']) == photo['id'], f'Cover not selected: {src}'
             with Image.open(path) as image:
                 assert image.format == 'WEBP', src
                 assert image.getexif().get(315) == 'Arjun Sarkar', src

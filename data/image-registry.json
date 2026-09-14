@@ -4622,7 +4622,7 @@
   "880691": {
     "id": 880691,
     "original": "poy/countries/austria/IMG_2985.jpg",
-    "src": "poy/countries/austria/880691.webp",
+    "src": "poy/countries/austria/cover.webp",
     "sha256": "252f0784ef0fbd4056a5a1e08e6cea46087b71d994da9cf83f1d5e9da5683021",
     "version": 1,
     "width": 2560,
@@ -5404,7 +5404,7 @@
   "983089": {
     "id": 983089,
     "original": "poy/countries/china/IMG_4892.jpg",
-    "src": "poy/countries/china/983089.webp",
+    "src": "poy/countries/china/cover.webp",
     "sha256": "7342dd54936e3450d1d385c14848d7874aa64e791bdfbb33abd8703cf1b6b822",
     "version": 1,
     "width": 2406,
@@ -7546,7 +7546,7 @@
   "338259": {
     "id": 338259,
     "original": "poy/countries/czech republic/IMG_2908.jpg",
-    "src": "poy/countries/czech republic/338259.webp",
+    "src": "poy/countries/czech republic/cover.webp",
     "sha256": "b0ec67e65121780c0a06b963cfa0a9fc7f50811f40558880d0f7d20bd21c17b3",
     "version": 1,
     "width": 2406,
@@ -7920,7 +7920,7 @@
   "569324": {
     "id": 569324,
     "original": "poy/countries/france/IMG_5488-Edit.webp",
-    "src": "poy/countries/france/569324.webp",
+    "src": "poy/countries/france/cover.webp",
     "sha256": "9d63ad49297da3b421ed938f2458814f505955ba6345f33eeae7ed02353f63bb",
     "version": 1,
     "width": 1556,
@@ -11048,7 +11048,7 @@
   "315191": {
     "id": 315191,
     "original": "poy/countries/india/12.webp",
-    "src": "poy/countries/india/315191.webp",
+    "src": "poy/countries/india/cover.webp",
     "sha256": "2d81eb860dd34f353eda31421d51896e68769f0739ee3565b5aa5d8225dca54e",
     "version": 1,
     "width": 2560,
@@ -15128,7 +15128,7 @@
   "441163": {
     "id": 441163,
     "original": "poy/countries/poland/IMG_9628.jpg",
-    "src": "poy/countries/poland/441163.webp",
+    "src": "poy/countries/poland/cover.webp",
     "sha256": "157bafa2d8e44047fe08fdcc41ae92319966f0328ea56b4f967462fdb826f681",
     "version": 1,
     "width": 2346,
@@ -15502,7 +15502,7 @@
   "989877": {
     "id": 989877,
     "original": "poy/countries/singapore/IMG_6163.webp",
-    "src": "poy/countries/singapore/989877.webp",
+    "src": "poy/countries/singapore/cover.webp",
     "sha256": "e3d0b9a10d3bfe00ce116830a2d418b37b35a5a94cdb72af1b2572be0681ae73",
     "version": 1,
     "width": 1396,
@@ -17236,7 +17236,7 @@
   "121785": {
     "id": 121785,
     "original": "poy/countries/south korea/IMG_2019-Edit-2 (1).webp",
-    "src": "poy/countries/south korea/121785.webp",
+    "src": "poy/countries/south korea/cover.webp",
     "sha256": "c390d1a2b3ac7cc0fe21cd6d2d566134f21a6ee7a170b7598fb6d6813e5cb181",
     "version": 1,
     "width": 2048,
@@ -19072,7 +19072,7 @@
   "78815": {
     "id": 78815,
     "original": "poy/countries/switzerland/IMG_4395-Edit.jpg",
-    "src": "poy/countries/switzerland/78815.webp",
+    "src": "poy/countries/switzerland/cover.webp",
     "sha256": "779565de9b379eedd878fbc3f169d52634e7a3d61bff42feb9d6eb009dab0e86",
     "version": 1,
     "width": 2354,
@@ -22293,7 +22293,7 @@
   "918616": {
     "id": 918616,
     "original": "poy/countries/taiwan/IMG_9499.jpg",
-    "src": "poy/countries/taiwan/918616.webp",
+    "src": "poy/countries/taiwan/cover.webp",
     "sha256": "a1bf117c56d2aaf1338e6bf44069a421a505e5915c061d0b4e0b82c4a1d778ad",
     "version": 1,
     "width": 2406,
@@ -26398,7 +26398,7 @@
   "36744": {
     "id": 36744,
     "original": "poy/countries/turkey/IMG_0127-2.jpg",
-    "src": "poy/countries/turkey/36744.webp",
+    "src": "poy/countries/turkey/cover.webp",
     "sha256": "bf6fc5bb8c11c6d4da6e23bd116dc909ccdf7550b5a216f160426530926884a9",
     "version": 1,
     "width": 1924,
@@ -31022,7 +31022,7 @@
   "695732": {
     "id": 695732,
     "original": "poy/countries/netherlands/IMG_9182.jpg",
-    "src": "poy/countries/netherlands/695732.webp",
+    "src": "poy/countries/netherlands/cover.webp",
     "sha256": "e2946046d64d0d8b980ab4611bf780299b9067c584acba7319d56dfd95bc2cb3",
     "version": 1,
     "width": 2560,
@@ -32756,7 +32756,7 @@
   "241366": {
     "id": 241366,
     "original": "poy/countries/thailand/IMG_1145-Edit.jpg",
-    "src": "poy/countries/thailand/241366.webp",
+    "src": "poy/countries/thailand/cover.webp",
     "sha256": "0ea9a77e70910ee6bdd2acd1cc44321b6665f0fdbcbde8b76e2c5dc0a9f62fd1",
     "version": 1,
     "width": 2332,
@@ -35654,7 +35654,7 @@
   "744053": {
     "id": 744053,
     "original": "poy/countries/germany/IMG_3313-2.jpg",
-    "src": "poy/countries/germany/744053.webp",
+    "src": "poy/countries/germany/cover.webp",
     "sha256": "ed1578b480da8ae22e73610b39aec19699cadced4f43794174afdec1bbba9e2a",
     "version": 1,
     "width": 2426,
@@ -36092,5 +36092,94 @@
       1924
     ],
     "backup": ".photo-originals/43976037c728a8f3065b8ef98de76867b32fd02d0549cb4ca6af1f8f4d812c7a/IMG_7610.jpg"
+  },
+  "196294": {
+    "id": 196294,
+    "original": "poy/countries/belgium/IMG_7454.jpg",
+    "src": "poy/countries/belgium/196294.webp",
+    "sha256": "4637079fcb66fb2574616e6526043420438d9bc2bdb36d2e3834f185a67b3d14",
+    "version": 1,
+    "width": 1540,
+    "height": 1924,
+    "variants": [
+      {
+        "src": "assets/photos/480/196294.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/196294.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      1540,
+      1924
+    ],
+    "crop": [
+      0,
+      0,
+      1540,
+      1924
+    ],
+    "croppedSize": [
+      1540,
+      1924
+    ],
+    "backup": ".photo-originals/06717445c4ed6bc8eff7a1b1c04aa2405ee55caab8d36e1d703cdad4035235a6/IMG_7454.jpg"
+  },
+  "70558": {
+    "id": 70558,
+    "original": "poy/countries/belgium/cover.jpg",
+    "src": "poy/countries/belgium/cover.webp",
+    "sha256": "b9b9d351b6af3ffb92db2d1f4e150bc34095008240995eb4883e40fc839eab38",
+    "version": 1,
+    "width": 2560,
+    "height": 1629,
+    "variants": [
+      {
+        "src": "assets/photos/480/70558.webp",
+        "width": 480
+      },
+      {
+        "src": "assets/photos/960/70558.webp",
+        "width": 960
+      }
+    ],
+    "originalSize": [
+      3024,
+      1924
+    ],
+    "crop": [
+      0,
+      0,
+      3024,
+      1924
+    ],
+    "croppedSize": [
+      3024,
+      1924
+    ],
+    "backup": ".photo-originals/9630ed7c74843b39979c628667939dae69d3d55aefc097946d6ed8a75afcced0/cover.jpg",
+    "retouches": [
+      {
+        "kind": "Arjun signature removal",
+        "method": "imagegen sky patch with harmonic boundary color matching",
+        "region": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "before": ".photo-originals/4ebf8a5edf58443940b03735b5d9e0e5a77c9ae90a4776a665f982fab9ea6b8c/cover.webp",
+        "patch": ".photo-originals/.retouches/70558/signature-70558-generated.png",
+        "editedMaster": ".photo-originals/.retouches/70558/edited-master.png",
+        "blendRegion": [
+          20,
+          15,
+          330,
+          150
+        ]
+      }
+    ]
   }
 }

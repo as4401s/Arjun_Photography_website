@@ -1355,7 +1355,7 @@
     },
     {
       "id": 880691,
-      "src": "poy/countries/austria/880691.webp",
+      "src": "poy/countries/austria/cover.webp",
       "width": 2560,
       "height": 1707,
       "revision": "252f0784ef0f",
@@ -1751,6 +1751,27 @@
       "selected": false,
       "title": "",
       "alt": "Austria — photograph by Arjun Sarkar"
+    },
+    {
+      "id": 70558,
+      "src": "poy/countries/belgium/cover.webp",
+      "width": 2560,
+      "height": 1629,
+      "revision": "b9b9d351b6af",
+      "variants": [
+        {
+          "src": "assets/photos/480/70558.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/70558.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
     },
     {
       "id": 226271,
@@ -2278,6 +2299,27 @@
       "alt": "Belgium — photograph by Arjun Sarkar"
     },
     {
+      "id": 196294,
+      "src": "poy/countries/belgium/196294.webp",
+      "width": 1540,
+      "height": 1924,
+      "revision": "4637079fcb66",
+      "variants": [
+        {
+          "src": "assets/photos/480/196294.webp",
+          "width": 480
+        },
+        {
+          "src": "assets/photos/960/196294.webp",
+          "width": 960
+        }
+      ],
+      "country": "Belgium",
+      "selected": false,
+      "title": "",
+      "alt": "Belgium — photograph by Arjun Sarkar"
+    },
+    {
       "id": 727529,
       "src": "poy/countries/belgium/727529.webp",
       "width": 2404,
@@ -2783,7 +2825,7 @@
     },
     {
       "id": 983089,
-      "src": "poy/countries/china/983089.webp",
+      "src": "poy/countries/china/cover.webp",
       "width": 2406,
       "height": 1924,
       "revision": "7342dd54936e",
@@ -4106,7 +4148,7 @@
     },
     {
       "id": 338259,
-      "src": "poy/countries/czech%20republic/338259.webp",
+      "src": "poy/countries/czech%20republic/cover.webp",
       "width": 2406,
       "height": 1924,
       "revision": "b0ec67e65121",
@@ -4337,7 +4379,7 @@
     },
     {
       "id": 569324,
-      "src": "poy/countries/france/569324.webp",
+      "src": "poy/countries/france/cover.webp",
       "width": 1556,
       "height": 1556,
       "revision": "9d63ad49297d",
@@ -4726,27 +4768,6 @@
         },
         {
           "src": "assets/photos/960/422120.webp",
-          "width": 960
-        }
-      ],
-      "country": "France",
-      "selected": false,
-      "title": "",
-      "alt": "France — photograph by Arjun Sarkar"
-    },
-    {
-      "id": 430610,
-      "src": "poy/countries/france/430610.webp",
-      "width": 1332,
-      "height": 1556,
-      "revision": "3b83fbe1c4e0",
-      "variants": [
-        {
-          "src": "assets/photos/480/430610.webp",
-          "width": 480
-        },
-        {
-          "src": "assets/photos/960/430610.webp",
           "width": 960
         }
       ],
@@ -7319,7 +7340,7 @@
     },
     {
       "id": 744053,
-      "src": "poy/countries/germany/744053.webp",
+      "src": "poy/countries/germany/cover.webp",
       "width": 2426,
       "height": 1924,
       "revision": "ed1578b480da",
@@ -9839,7 +9860,7 @@
     },
     {
       "id": 315191,
-      "src": "poy/countries/india/315191.webp",
+      "src": "poy/countries/india/cover.webp",
       "width": 2560,
       "height": 1517,
       "revision": "2d81eb860dd3",
@@ -12002,7 +12023,7 @@
     },
     {
       "id": 695732,
-      "src": "poy/countries/netherlands/695732.webp",
+      "src": "poy/countries/netherlands/cover.webp",
       "width": 2560,
       "height": 1707,
       "revision": "e2946046d64d",
@@ -13241,7 +13262,7 @@
     },
     {
       "id": 441163,
-      "src": "poy/countries/poland/441163.webp",
+      "src": "poy/countries/poland/cover.webp",
       "width": 2346,
       "height": 1877,
       "revision": "157bafa2d8e4",
@@ -13472,7 +13493,7 @@
     },
     {
       "id": 989877,
-      "src": "poy/countries/singapore/989877.webp",
+      "src": "poy/countries/singapore/cover.webp",
       "width": 1396,
       "height": 1744,
       "revision": "e3d0b9a10d3b",
@@ -14585,7 +14606,7 @@
     },
     {
       "id": 121785,
-      "src": "poy/countries/south%20korea/121785.webp",
+      "src": "poy/countries/south%20korea/cover.webp",
       "width": 2048,
       "height": 1343,
       "revision": "c390d1a2b3ac",
@@ -15761,7 +15782,7 @@
     },
     {
       "id": 78815,
-      "src": "poy/countries/switzerland/78815.webp",
+      "src": "poy/countries/switzerland/cover.webp",
       "width": 2354,
       "height": 1882,
       "revision": "779565de9b37",
@@ -17873,7 +17894,7 @@
     },
     {
       "id": 918616,
-      "src": "poy/countries/taiwan/918616.webp",
+      "src": "poy/countries/taiwan/cover.webp",
       "width": 2406,
       "height": 1924,
       "revision": "a1bf117c56d2",
@@ -18902,7 +18923,7 @@
     },
     {
       "id": 241366,
-      "src": "poy/countries/thailand/241366.webp",
+      "src": "poy/countries/thailand/cover.webp",
       "width": 2332,
       "height": 1835,
       "revision": "0ea9a77e7091",
@@ -19574,7 +19595,7 @@
     },
     {
       "id": 36744,
-      "src": "poy/countries/turkey/36744.webp",
+      "src": "poy/countries/turkey/cover.webp",
       "width": 1924,
       "height": 1924,
       "revision": "bf6fc5bb8c11",
@@ -22221,7 +22242,19 @@
   "favicon": 107058,
   "covers": {
     "Switzerland": 78815,
-    "Taiwan": 507460,
-    "China": 983089
+    "Taiwan": 918616,
+    "China": 983089,
+    "Austria": 880691,
+    "Belgium": 70558,
+    "Czech Republic": 338259,
+    "France": 569324,
+    "Germany": 744053,
+    "India": 315191,
+    "Netherlands": 695732,
+    "Poland": 441163,
+    "Singapore": 989877,
+    "South Korea": 121785,
+    "Thailand": 241366,
+    "Turkey": 36744
   }
 }
