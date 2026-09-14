@@ -180,6 +180,7 @@ h2, .gallery-heading h1 {
 .view-switch a:hover { color: #fff; }
 .view-switch span { margin-left: 10px; }
 .photo-grid { columns: 3; column-gap: 16px; }
+.photo-item, .destination-image, .destination-empty { border-radius: 5px; }
 .photo-item {
   margin: 0 0 16px;
   break-inside: avoid;
